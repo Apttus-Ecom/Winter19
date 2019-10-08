@@ -1,0 +1,1202 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>CategoryService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/apttus/ecommerce/src/lib/modules/catalog/services/category/category.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Products are the core resource to any Apttus project. They can be associated by category, collection, brands and more.</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="../injectables/CategoryService.html" target="_self" >CategoryServiceCore</a></code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getCategories">getCategories</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoryBranch">getCategoryBranch</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoryBranchChildren">getCategoryBranchChildren</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoryBranchForProduct">getCategoryBranchForProduct</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoryByName">getCategoryByName</a>
+                            </li>
+                            <li>
+                                <a href="#getCategoryTree">getCategoryTree</a>
+                            </li>
+                            <li>
+                                <a href="#getOptionCategories">getOptionCategories</a>
+                            </li>
+                            <li>
+                                <a href="#getRelatedCategories">getRelatedCategories</a>
+                            </li>
+                            <li>
+                                <a href="#getRootCategories">getRootCategories</a>
+                            </li>
+                            <li>
+                                <a href="#getSubcategories">getSubcategories</a>
+                            </li>
+                            <li>
+                                <a href="#globalFilter">globalFilter</a>
+                            </li>
+                            <li>
+                                <a href="#globalJoin">globalJoin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategories"></a>
+                    <span class="name">
+                        <b>
+                            getCategories
+                        </b>
+                        <a href="#getCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategories(limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, hierarchyIdList?: Array<string>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns all the categories available to the user. Will translate the categories based on the user locale.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    ngOnInit(){
+        this.categoryList$ = this.categoryService.getCategories();
+        // or
+        this.categoryService.getCategories().subscribe(c =&gt; this.categoryList = c);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1000</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the maximum number of categories to return. Note: more than 1000 may cause issues.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>hierarchyIdList</td>
+                                    <td>
+                                            <code>Array&lt;string&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an array of categories in an observable. Use getCategoryTree() if you need a hierarchy structure.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryBranch"></a>
+                    <span class="name">
+                        <b>
+                            getCategoryBranch
+                        </b>
+                        <a href="#getCategoryBranch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoryBranch(categoryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>getCategoryBranch takes a single category id and returns an array containing the category and its immediate parents up to the root.
+The first element in the array is the root and the last is the category specified in the argument. Designed for breadcrumbs.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    ngOnInit(){
+        this.categoryList$ = this.categoryService.getCategoryBranch();
+        // or
+        this.categoryService.getCategoryBranch().subscribe(c =&gt; this.categoryList = c);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the leaf category for the branch</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a single dimensional array containing the category and its immediate parents up to the root in an Observable</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryBranchChildren"></a>
+                    <span class="name">
+                        <b>
+                            getCategoryBranchChildren
+                        </b>
+                        <a href="#getCategoryBranchChildren"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoryBranchChildren(categoryIdList: Array<string>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>getCategoryBranchChildren takes a single category id and returns an array containing the category and all of its children down to the leaves.
+Note: does not maitain relationships with ancestor / child categories using _children property. This simply is a list of all categories under a given category.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    ngOnInit(){
+        this.categoryList$ = this.categoryService.getCategoryBranchChildren();
+        // or
+        this.categoryService.getCategoryBranchChildren().subscribe(c =&gt; this.categoryList = c);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoryIdList</td>
+                                    <td>
+                                            <code>Array&lt;string&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a single dimensional array containing the category and its decendants down to the leaves</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryBranchForProduct"></a>
+                    <span class="name">
+                        <b>
+                            getCategoryBranchForProduct
+                        </b>
+                        <a href="#getCategoryBranchForProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoryBranchForProduct(product: <a href="../classes/Product.html">Product</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Similar to getCategoryBranch, but takes a product for an argument and returns the array of categories leading to that product.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category, Product, ProductService } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService, private productService: productService){}
+
+    ngOnInit(){
+        this.categoryList$ = this.productService.getProductsByCode([&#39;xxx&#39;])
+                                .map(p =&gt; p[0])
+                                .flatMap(product =&gt; this.categoryService.getCategoryBranchForProduct(product));
+        // or
+        this.productService.getProductsByCode([&#39;xxx&#39;])
+                                .map(p =&gt; p[0])
+                                .flatMap(product =&gt; this.categoryService.getCategoryBranchForProduct(product))
+                                .subscribe(categoryList =&gt; this.categoryList = categoryList);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>product</td>
+                                    <td>
+                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>an instance of the product to get the category branch for.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a single dimensional array containing the product&#39;s category and its immediate parents up to the root in an Observable</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryByName"></a>
+                    <span class="name">
+                        <b>
+                            getCategoryByName
+                        </b>
+                        <a href="#getCategoryByName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoryByName(categoryName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a category matching the given category name.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    category: Category;
+    category$: Observable&lt;Category&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    ngOnInit(){
+        this.category$ = this.categoryService.getCategoryByName();
+        // or
+        this.categoryService.getCategoryByName().subscribe(c =&gt; this.category = c);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoryName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the name of category to return.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Category&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a category in an observable.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoryTree"></a>
+                    <span class="name">
+                        <b>
+                            getCategoryTree
+                        </b>
+                        <a href="#getCategoryTree"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCategoryTree(categoryNames?: Array<string>, hierarchyIdList?: Array<string>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the categories as a tree structure. Will return all categories or those specified in the categoryNames argument.
+Adds an additional attribute to all categories returned called &#39;_.children&#39;. This attribute contains an array of child categories.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    ngOnInit(){
+        this.categoryList$ = this.categoryService.getCategoryTree();
+        // or
+        this.categoryService.getCategoryTree().subscribe(c =&gt; this.categoryList = c);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoryNames</td>
+                                    <td>
+                                            <code>Array&lt;string&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>An array of specific categories that you wish to retrieve.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>hierarchyIdList</td>
+                                    <td>
+                                            <code>Array&lt;string&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an array of categories in an observable.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOptionCategories"></a>
+                    <span class="name">
+                        <b>
+                            getOptionCategories
+                        </b>
+                        <a href="#getOptionCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getOptionCategories(productOptionGroups: Array<ProductOptionGroup>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a list of option categories for the given list of product option groups.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category, ProductOptionGroup } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    getOptionCategories(productOptionGroups: Array&lt;ProductOptionGroup&gt;){
+        this.categoryList$ = this.categoryService.getOptionCategories(productOptionGroups);
+        // or
+        this.categoryService.getOptionCategories(productOptionGroups).subscribe(
+            c =&gt; this.categoryList = c,
+            err =&gt; {...}
+        );
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>productOptionGroups</td>
+                                    <td>
+                                            <code>Array&lt;ProductOptionGroup&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an array of categories in an observable.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRelatedCategories"></a>
+                    <span class="name">
+                        <b>
+                            getRelatedCategories
+                        </b>
+                        <a href="#getRelatedCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRelatedCategories(categoryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>gets all the categories under the same parent category as the category specified in the argument</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    getSubcategories(category: Category){
+        this.categoryList$ = this.categoryService.getRelatedCategories(category.Id);
+        // or
+        this.categoryService.getRelatedCategories(category.Id).subscribe(
+            categoryList =&gt; this.categoryList = categoryList,
+            err =&gt; {...}
+        );
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the category id to get related categories for</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an array of categories under the same parent category specified in the argument</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRootCategories"></a>
+                    <span class="name">
+                        <b>
+                            getRootCategories
+                        </b>
+                        <a href="#getRootCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRootCategories()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns all categories which do not have a parent cateogry.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    ngOnInit(){
+        this.categoryList$ = this.categoryService.getRootCategories();
+        // or
+        this.categoryService.getRootCategories().subscribe(c =&gt; this.categoryList = c);
+    }
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an array of categories in an observable.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSubcategories"></a>
+                    <span class="name">
+                        <b>
+                            getSubcategories
+                        </b>
+                        <a href="#getSubcategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSubcategories(categoryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, limit?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method returns a list of subcategories for a given category id</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { CategoryService, Category } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    categoryList: Array&lt;Category&gt;;
+    categoryList$: Observable&lt;Array&lt;Category&gt;&gt;;
+
+    constructor(private categoryService: CategoryService){}
+
+    getSubcategories(category: Category){
+        this.categoryList$ = this.categoryService.getSubcategories(category.Id);
+        // or
+        this.categoryService.getSubcategories(category.Id).subscribe(
+            categoryList =&gt; this.categoryList = categoryList,
+            err =&gt; {...}
+        );
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoryId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the parent category</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Observable&lt;Array&lt;Category&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an array of subcategories for the given category id in an Observable</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalFilter"></a>
+                    <span class="name">
+                        <b>
+                            globalFilter
+                        </b>
+                        <a href="#globalFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>globalFilter()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The global filter is for retrieving categories from this service.
+The default filter is to return category that are not hidden and whose ancestor id value as not null and primordial id as null.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Array&lt;AFilter&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable array of AFilter objects.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalJoin"></a>
+                    <span class="name">
+                        <b>
+                            globalJoin
+                        </b>
+                        <a href="#globalJoin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>globalJoin()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The global join is for retrieving categorie form this service.
+This allows for conditions that include joins on other tables to be included on the global filter.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Array&lt;AJoin&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable arrya of AJoin objects.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CategoryService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

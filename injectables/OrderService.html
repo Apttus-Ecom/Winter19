@@ -1,0 +1,1736 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>OrderService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/apttus/ecommerce/src/lib/modules/order/services/order/order.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The order object represents an order in Apttus. Only orders where the current user is the owner will be returned by this service.</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="../injectables/OrderService.html" target="_self" >OrderServiceCore</a></code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#acceptOrder">acceptOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#amendOrder">amendOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cancelAndAcceptOrder">cancelAndAcceptOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cancelOrder">cancelOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#convertCartToOrder">convertCartToOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#convertOrderToCart">convertOrderToCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createCart">createCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getMyOrders">getMyOrders</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getOrderByName">getOrderByName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getOrderByQuote">getOrderByQuote</a>
+                            </li>
+                            <li>
+                                <a href="#globalFilter">globalFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#mergeCartItems">mergeCartItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#syncCartAndAcceptOrder">syncCartAndAcceptOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#undoAmendOrder">undoAmendOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#undoCancelOrder">undoCancelOrder</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="acceptOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            acceptOrder
+                        </b>
+                        <a href="#acceptOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>acceptOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to accept the order for given order id</p>
+<h3 id="example">Example:</h3>
+<p>```typescript
+      import { OrderService, Order } from &#39;@apttus/ecommerce&#39;;
+      import { Observable } from &#39;rxjs/Observable&#39;;</p>
+<div><pre class="line-numbers"><code class="language-none">  export class MyComponent implements OnInit{
+       order: any;
+       order$: Observable&lt;any&gt;;
+
+       constructor(private orderService: OrderService){}
+
+       acceptOrder(orderId: string){
+            this.orderService.acceptOrder(orderId).subscribe(o =&gt; this.order = o);
+            // or
+            this.order$ = this.orderService.acceptOrder(orderId);
+       }
+  }
+ ```</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the order to accept</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of accepted order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="amendOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            amendOrder
+                        </b>
+                        <a href="#amendOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>amendOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderItems: Array<OrderLineItem>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to amend the order for given order id</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: any;
+    order$: Observable&lt;any&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    amendOrder(orderId: string, orderItems: Array&lt;OrderLineItem&gt;){
+        this.orderService.amendOrder(orderId, orderItems).subscribe(o =&gt; this.order = o);
+        // or
+        this.order$ = this.orderService.amendOrder(orderId, orderItems);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the order to amend</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>orderItems</td>
+                                    <td>
+                                            <code>Array&lt;OrderLineItem&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of the order line items for amendment</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of previous order instance</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelAndAcceptOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            cancelAndAcceptOrder
+                        </b>
+                        <a href="#cancelAndAcceptOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>cancelAndAcceptOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to cancel and accept the cancellation of an order for given order id</p>
+<h3 id="example">Example:</h3>
+<p>```typescript
+      import { OrderService } from &#39;@apttus/ecommerce&#39;;
+      import { Observable } from &#39;rxjs/Observable&#39;;</p>
+<div><pre class="line-numbers"><code class="language-none">  export class MyComponent implements OnInit{
+       order: any;
+       order$: Observable&lt;any&gt;;
+
+       constructor(private orderService: OrderService){}
+
+       cancelAndAcceptOrder(orderId: string){
+            this.orderService.cancelAndAcceptOrder(orderId).subscribe(o =&gt; this.order = o);
+            // or
+            this.order$ = this.orderService.cancelAndAcceptOrder(orderId);
+       }
+  }
+ ```</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the order to cancel and accept the cancellation</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of cancelled order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            cancelOrder
+                        </b>
+                        <a href="#cancelOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>cancelOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to cancel the order for given order id</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: any;
+    order$: Observable&lt;any&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    cancelOrder(orderId: string){
+        this.orderService.cancelOrder(orderId).subscribe(o =&gt; this.order = o);
+        // or
+        this.order$ = this.orderService.cancelOrder(orderId);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the order to cancel</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of cancelled order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertCartToOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            convertCartToOrder
+                        </b>
+                        <a href="#convertCartToOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>convertCartToOrder(order: <a href="../classes/Order.html">Order</a>, primaryContact: <a href="../classes/Contact.html">Contact</a>, cart?: <a href="../classes/Cart.html">Cart</a>, selectedAcc?: <a href="../interfaces/AccountInfo.html">AccountInfo</a>, acceptOrder: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method converts the current cart into an order record. Will set the cart status to &#39;Finalized&#39;.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order, Contact, Cart, ContactService } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: Order;
+
+    constructor(private orderService: OrderService, private contactService: ContactService){}
+
+    convertCartToOrder(){
+        // Use the contact record for the current user
+        this.contactService.getMyContact().pipe(take(1)).subscribe(contact =&gt; {
+            const order: Order = new Order();
+            order.Name = &#39;Sample Order&#39;;
+            this.orderService.convertCartToOrder(order, contact).subscribe(o =&gt; this.order = order);
+        });
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>order</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>new Order()</code>
+                                    </td>
+
+                                    <td>
+                                        <p>an optional instance of an order to predefine values on the final order record that gets created</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>primaryContact</td>
+                                    <td>
+                                                <code><a href="../classes/Contact.html" target="_self" >Contact</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>the primary contact to assign to the order</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>cart</td>
+                                    <td>
+                                                <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>the cart record to convert. Will use the current active cart if left undefined.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>selectedAcc</td>
+                                    <td>
+                                                <code><a href="../interfaces/AccountInfo.html" target="_self" >AccountInfo</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>acceptOrder</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Order.html" target="_self" >Observable&lt;Order&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable of the order instance that gets created</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertOrderToCart"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            convertOrderToCart
+                        </b>
+                        <a href="#convertOrderToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>convertOrderToCart(order: <a href="../classes/Order.html">Order</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a cart from an order object.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order, Cart } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    cart: Cart;
+
+    constructor(private orderService: OrderService){}
+
+    convertOrderToCart(order: Order){
+        this.orderService.convertOrderToCart(order).subscribe(c =&gt; this.cart = c);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>order</td>
+                                    <td>
+                                                <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the order object to convert to a cart</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cart.html" target="_self" >Observable&lt;Cart&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of type cart</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createCart"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createCart
+                        </b>
+                        <a href="#createCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createCart(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to create a new cart for an Order</p>
+<h3 id="example">Example:</h3>
+<p>```typescript
+      import { OrderService } from &#39;@apttus/ecommerce&#39;;
+      import { Observable } from &#39;rxjs/Observable&#39;;</p>
+<div><pre class="line-numbers"><code class="language-none">  export class MyComponent implements OnInit{
+       result: string;
+
+       constructor(private orderService: OrderService){}
+
+       createCart(){
+            this.orderService.createCart().subscribe(r =&gt; this.result = r);
+       }
+  }
+ ```</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of an Order</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the id of new cart for given order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMyOrders"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getMyOrders
+                        </b>
+                        <a href="#getMyOrders"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMyOrders(accountId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, days?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, pageNumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderBy: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderDirection: "ASC" | "DESC")</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>method returns a list of orders for the current user</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    orderList: Array&lt;Order&gt;;
+    orderList$: Observable&lt;Array&lt;Order&gt;&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    ngOnInit(){
+        this.orderService.getMyOrders().subscribe(o =&gt; this.orderList = o);
+        // or
+        this.orderList$ = this.orderService.getMyOrders();
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>accountId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the account id to filter the order results by</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>days</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>the number of days into the past with which to retrieve orders. If left empty, will retrieve all orders</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>10</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the total number of records to return</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>pageNumber</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0</code>
+                                    </td>
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;CreatedDate&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the field by which to order the records</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>orderDirection</td>
+                                    <td>
+                                            <code>&quot;ASC&quot; | &quot;DESC&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;DESC&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the direction in which to sort the records</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Order.html" target="_self" >Observable&lt;Array&lt;Order&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable array of orders</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOrderByName"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getOrderByName
+                        </b>
+                        <a href="#getOrderByName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getOrderByName(orderName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method retrieves a specific order instance by a given name</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: Order;
+    order$: Observable&lt;Order&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    getOrderByName(name: string){
+        this.orderService.getOrderByName(name).subscribe(o =&gt; this.order = o);
+        // or
+        this.order$ = this.orderService.getOrderByName(name);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the name of the order to retrieve</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Order.html" target="_self" >Observable&lt;Order&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of an order instance specified by the name argument</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOrderByQuote"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getOrderByQuote
+                        </b>
+                        <a href="#getOrderByQuote"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getOrderByQuote(quoteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method retrieves order details for a given quote.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: Order;
+    order$: Observable&lt;Order&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    getOrderByQuote(name: string){
+        this.orderService.getOrderByQuote(quoteId).subscribe(o =&gt; this.order = o);
+        // or
+        this.order$ = this.orderService.getOrderByQuote(quoteId);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quoteId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id of the quote for which order is to be retrieved.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Order.html" target="_self" >Observable&lt;Order&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of an order instance specified by the name argument</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="globalFilter"></a>
+                    <span class="name">
+                        <b>
+                            globalFilter
+                        </b>
+                        <a href="#globalFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>globalFilter()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>the global filter for orders returned by this service. Will only return orders that the current user owns.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Array&lt;AFilter&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a string observable with the filter query</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mergeCartItems"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            mergeCartItems
+                        </b>
+                        <a href="#mergeCartItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mergeCartItems(orderItemList: Array<OrderLineItem>, cart?: <a href="../classes/Cart.html">Cart</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method is used for adding an existing order to a cart (i.e. reorder). If the items already exist in the cart, it will increment the quantity.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order, Cart } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    constructor(private orderService: OrderService){}
+
+    addOrderItemsToCart(order: Order){
+        this.orderService.mergeCartItems(order.OrderLineItems)
+        .subscribe(
+            () =&gt; {...},
+            err =&gt; {...}
+        );
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderItemList</td>
+                                    <td>
+                                            <code>Array&lt;OrderLineItem&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>a list of order items to merge</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>cart</td>
+                                    <td>
+                                                <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>the cart record to add the items to. If left undefined or null, will use the current cart.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a void observable when the operation completes</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="syncCartAndAcceptOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            syncCartAndAcceptOrder
+                        </b>
+                        <a href="#syncCartAndAcceptOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>syncCartAndAcceptOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to sync cart and accept the order</p>
+<h3 id="example">Example:</h3>
+<p>```typescript
+       import { OrderService } from &#39;@apttus/ecommerce&#39;;
+       import { Observable } from &#39;rxjs/Observable&#39;;</p>
+<div><pre class="line-numbers"><code class="language-none">   export class MyComponent implements OnInit{
+        order: any;
+        order$: Observable&lt;any&gt;;
+
+        constructor(private orderService: OrderService){}
+
+        syncCartAndAcceptOrder(orderId: string, cartId: string){
+             this.orderService.syncCartAndAcceptOrder(orderId, cartId).subscribe(o =&gt; this.order = o);
+             // or
+             this.order$ = this.orderService.syncCartAndAcceptOrder(orderId, cartId);
+        }
+   }
+  ```</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id of the order to sync with cart and acceptance</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>cartId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id of the cart to sync with order</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of cancelled order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="undoAmendOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            undoAmendOrder
+                        </b>
+                        <a href="#undoAmendOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>undoAmendOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to revert the amended order for given order id</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: any;
+    order$: Observable&lt;any&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    undoAmendOrder(orderId: string){
+        this.orderService.undoAmendOrder(orderId).subscribe(o =&gt; this.order = o);
+        // or
+        this.order$ = this.orderService.undoAmendOrder(orderId);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the order to undo amendment</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of previous order instance</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="undoCancelOrder"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            undoCancelOrder
+                        </b>
+                        <a href="#undoCancelOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>undoCancelOrder(orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to revert the cancellation of an order for given order id</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { OrderService, Order } from &#39;&#64;apttus/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+    order: any;
+    order$: Observable&lt;any&gt;;
+
+    constructor(private orderService: OrderService){}
+
+    undoCancelOrder(orderId: string){
+        this.orderService.undoCancelOrder(orderId).subscribe(o =&gt; this.order = o);
+        // or
+        this.order$ = this.orderService.undoCancelOrder(orderId);
+    }
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>orderId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the id of the order to undo cancellation</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of an previous order instance</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'OrderService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

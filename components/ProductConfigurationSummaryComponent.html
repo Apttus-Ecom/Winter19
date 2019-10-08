@@ -1,0 +1,930 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProductConfigurationSummaryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/product-configuration-summary/product-configuration-summary.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Product configuration summary component is used to show the hierarchical view of the selected configurations for a given cart/order line item in a modal window.
+The view is a tree like structure containing selected attributes and values within attribute groups, selected options/attributes within option groups, nested at different levels in the hierarchy.</p>
+<h3>Preview</h3>
+<img class="jumbotron" src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/productConfigSummary.png" style="max-width: 100%">
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript"> import { ProductConfigurationSummaryModule } from &#39;&#64;apttus/elements&#39;;
+
+ &#64;NgModule({
+  imports: [ProductConfigurationSummaryModule, ...]
+})
+ export class AppModule {}</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">// Basic Usage
+&lt;apt-product-configuration-summary [product]=&quot;product&quot;&gt;&lt;/apt-product-configuration-summary&gt;
+
+// All inputs and outputs.
+&lt;apt-product-configuration-summary
+[product]=&quot;product&quot;
+[relatedTo]=&quot;lineItem&quot;
+[changes]=&quot;lineItems&quot;
+[preload]=&quot;true&quot;
+[position]=&quot;'top'&quot;
+(onProductAdd)=&quot;closeModal()&quot;
+(onNavigate)=&quot;closeModal()&quot;&gt;
+&lt;/apt-product-configuration-summary&gt;</code></pre>
+                </div>
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-product-configuration-summary</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./product-configuration-summary.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./product-configuration-summary.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changes">changes</a>
+                            </li>
+                            <li>
+                                <a href="#position">position</a>
+                            </li>
+                            <li>
+                                <a href="#preload">preload</a>
+                            </li>
+                            <li>
+                                <a href="#product">product</a>
+                            </li>
+                            <li>
+                                <a href="#relatedTo">relatedTo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onNavigate">onNavigate</a>
+                            </li>
+                            <li>
+                                <a href="#onProductAdd">onProductAdd</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(productOptionService: <a href="../injectables/ProductOptionService.html">ProductOptionService</a>, cartService: <a href="../injectables/CartService.html">CartService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, cacheService: CacheService, ngZone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>productOptionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductOptionService.html" target="_self" >ProductOptionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cacheService</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ngZone</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changes"></a>
+                        <b>changes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;CartItem&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>List of cart items that this configuration changes.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="position"></a>
+                        <b>position</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;left&quot; | &quot;right&quot; | &quot;middle&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;middle&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Sets the position.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="preload"></a>
+                        <b>preload</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Will preload the data for the configuration component before showing to speed up initial render</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="product"></a>
+                        <b>product</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | BundleProduct</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Instance of Cart or Order line item or Product to represent the data displayed on this component.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="relatedTo"></a>
+                        <b>relatedTo</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Related cart item.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onNavigate"></a>
+                        <b>onNavigate</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;void&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitter for when user navigates from summary.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onProductAdd"></a>
+                        <b>onProductAdd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;void&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitter for when a product is added to cart.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div bsModal #summaryModal&#x3D;&quot;bs-modal&quot; class&#x3D;&quot;modal fade&quot; [ngClass]&#x3D;&quot;position&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot;
+  aria-labelledby&#x3D;&quot;dialog-sizes-name1&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot; *ngIf&#x3D;&quot;product$ | async as product; else loading&quot;&gt;
+
+
+      &lt;!-- --&gt;
+      &lt;div class&#x3D;&quot;p-0 mx-4 mt-3&quot; *ngIf&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;middle&#x27;&quot;&gt;
+        &lt;div class&#x3D;&quot;align-items-center border-bottom border-secondary d-flex justify-content-between pb-3&quot;&gt;
+          &lt;h5 class&#x3D;&quot;modal-title font-weight-normal&quot;&gt;
+            {{&#x27;COMMON.PRODUCT_CONFIGURATION&#x27; | translate}}
+          &lt;/h5&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;hide()&quot;&gt;
+            &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class&#x3D;&quot;bg-light d-flex justify-content-between p-3&quot;&gt;
+          &lt;div class&#x3D;&quot;flex-grow-1&quot;&gt;
+            &lt;h4&gt;{{product?.Name}}&lt;/h4&gt;
+            &lt;div class&#x3D;&quot;text-muted&quot; [translate]&#x3D;&quot;&#x27;PRODUCT_CONFIGURATION_SUMMARY.PRODUCT_ID&#x27;&quot;
+              [translateParams]&#x3D;&quot;{productCode: product?.ProductCode}&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;border-left border-secondary d-flex align-items-center&quot;&gt;
+            &lt;div class&#x3D;&quot;px-4&quot;&gt;
+              &lt;div class&#x3D;&quot;text-muted mb-2&quot;&gt;
+                {{&#x27;COMMON.NET_PRICE&#x27; | translate}}
+              &lt;/div&gt;
+              &lt;h5 class&#x3D;&quot;m-0&quot;&gt;
+                &lt;apt-price [record]&#x3D;&quot;product&quot; [bundle]&#x3D;&quot;true&quot; [quantity]&#x3D;&quot;1&quot; type&#x3D;&quot;net&quot;&gt;&lt;/apt-price&gt;
+              &lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex align-items-center&quot;&gt;
+              &lt;div *ngIf&#x3D;&quot;secondaryButton&quot;&gt;
+                &lt;button class&#x3D;&quot;btn&quot; [ngClass]&#x3D;&quot;secondaryButton?.style&quot;
+                  (click)&#x3D;&quot;secondaryButton.action(product)&quot;&gt;{{secondaryButton.label | translate}}&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div *ngIf&#x3D;&quot;actionButton&quot;&gt;
+                &lt;button class&#x3D;&quot;btn ml-2 btn-raised&quot; [ngClass]&#x3D;&quot;actionButton?.style&quot; (click)&#x3D;&quot;actionButton.action(product)&quot;
+                  [ladda]&#x3D;&quot;addLoading&quot; data-style&#x3D;&quot;zoom-in&quot;&gt;{{actionButton.label | translate}}&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;p-0 mx-4 mt-3&quot; *ngIf&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;&gt;
+        &lt;div class&#x3D;&quot;align-items-center border-bottom border-secondary d-flex pb-3&quot;&gt;
+          &lt;h5 class&#x3D;&quot;modal-title font-weight-normal&quot;&gt;
+            &lt;div&gt;{{&#x27;COMMON.PRODUCT_CONFIGURATION&#x27; | translate}}&lt;/div&gt;
+          &lt;/h5&gt;
+          &lt;div *ngIf&#x3D;&quot;relatedTo&quot;&gt;
+            &lt;select class&#x3D;&quot;form-control ml-3 form-control-sm&quot; id&#x3D;&quot;summary-filter&quot; name&#x3D;&quot;summaryFilter&quot;
+              [(ngModel)]&#x3D;&quot;filter&quot; (ngModelChange)&#x3D;&quot;setProduct()&quot;&gt;
+              &lt;option [value]&#x3D;&quot;&#x27;items&#x27;&quot;&gt;All&lt;/option&gt;
+              &lt;option [value]&#x3D;&quot;&#x27;changes&#x27;&quot;&gt;Changes Only&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close ml-auto&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;hide()&quot;&gt;
+            &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+          &lt;div class&#x3D;&quot;bg-light p-3 line-height-large&quot;&gt;
+            &lt;div class&#x3D;&quot;row&quot;&gt;
+              &lt;strong class&#x3D;&quot;col-7&quot;&gt;{{product?.Name}}&lt;/strong&gt;
+              &lt;div class&#x3D;&quot;col-2&quot;&gt;{{&#x27;COMMON.QTY&#x27; | translate}}: 1&lt;/div&gt;
+              &lt;apt-price class&#x3D;&quot;col-3 text-right&quot; [record]&#x3D;&quot;product?._metadata?.item&quot; [type]&#x3D;&quot;&#x27;net&#x27;&quot;&gt;&lt;/apt-price&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+              &lt;span&gt;Option Total&lt;/span&gt;
+              &lt;apt-price [record]&#x3D;&quot;optionItems&quot; [type]&#x3D;&quot;&#x27;net&#x27;&quot;&gt;&lt;/apt-price&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex border-top border-gray justify-content-between pt-3&quot;&gt;
+              &lt;strong&gt;Net Price&lt;/strong&gt;
+              &lt;apt-price [record]&#x3D;&quot;cartItems&quot; [type]&#x3D;&quot;&#x27;net&#x27;&quot;&gt;&lt;/apt-price&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;h5 class&#x3D;&quot;font-weight-normal mt-4&quot;&gt;
+          Itemized Options
+        &lt;/h5&gt;
+      &lt;/div&gt;
+
+
+      &lt;div class&#x3D;&quot;modal-body px-0 pt-0 mx-4&quot;&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;product?.OptionGroups?.length &gt; 0 || product?.AttributeGroups?.length &gt; 0; else empty&quot;&gt;
+          &lt;div class&#x3D;&quot;h-100&quot;&gt;
+              &lt;!-- Header --&gt;
+
+
+              &lt;!-- Main Accordion --&gt;
+
+              &lt;div class&#x3D;&quot;accordion mt-3&quot; [id]&#x3D;&quot;uuid + product?.Id&quot;
+                *ngIf&#x3D;&quot;product?.AttributeGroups?.length &gt; 0 || product?.OptionGroups?.length &gt; 0&quot;&gt;
+
+                &lt;!-- Top Level Attributes --&gt;
+                &lt;ng-container
+                  *ngFor&#x3D;&quot;let attributeGroupMember of product?.AttributeGroups; let x &#x3D; index; let xf &#x3D; first; trackBy: trackById&quot;&gt;
+                  &lt;ng-container *ngIf&#x3D;&quot;attributeGroupMember?.AttributeGroup?.ProductAttributes?.length &gt; 0&quot;&gt;
+                    &lt;div class&#x3D;&quot;bg-light border-top border-secondary&quot;&gt;
+                      &lt;button class&#x3D;&quot;btn btn-link chevron&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot;
+                        [attr.data-target]&#x3D;&quot;&#x27;#&#x27; + uuid + attributeGroupMember.Id&quot; [attr.aria-expanded]&#x3D;&quot;xf&quot;&gt;
+                        &lt;strong class&#x3D;&quot;ml-2&quot;&gt;{{attributeGroupMember?.AttributeGroup?.Name}}&lt;/strong&gt;
+                      &lt;/button&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;div [id]&#x3D;&quot;uuid + attributeGroupMember.Id&quot; class&#x3D;&quot;collapse&quot; [class.show]&#x3D;&quot;xf&quot;
+                      [attr.data-parent]&#x3D;&quot;&#x27;#&#x27; + uuid + product?.Id&quot;&gt;
+                      &lt;ng-container
+                        *ngFor&#x3D;&quot;let attribute of attributeGroupMember?.AttributeGroup?.ProductAttributes; let l &#x3D; last&quot;&gt;
+                        &lt;div class&#x3D;&quot;pt-2 px-3&quot; [class.border-bottom]&#x3D;&quot;!l&quot; [class.border-gray]&#x3D;&quot;!l&quot;&gt;
+                          &lt;apt-output-field [record]&#x3D;&quot;product?._metadata?.item?.AttributeValue&quot;
+                            [field]&#x3D;&quot;attribute.Field&quot; [editable]&#x3D;&quot;false&quot; labelClass&#x3D;&quot;font-italic font-weight-normal&quot;
+                            valueClass&#x3D;&quot;font-weight-bold&quot;&gt;
+                          &lt;/apt-output-field&gt;
+                        &lt;/div&gt;
+                      &lt;/ng-container&gt;
+                    &lt;/div&gt;
+                  &lt;/ng-container&gt;
+                &lt;/ng-container&gt;
+
+                &lt;!-- Top Level Options--&gt;
+                &lt;ng-container
+                  *ngFor&#x3D;&quot;let optionGroupMember of product.OptionGroups; let f &#x3D; first; let i &#x3D; index; trackBy: trackById&quot;&gt;
+                  &lt;div class&#x3D;&quot;bg-light border-top border-secondary&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link chevron&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot;
+                      [attr.data-target]&#x3D;&quot;&#x27;#&#x27; + uuid + optionGroupMember.Id&quot;
+                      [attr.aria-expanded]&#x3D;&quot;i + product?.AttributeGroups?.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+                      &lt;strong class&#x3D;&quot;ml-2&quot;&gt;{{optionGroupMember?.OptionGroup?.Name}}&lt;/strong&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;collapse&quot; [id]&#x3D;&quot;uuid + optionGroupMember.Id&quot; [attr.data-parent]&#x3D;&quot;&#x27;#&#x27; + uuid + product?.Id&quot;
+                    [class.show]&#x3D;&quot;i + product?.AttributeGroups?.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                      &lt;div class&#x3D;&quot;accordion&quot; [id]&#x3D;&quot;&#x27;child&#x27; + uuid + optionGroupMember.Id&quot;&gt;
+                        &lt;div
+                          *ngFor&#x3D;&quot;let productOptionGroup of optionGroupMember?._metadata?.children; trackBy: trackById&quot;
+                          class&#x3D;&quot;mb-3&quot;&gt;
+                          &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;productOptionGroupTemplate&quot;
+                            [ngTemplateOutletContext]&#x3D;&quot;{productOptionGroup: productOptionGroup, parent: &#x27;child&#x27; + uuid + optionGroupMember.Id}&quot;&gt;
+                          &lt;/ng-template&gt;
+                        &lt;/div&gt;
+
+                        &lt;div *ngFor&#x3D;&quot;let option of optionGroupMember?.Options; let f &#x3D; first; trackBy: trackById&quot;
+                          class&#x3D;&quot;mb-3&quot;&gt;
+                          &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;optionTemplate&quot; [ngTemplateOutletContext]&#x3D;&quot;{option: option
+                                  ,parent: &#x27;child&#x27; + uuid + optionGroupMember.Id
+                                  ,expanded: f
+                                  , cartItem: option?.ComponentProduct?._metadata?.item}&quot;&gt;
+                          &lt;/ng-template&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/ng-container&gt;
+
+                &lt;ng-template #productOptionGroupTemplate let-productOptionGroup&#x3D;&quot;productOptionGroup&quot;
+                  let-parent&#x3D;&quot;parent&quot;&gt;
+                  &lt;button class&#x3D;&quot;btn btn-link p-0 minus text-capitalize text-dark&quot; data-toggle&#x3D;&quot;collapse&quot;
+                    [attr.data-target]&#x3D;&quot;&#x27;#&#x27; + parent + productOptionGroup.Id&quot; [attr.aria-expanded]&#x3D;&quot;true&quot;&gt;
+                    &lt;i&gt;{{productOptionGroup?.OptionGroup?.Name}}&lt;/i&gt;
+                  &lt;/button&gt;
+
+                  &lt;div [id]&#x3D;&quot;parent + productOptionGroup.Id&quot; class&#x3D;&quot;collapse&quot; [class.show]&#x3D;&quot;true&quot;
+                    [attr.data-parent]&#x3D;&quot;&#x27;#&#x27; + parent&quot;&gt;
+                    &lt;div class&#x3D;&quot;my-2 ml-3&quot;
+                      *ngFor&#x3D;&quot;let component of productOptionGroup?.Options; let f &#x3D; first; trackBy: trackById&quot;&gt;
+                      &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;optionTemplate&quot;
+                        [ngTemplateOutletContext]&#x3D;&quot;{option: component, parent: parent + productOptionGroup.Id, expanded: f, cartItem: component?.ComponentProduct?._metadata?.item}&quot;&gt;
+                      &lt;/ng-template&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/ng-template&gt;
+
+                &lt;!-- Nested option template --&gt;
+                &lt;ng-template #optionTemplate let-option&#x3D;&quot;option&quot; let-parent&#x3D;&quot;parent&quot; let-expanded&#x3D;&quot;expanded&quot;
+                  let-cartItem&#x3D;&quot;cartItem&quot;&gt;
+                  &lt;div class&#x3D;&quot;d-flex justify-content-between border-bottom border-gray&quot;&gt;
+                    &lt;div class&#x3D;&quot;d-flex align-items-center text-truncate mb-1&quot;&gt;
+                      &lt;button class&#x3D;&quot;btn btn-link p-0 minus text-capitalize text-dark text-truncate btn-sm&quot;
+                        data-toggle&#x3D;&quot;collapse&quot; [attr.data-target]&#x3D;&quot;&#x27;#&#x27; + parent + option?.Id&quot;
+                        [attr.aria-expanded]&#x3D;&quot;expanded&quot;
+                        *ngIf&#x3D;&quot;option?.ComponentProduct?.OptionGroups?.length &gt; 0 || option?.ComponentProduct?.AttributeGroups?.length &gt; 0; else read&quot;&gt;
+                        {{option?.ComponentProduct?.Name}}
+                      &lt;/button&gt;
+                      &lt;ng-template #read&gt;
+                        &lt;div class&#x3D;&quot;text-dark text-truncate&quot;&gt;
+                          {{option?.ComponentProduct?.Name}}
+                        &lt;/div&gt;
+                      &lt;/ng-template&gt;
+                      &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;statusBadge&quot; [ngTemplateOutletContext]&#x3D;&quot;{cartItem: cartItem}&quot;
+                        *ngIf&#x3D;&quot;relatedTo?.Asset || !isCart&quot;&gt;&lt;/ng-template&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;d-flex flex-nowrap justify-content-between width-fixed mx-2&quot;&gt;
+                      &lt;ng-container *ngIf&#x3D;&quot;cartItem; else productPrice&quot;&gt;
+                        &lt;div&gt;
+                          {{&#x27;COMMON.QTY&#x27; | translate}}: {{cartItem?.Quantity}}
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;ml-auto&quot;&gt;
+                          &lt;apt-price [record]&#x3D;&quot;cartItem&quot; [quantity]&#x3D;&quot;cartItem?.Quantity&quot;&gt;&lt;/apt-price&gt;
+                        &lt;/div&gt;
+                      &lt;/ng-container&gt;
+                      &lt;ng-template #productPrice&gt;
+                        &lt;div&gt;
+                          {{&#x27;COMMON.QTY&#x27; | translate}}: {{(option?.DefaultQuantity) ? (option?.DefaultQuantity) : 1}}
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;ml-auto&quot;&gt;
+                          &lt;apt-price [record]&#x3D;&quot;option?.ComponentProduct&quot;
+                            [quantity]&#x3D;&quot;(option?.DefaultQuantity) ? (option?.DefaultQuantity) : 1&quot;&gt;&lt;/apt-price&gt;
+                        &lt;/div&gt;
+                      &lt;/ng-template&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;!-- Option Accordion --&gt;
+                  &lt;div [id]&#x3D;&quot;parent + option?.Id&quot; [attr.data-parent]&#x3D;&quot;&#x27;#&#x27; + parent&quot;
+                    class&#x3D;&quot;collapse pl-4 configuration accordion&quot; [class.show]&#x3D;&quot;expanded&quot;&gt;
+                    &lt;div
+                      *ngFor&#x3D;&quot;let attributeGroupMember of option?.ComponentProduct?.AttributeGroups; let aIndex &#x3D; index; let aFirst &#x3D; first; trackBy: trackById&quot;
+                      class&#x3D;&quot;mt-2&quot;&gt;
+                      &lt;button class&#x3D;&quot;btn btn-link p-0 minus text-capitalize text-dark&quot; data-toggle&#x3D;&quot;collapse&quot;
+                        [attr.data-target]&#x3D;&quot;&#x27;#&#x27; + option?.Id + attributeGroupMember.Id&quot; [attr.aria-expanded]&#x3D;&quot;true&quot;&gt;
+                        &lt;i&gt;{{attributeGroupMember?.AttributeGroup?.Name}}&lt;/i&gt;
+                      &lt;/button&gt;
+
+                      &lt;div [id]&#x3D;&quot;option?.Id + attributeGroupMember.Id&quot; class&#x3D;&quot;collapse&quot; [class.show]&#x3D;&quot;true&quot;
+                        [attr.data-parent]&#x3D;&quot;&#x27;#&#x27; + parent + option?.Id&quot;&gt;
+                        &lt;div
+                          *ngFor&#x3D;&quot;let attribute of attributeGroupMember?.AttributeGroup?.ProductAttributes; let l &#x3D; last&quot;&gt;
+                          &lt;div class&#x3D;&quot;pt-2 px-3 border-bottom border-gray&quot;&gt;
+                            &lt;apt-output-field [record]&#x3D;&quot;cartItem?.AttributeValue&quot; [field]&#x3D;&quot;attribute.Field&quot;
+                              [editable]&#x3D;&quot;false&quot; labelClass&#x3D;&quot;font-italic font-weight-normal&quot;
+                              valueClass&#x3D;&quot;font-weight-bold&quot;&gt;&lt;/apt-output-field&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div
+                      *ngFor&#x3D;&quot;let productOptionGroup of option.ComponentProduct?.OptionGroups; let oFirst &#x3D; first; trackBy: trackById&quot;
+                      class&#x3D;&quot;mt-3&quot;&gt;
+                      &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;productOptionGroupTemplate&quot;
+                        [ngTemplateOutletContext]&#x3D;&quot;{productOptionGroup: productOptionGroup, parent: parent + option.Id}&quot;&gt;
+                      &lt;/ng-template&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                &lt;/ng-template&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+
+        &lt;ng-template #empty&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-center flex-column align-items-center py-5 my-5&quot;&gt;
+            &lt;i class&#x3D;&quot;fa fa-cog fa-5x text-primary xl text-faded&quot;&gt;&lt;/i&gt;
+            &lt;div class&#x3D;&quot;mt-4&quot;&gt;{{&#x27;CONFIGURATION.EMPTY&#x27; | translate}}&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ng-template #loading&gt;
+      &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-center py-5&quot;&gt;
+            &lt;apt-dots&gt;&lt;/apt-dots&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #statusBadge let-cartItem&#x3D;&quot;cartItem&quot;&gt;
+  &lt;ng-container [ngSwitch]&#x3D;&quot;cartItem?.LineStatus&quot;&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-danger py-1&quot; *ngSwitchCase&#x3D;&quot;&#x27;Cancelled&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-info py-1&quot; *ngSwitchCase&#x3D;&quot;&#x27;Upgraded&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-warning py-1&quot; *ngSwitchCase&#x3D;&quot;&#x27;Amended&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-success py-1&quot; *ngSwitchCase&#x3D;&quot;&#x27;New&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-warning py-1&quot; *ngSwitchCase&#x3D;&quot;&#x27;Renewed&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-light py-1&quot; *ngSwitchCase&#x3D;&quot;&#x27;Existing&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./product-configuration-summary.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+    font-size: small;
+}
+.configuration{
+    font-size: small;
+}
+.line-height-large{
+    line-height: 1.8rem;
+}
+.modal{
+    &amp;.right{
+        .modal-content{
+            height: 100vh;
+        }
+        &amp;.show{
+            .modal-dialog{
+                right: -1px;
+            }
+        }
+        .modal-dialog{
+            position: absolute;
+            transition: right 300ms;
+            margin: -1px 0 0 0;
+            right: -20rem;
+            width: 40rem;
+            max-width: 100vw;
+            .modal-content{
+                height: 100vh;
+            }
+        }
+    }
+}
+
+.width-fixed{
+    min-width: 8rem;
+    max-width: 8rem;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div bsModal #summaryModal="bs-modal" class="modal fade" [ngClass]="position" tabindex="-1" role="dialog"  aria-labelledby="dialog-sizes-name1">  <div class="modal-dialog modal-lg">    <div class="modal-content" *ngIf="product$ | async as product; else loading">      <!-- -->      <div class="p-0 mx-4 mt-3" *ngIf="position === \'middle\'">        <div class="align-items-center border-bottom border-secondary d-flex justify-content-between pb-3">          <h5 class="modal-title font-weight-normal">            {{\'COMMON.PRODUCT_CONFIGURATION\' | translate}}          </h5>          <button type="button" class="close" aria-label="Close" (click)="hide()">            <span aria-hidden="true">&times;</span>          </button>        </div>        <div class="bg-light d-flex justify-content-between p-3">          <div class="flex-grow-1">            <h4>{{product?.Name}}</h4>            <div class="text-muted" [translate]="\'PRODUCT_CONFIGURATION_SUMMARY.PRODUCT_ID\'"              [translateParams]="{productCode: product?.ProductCode}"></div>          </div>          <div class="border-left border-secondary d-flex align-items-center">            <div class="px-4">              <div class="text-muted mb-2">                {{\'COMMON.NET_PRICE\' | translate}}              </div>              <h5 class="m-0">                <apt-price [record]="product" [bundle]="true" [quantity]="1" type="net"></apt-price>              </h5>            </div>            <div class="d-flex align-items-center">              <div *ngIf="secondaryButton">                <button class="btn" [ngClass]="secondaryButton?.style"                  (click)="secondaryButton.action(product)">{{secondaryButton.label | translate}}</button>              </div>              <div *ngIf="actionButton">                <button class="btn ml-2 btn-raised" [ngClass]="actionButton?.style" (click)="actionButton.action(product)"                  [ladda]="addLoading" data-style="zoom-in">{{actionButton.label | translate}}</button>              </div>            </div>          </div>        </div>      </div>      <div class="p-0 mx-4 mt-3" *ngIf="position === \'right\'">        <div class="align-items-center border-bottom border-secondary d-flex pb-3">          <h5 class="modal-title font-weight-normal">            <div>{{\'COMMON.PRODUCT_CONFIGURATION\' | translate}}</div>          </h5>          <div *ngIf="relatedTo">            <select class="form-control ml-3 form-control-sm" id="summary-filter" name="summaryFilter"              [(ngModel)]="filter" (ngModelChange)="setProduct()">              <option [value]="\'items\'">All</option>              <option [value]="\'changes\'">Changes Only</option>            </select>          </div>          <button type="button" class="close ml-auto" aria-label="Close" (click)="hide()">            <span aria-hidden="true">&times;</span>          </button>        </div>        <div>          <div class="bg-light p-3 line-height-large">            <div class="row">              <strong class="col-7">{{product?.Name}}</strong>              <div class="col-2">{{\'COMMON.QTY\' | translate}}: 1</div>              <apt-price class="col-3 text-right" [record]="product?._metadata?.item" [type]="\'net\'"></apt-price>            </div>            <div class="d-flex justify-content-between">              <span>Option Total</span>              <apt-price [record]="optionItems" [type]="\'net\'"></apt-price>            </div>            <div class="d-flex border-top border-gray justify-content-between pt-3">              <strong>Net Price</strong>              <apt-price [record]="cartItems" [type]="\'net\'"></apt-price>            </div>          </div>        </div>        <h5 class="font-weight-normal mt-4">          Itemized Options        </h5>      </div>      <div class="modal-body px-0 pt-0 mx-4">        <ng-container *ngIf="product?.OptionGroups?.length > 0 || product?.AttributeGroups?.length > 0; else empty">          <div class="h-100">              <!-- Header -->              <!-- Main Accordion -->              <div class="accordion mt-3" [id]="uuid + product?.Id"                *ngIf="product?.AttributeGroups?.length > 0 || product?.OptionGroups?.length > 0">                <!-- Top Level Attributes -->                <ng-container                  *ngFor="let attributeGroupMember of product?.AttributeGroups; let x = index; let xf = first; trackBy: trackById">                  <ng-container *ngIf="attributeGroupMember?.AttributeGroup?.ProductAttributes?.length > 0">                    <div class="bg-light border-top border-secondary">                      <button class="btn btn-link chevron" type="button" data-toggle="collapse"                        [attr.data-target]="\'#\' + uuid + attributeGroupMember.Id" [attr.aria-expanded]="xf">                        <strong class="ml-2">{{attributeGroupMember?.AttributeGroup?.Name}}</strong>                      </button>                    </div>                    <div [id]="uuid + attributeGroupMember.Id" class="collapse" [class.show]="xf"                      [attr.data-parent]="\'#\' + uuid + product?.Id">                      <ng-container                        *ngFor="let attribute of attributeGroupMember?.AttributeGroup?.ProductAttributes; let l = last">                        <div class="pt-2 px-3" [class.border-bottom]="!l" [class.border-gray]="!l">                          <apt-output-field [record]="product?._metadata?.item?.AttributeValue"                            [field]="attribute.Field" [editable]="false" labelClass="font-italic font-weight-normal"                            valueClass="font-weight-bold">                          </apt-output-field>                        </div>                      </ng-container>                    </div>                  </ng-container>                </ng-container>                <!-- Top Level Options-->                <ng-container                  *ngFor="let optionGroupMember of product.OptionGroups; let f = first; let i = index; trackBy: trackById">                  <div class="bg-light border-top border-secondary">                    <button class="btn btn-link chevron" type="button" data-toggle="collapse"                      [attr.data-target]="\'#\' + uuid + optionGroupMember.Id"                      [attr.aria-expanded]="i + product?.AttributeGroups?.length === 0">                      <strong class="ml-2">{{optionGroupMember?.OptionGroup?.Name}}</strong>                    </button>                  </div>                  <div class="collapse" [id]="uuid + optionGroupMember.Id" [attr.data-parent]="\'#\' + uuid + product?.Id"                    [class.show]="i + product?.AttributeGroups?.length === 0">                    <div class="card-body">                      <div class="accordion" [id]="\'child\' + uuid + optionGroupMember.Id">                        <div                          *ngFor="let productOptionGroup of optionGroupMember?._metadata?.children; trackBy: trackById"                          class="mb-3">                          <ng-template [ngTemplateOutlet]="productOptionGroupTemplate"                            [ngTemplateOutletContext]="{productOptionGroup: productOptionGroup, parent: \'child\' + uuid + optionGroupMember.Id}">                          </ng-template>                        </div>                        <div *ngFor="let option of optionGroupMember?.Options; let f = first; trackBy: trackById"                          class="mb-3">                          <ng-template [ngTemplateOutlet]="optionTemplate" [ngTemplateOutletContext]="{option: option                                  ,parent: \'child\' + uuid + optionGroupMember.Id                                  ,expanded: f                                  , cartItem: option?.ComponentProduct?._metadata?.item}">                          </ng-template>                        </div>                      </div>                    </div>                  </div>                </ng-container>                <ng-template #productOptionGroupTemplate let-productOptionGroup="productOptionGroup"                  let-parent="parent">                  <button class="btn btn-link p-0 minus text-capitalize text-dark" data-toggle="collapse"                    [attr.data-target]="\'#\' + parent + productOptionGroup.Id" [attr.aria-expanded]="true">                    <i>{{productOptionGroup?.OptionGroup?.Name}}</i>                  </button>                  <div [id]="parent + productOptionGroup.Id" class="collapse" [class.show]="true"                    [attr.data-parent]="\'#\' + parent">                    <div class="my-2 ml-3"                      *ngFor="let component of productOptionGroup?.Options; let f = first; trackBy: trackById">                      <ng-template [ngTemplateOutlet]="optionTemplate"                        [ngTemplateOutletContext]="{option: component, parent: parent + productOptionGroup.Id, expanded: f, cartItem: component?.ComponentProduct?._metadata?.item}">                      </ng-template>                    </div>                  </div>                </ng-template>                <!-- Nested option template -->                <ng-template #optionTemplate let-option="option" let-parent="parent" let-expanded="expanded"                  let-cartItem="cartItem">                  <div class="d-flex justify-content-between border-bottom border-gray">                    <div class="d-flex align-items-center text-truncate mb-1">                      <button class="btn btn-link p-0 minus text-capitalize text-dark text-truncate btn-sm"                        data-toggle="collapse" [attr.data-target]="\'#\' + parent + option?.Id"                        [attr.aria-expanded]="expanded"                        *ngIf="option?.ComponentProduct?.OptionGroups?.length > 0 || option?.ComponentProduct?.AttributeGroups?.length > 0; else read">                        {{option?.ComponentProduct?.Name}}                      </button>                      <ng-template #read>                        <div class="text-dark text-truncate">                          {{option?.ComponentProduct?.Name}}                        </div>                      </ng-template>                      <ng-template [ngTemplateOutlet]="statusBadge" [ngTemplateOutletContext]="{cartItem: cartItem}"                        *ngIf="relatedTo?.Asset || !isCart"></ng-template>                    </div>                    <div class="d-flex flex-nowrap justify-content-between width-fixed mx-2">                      <ng-container *ngIf="cartItem; else productPrice">                        <div>                          {{\'COMMON.QTY\' | translate}}: {{cartItem?.Quantity}}                        </div>                        <div class="ml-auto">                          <apt-price [record]="cartItem" [quantity]="cartItem?.Quantity"></apt-price>                        </div>                      </ng-container>                      <ng-template #productPrice>                        <div>                          {{\'COMMON.QTY\' | translate}}: {{(option?.DefaultQuantity) ? (option?.DefaultQuantity) : 1}}                        </div>                        <div class="ml-auto">                          <apt-price [record]="option?.ComponentProduct"                            [quantity]="(option?.DefaultQuantity) ? (option?.DefaultQuantity) : 1"></apt-price>                        </div>                      </ng-template>                    </div>                  </div>                  <!-- Option Accordion -->                  <div [id]="parent + option?.Id" [attr.data-parent]="\'#\' + parent"                    class="collapse pl-4 configuration accordion" [class.show]="expanded">                    <div                      *ngFor="let attributeGroupMember of option?.ComponentProduct?.AttributeGroups; let aIndex = index; let aFirst = first; trackBy: trackById"                      class="mt-2">                      <button class="btn btn-link p-0 minus text-capitalize text-dark" data-toggle="collapse"                        [attr.data-target]="\'#\' + option?.Id + attributeGroupMember.Id" [attr.aria-expanded]="true">                        <i>{{attributeGroupMember?.AttributeGroup?.Name}}</i>                      </button>                      <div [id]="option?.Id + attributeGroupMember.Id" class="collapse" [class.show]="true"                        [attr.data-parent]="\'#\' + parent + option?.Id">                        <div                          *ngFor="let attribute of attributeGroupMember?.AttributeGroup?.ProductAttributes; let l = last">                          <div class="pt-2 px-3 border-bottom border-gray">                            <apt-output-field [record]="cartItem?.AttributeValue" [field]="attribute.Field"                              [editable]="false" labelClass="font-italic font-weight-normal"                              valueClass="font-weight-bold"></apt-output-field>                          </div>                        </div>                      </div>                    </div>                    <div                      *ngFor="let productOptionGroup of option.ComponentProduct?.OptionGroups; let oFirst = first; trackBy: trackById"                      class="mt-3">                      <ng-template [ngTemplateOutlet]="productOptionGroupTemplate"                        [ngTemplateOutletContext]="{productOptionGroup: productOptionGroup, parent: parent + option.Id}">                      </ng-template>                    </div>                  </div>                </ng-template>              </div>          </div>        </ng-container>        <ng-template #empty>          <div class="d-flex justify-content-center flex-column align-items-center py-5 my-5">            <i class="fa fa-cog fa-5x text-primary xl text-faded"></i>            <div class="mt-4">{{\'CONFIGURATION.EMPTY\' | translate}}</div>          </div>        </ng-template>      </div>    </div>    <ng-template #loading>      <div class="modal-content">        <div class="modal-body">          <div class="d-flex justify-content-center py-5">            <apt-dots></apt-dots>          </div>        </div>      </div>    </ng-template>  </div></div><ng-template #statusBadge let-cartItem="cartItem">  <ng-container [ngSwitch]="cartItem?.LineStatus">    <span class="badge ml-2 badge-danger py-1" *ngSwitchCase="\'Cancelled\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-info py-1" *ngSwitchCase="\'Upgraded\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-warning py-1" *ngSwitchCase="\'Amended\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-success py-1" *ngSwitchCase="\'New\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-warning py-1" *ngSwitchCase="\'Renewed\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-light py-1" *ngSwitchCase="\'Existing\'">      {{cartItem?.LineStatus}}    </span>  </ng-container></ng-template></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ProductConfigurationSummaryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductConfigurationSummaryComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

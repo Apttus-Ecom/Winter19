@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="apttus-e-commerce-sdk">Apttus E-commerce SDK</h1>
+<p>The purpose of this guide is to provide technical instructions on the installation and setup of an Apttus E-Commerce storefront. The intended audience are developers who will be creating and maintaining new storefronts on a Salesforce Apttus installation. If you haven&#39;t already, please contact Apttus to get the E-Commerce package installed in your org prior to installation.</p>
+<h2 id="create-your-first-storefront">Create your first Storefront</h2>
+<p>The Apttus E-Commerce SDK is intended to work with the unified data model of the underlying Apttus Quote-to-cash platform. This means, there are no additional data setup steps in order to create and maintain your catalog within Apttus outside of what you may already do if you use Apttus CPQ. That said, this guide assumes you have already created data for the following within Apttus:</p>
+<ul>
+<li>Category</li>
+<li>Product</li>
+<li>Price List</li>
+</ul>
+<h3 id="community-setup">Community Setup</h3>
+<p>The Apttus E-Commerce platform leverages a Salesforce Community to provide authentication and hosting features for guest users. After the e-commerce package is deployed, the next step is to create a Salesforce Community. At minimum, you just need the community URL. However, if you intend to support guest users, you will need to enable that within the community settings. After deployment, the angular library will provide a Visualforce page that you can set as the default page for all page settings within the community (i.e home, login, forgot password, change password etc). Being that its a single page application, it is designed to handle all incoming requests.</p>
+<h3 id="storefront-object">Storefront Object</h3>
+<p>Apart from the underlying catalog, the E-Commerce package comes with a store object and tab to map a storefront to a catalog. If you are using an Apttus MDO org, there may already be a &#39;store&#39; object installed. This object is deprecated in favor of the &#39;Storefront&#39; object that comes with the E-Commerce package.</p>
+<p>After your catalog has been setup within Apttus, the next step is to create a &#39;Storefront&#39; record. The storefront object is very basic and contains only a couple fields to map a storefront to a price list and logo for the guest user. The price list should look up to the price list you want the guest user to access and the logo should be an id or a url of the logo attachment for the store. The storefront record also has a &#39;banner&#39; related list that can be used to setup banners for the jumbotron component in the reference template.  Remember the name of the storefront you created. This will be used in a later step to associate with a storefront codebase.</p>
+<h3 id="apttus-ecommerce-permission-set">Apttus Ecommerce Permission Set</h3>
+<p>The E-Commerce package comes with a basic permission set for providing the necessary access to users. The permission set is named &#39;Apttus Ecommerce&#39; and should be assigned to users access the e-commerce storefront. If you would like to make any changes to the permissions, you may clone the permission set and make any changes necessary. </p>
+<h2 id="angular-library-installation">Angular Library Installation</h2>
+<p>In order to install the apttus ecommerce libraries, you must first be granted access. Please reach out to Apttus support for obtaining access to this libraries.</p>
+<p>To install all required libraries, run:</p>
+<div><pre class="line-numbers"><code class="language-bash">npm install --save &#64;apttus/core &#64;apttus/ecommerce &#64;apttus/elements</code></pre></div><p>AppModule.ts</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;;
+import { NgModule } from &#39;&#64;angular/core&#39;;
+import { AppRoutingModule } from &#39;./app-routing.module&#39;;
+import { AppComponent } from &#39;./app.component&#39;;
+import { BrowserAnimationsModule } from &#39;&#64;angular/platform-browser/animations&#39;;
+
+import { ApttusModule } from &#39;&#64;apttus/core&#39;;
+import { CommerceModule, TranslatorLoaderService } from &#39;&#64;apttus/ecommerce&#39;;
+
+import { environment } from &#39;../environments/environment&#39;;
+import { ComponentModule } from &#39;./components/component.module&#39;;
+import { RouteGuard } from &#39;./services/route.guard&#39;;
+import { AuthGuard } from &#39;./services/auth.guard&#39;;
+import { ConfigureGuard } from &#39;./services/configure.guard&#39;;
+import { ConstraintRuleGuard } from &#39;./services/constraint-rule.guard&#39;;
+
+// Register locale data
+import localeMx from &#39;&#64;angular/common/locales/es-MX&#39;;
+import localeMxExtra from &#39;&#64;angular/common/locales/extra/es-MX&#39;;
+import localeFr from &#39;&#64;angular/common/locales/fr&#39;;
+import localeFrExtra from &#39;&#64;angular/common/locales/extra/fr&#39;;
+import { registerLocaleData } from &#39;&#64;angular/common&#39;;
+import { ServiceWorkerModule } from &#39;&#64;angular/service-worker&#39;;
+import { ModalModule } from &#39;ngx-bootstrap/modal&#39;;
+import { HttpClientModule } from &#39;&#64;angular/common/http&#39;;
+
+import { ProductDrawerModule, ApttusModalModule } from &#39;&#64;apttus/elements&#39;;
+// If using additional locales, register the locale data here
+registerLocaleData(localeMx, &#39;es-MX&#39;, localeMxExtra);
+registerLocaleData(localeFr, &#39;fr-FR&#39;, localeFrExtra);
+
+// Translations
+import { TranslateModule, TranslateLoader } from &#39;&#64;ngx-translate/core&#39;;
+import { AboGuard } from &#39;./services/aboGuard&#39;;
+import { OrderDetailsGuard } from &#39;&#64;apttus/ecommerce&#39;;
+
+&#64;NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    // Pass environment file to ApttusModule.
+    ApttusModule.forRoot(environment),
+    // Pass the string name of the APTSMD_Store__c record you want to use to the CommerceModule.
+    CommerceModule.forRoot(&#39;My Store&#39;),
+    ProductDrawerModule,
+    ModalModule.forRoot(),
+    ApttusModalModule,
+    TranslateModule.forRoot({
+      loader: { provide: TranslateLoader, useClass: TranslatorLoaderService }
+    }),
+    HttpClientModule,
+    ComponentModule,
+    ServiceWorkerModule,
+    ServiceWorkerModule.register(&#39;ngsw-worker.js&#39;, { enabled: environment.production })
+  ],
+  providers: [RouteGuard, AuthGuard, AboGuard, ConfigureGuard, ConstraintRuleGuard, OrderDetailsGuard],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }</code></pre></div><p>Once your library is imported, you can use its components, directives and pipes in your Angular application:</p>
+<h2 id="defining-a-model">Defining a model</h2>
+<p>Proper state management is crucial to a successful Angular PWA. To that end, accessing data within Salesforce requires you to define your model
+within a Typescript class. Behind the scenes, @apttus/core is managing how your components access and interact with that data to avoid uncessary
+operations and maintain synchronicity. </p>
+<p>Here&#39;s an example that defines the account and contact relationship for a component.</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { AObject, ATable, AField } from &#39;&#64;apttus/core&#39;;
+
+// We use the decorator ATable to tell &#64;apttus/core this class maps to the &#39;Account&#39; object.
+// In order to access standard sObject fields, our Account class must extend &#39;AObject&#39; (a subclass of &#39;SObject).
+// The class name can be anything, but the sobjectName and aqlName properties in the ATable decorator must map
+// to an object API name within Salesforce or AIC respectively.
+&#64;ATable({
+  sobjectName : &#39;Account&#39;,
+  aqlName: &#39;crm_Account&#39;
+})
+export class Account extends AObject {
+
+  // Similar to how the ATable decorator is used on model objects the AField decorator is used for fields within the model.
+  // The soql and aql properties must map to a field API name in Salesforce or AIC respectively.
+  &#64;AField({
+    soql: &#39;Name&#39;,
+    aql: &#39;Name&#39;
+  })
+  public Name: string = null;
+
+  &#64;AField({
+    soql: &#39;BillingStreet&#39;,
+    aql: &#39;BillingStreet&#39;
+  })
+  BillingStreet: string = null;
+
+  &#64;AField({
+    soql: &#39;My_Custom_Field__c&#39;
+  })
+  public MyCustomField: number = null;
+
+  //Related Lists
+  &#64;AField({
+    soql: &#39;PriceListId__r&#39;,
+    aql: &#39;DefaultPriceListId&#39;
+  })
+  PriceList: PriceList = new PriceList();
+}</code></pre></div><h2 id="defining-a-service">Defining a Service</h2>
+<p>After defining your model, you can access the data by creating a service for the models. The AObjectService class contains many of the standard DML and query operations to access the data, however you may add
+any convenience methods you want to your service. The core service methods are usually very simple.</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { AObjectService } from &#39;&#64;apttus/core&#39;;
+import { Injectable } from &#39;&#64;angular/core&#39;;
+import { Account } from &#39;./account.model.ts&#39;  // This is a reference to the account model created in the previous section
+
+
+&#64;Injectable({
+    providedIn : &#39;root&#39;
+})
+export class AccountService extends AObjectService{
+  //Add service methods here
+  type = Account;
+}</code></pre></div><h2 id="access-the-data-in-your-component">Access the data in your component</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component, OnOnit } from &#39;&#64;angular/core&#39;;
+import { AccountService } from &#39;./account.service.ts&#39;;
+import { Account } from &#39;./account.model.ts&#39;;
+
+&#64;Component({
+  selector : &#39;app-account&#39;,
+  template : `
+
+  `,
+  styles : [``]
+})
+export class AccountComponent implements OnInit{
+
+  constructor(private accountService: AccountService){}
+
+  // Always perform service methods in the ngOnInit method
+  ngOnInit(){
+    this.accountService.where([new ACondition(this.accountService.type, &#39;Id&#39;, &#39;NotNull&#39;, null)], &#39;AND&#39;, null, null, new APageInfo(1, 1)).subscribe(res =&gt; {
+      /*
+        res === [
+          {
+            Name: &#39;Account A&#39;,
+            BillingStreet: &#39;1234 Main Street&#39;,
+            MyCustomField: 44,
+            PriceList: {
+              ...
+            }
+          }
+        ]
+      */
+    });
+    this.accountService.describe(Account, &#39;MyCustomField&#39;, false).subscribe(res =&gt; {
+      // Describe information for My_Custom_Field__c
+    });
+
+    this.accountService.search(&#39;Main street&#39;).subscribe(res =&gt; {
+      // SOSL Search Results
+      // Note : search does not follow the model pattern and will return results specified in the query
+    });
+
+    this.accountService.get([&#39;00Fxxxxxxx&#39;, &#39;00Fxxxxxxx&#39;]).subscribe(res =&gt; {
+      // Returns an array of account records
+    })
+
+    this.accountService.aggregate([new ACondition(this.accountService.type, &#39;Id&#39;, &#39;NotNull&#39;, null)]).subscribe(res =&gt; {
+      // Returns aggregates for the specified clause. (i.e. total records as well as max/min values for all 
+      // fields specified in the model)
+    })
+
+    this.accountService.create([new Account()]).subscribe(res =&gt; {
+      // Returns list of id&#39;s created
+    })
+
+    this.accountService.update([new Account()]).subscribe(res =&gt; {
+      // Returns list of id&#39;s updated
+    })  
+
+    this.accountService.upsert([new Account()]).subscribe(res =&gt; {
+      // Returns list of objects upserted
+    }) 
+
+    this.accountService.delete([new Account()]).subscribe(res =&gt; {
+      // Returns list of boolean values for accounts that were successfully deleted
+    })
+  }
+}
+</code></pre></div><h2 id="deploy">deploy</h2>
+<p>To lint all <code>*.ts</code> files:</p>
+<div><pre class="line-numbers"><code class="language-bash">$ npm run lint</code></pre></div><p>To deploy your code to your salesforce org</p>
+<div><pre class="line-numbers"><code class="language-bash">$ npm run deploy</code></pre></div><br/>
+# Known Issues
+<br/>
+
+<h2 id="angularcli-600-cant-resolve-stream">@Angular/cli 6.0.0 Can&#39;t Resolve Stream</h2>
+<p>If you&#39;ve upgraded to @angular/cli 6, and you&#39;re seeing the following error</p>
+<div><pre class="line-numbers"><code class="language-bash">WARNING in C:/Workspace/ngs-workspace/node_modules/xml2js/node_modules/sax/lib/sax.js
+Module not found: Error: Can&#39;t resolve &#39;stream&#39; in &#39;C:\Workspace\ngs-workspace\node_modules\xml2js\node_modules\sax\lib&#39;
+
+ERROR in C:/Workspace/ngs-workspace/node_modules/csv-parse/lib/index.js
+Module not found: Error: Can&#39;t resolve &#39;stream&#39; in &#39;C:\Workspace\ngs-workspace\node_modules\csv-parse\lib&#39;
+ERROR in C:/Workspace/ngs-workspace/node_modules/csv-stringify/lib/index.js
+Module not found: Error: Can&#39;t resolve &#39;stream&#39; in &#39;C:\Workspace\ngs-workspace\node_modules\csv-stringify\lib&#39;
+ERROR in C:/Workspace/ngs-workspace/node_modules/xml2js/lib/parser.js
+Module not found: Error: Can&#39;t resolve &#39;timers&#39; in &#39;C:\Workspace\ngs-workspace\node_modules\xml2js\lib&#39;
+i ｢wdm｣: Failed to compile.</code></pre></div><h4 id="fix-add-path">Fix: Add path</h4>
+<p>Add the following to your tsconfig.app.json file under &#39;compilerOptions&#39;:</p>
+<div><pre class="line-numbers"><code class="language-json">&quot;paths&quot; : {
+  &quot;jsforce&quot; : [&quot;./node_modules/jsforce/build/jsforce.min.js&quot;]
+  ...
+}</code></pre></div><br/>
+
+<h2 id="uncaught-error-no-base-href-set-please-provide-a-value-for-the-app_base_href-token-or-add-a-base-element-to-the-document">Uncaught Error: No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.</h2>
+<p>In order to work on a visualforce page, your app needs to be setup to use the hash routing location strategy instead of the default</p>
+<h4 id="fix-set-the-usehash-flag-in-your-app-routingmodulets-file">Fix: Set the useHash flag in your app-routing.module.ts file</h4>
+<p>In your app-routing.module.ts file, set the useHash flag in the RouterModule.forRoot(...) call</p>
+<div><pre class="line-numbers"><code class="language-typescript">&#64;NgModule({
+  imports: [RouterModule.forRoot(appRoutes,  { useHash: true })],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

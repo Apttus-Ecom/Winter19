@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CRSideMenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/constraint-side-menu/constraint-side-menu.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The side menu that dispalys details about constraint rule errors and warnings.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintSideMenuModule } from &#39;&#64;apttus/elements&#39;;
+
+&#64;NgModule({
+  imports: [ConstraintSideMenuModule, ...]
+})
+export class AppModule {}</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;apt-cr-side-menu
+  [ruleList]=&quot;constraintRules&quot;
+  [items]=&quot;lineItems&quot;
+&gt;&lt;/apt-cr-side-menu&gt;</code></pre>
+                </div>
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-cr-side-menu</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./constraint-side-menu.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./constraint-side-menu.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#items">items</a>
+                            </li>
+                            <li>
+                                <a href="#ruleList">ruleList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(crService: <a href="../injectables/ConstraintRuleService.html">ConstraintRuleService</a>, cartService: <a href="../injectables/CartService.html">CartService</a>, productService: <a href="../injectables/ProductService.html">ProductService</a>, sideMenuService: <a href="../injectables/ConstraintSideMenuService.html">ConstraintSideMenuService</a>, constraintAlertService: <a href="../injectables/ConstraintAlertService.html">ConstraintAlertService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>crService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintRuleService.html" target="_self" >ConstraintRuleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sideMenuService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintSideMenuService.html" target="_self" >ConstraintSideMenuService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>constraintAlertService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintAlertService.html" target="_self" >ConstraintAlertService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="items"></a>
+                        <b>items</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;CartItem&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array of cart line items.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ruleList"></a>
+                        <b>ruleList</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ConstraintRule.html" target="_self" >Array&lt;ConstraintRule&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array of constraint rules.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div bsModal #rulesModal&#x3D;&quot;bs-modal&quot; class&#x3D;&quot;modal&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;dialog-sizes-name1&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-lg crMenu&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-body p-0&quot;&gt;
+        &lt;div class&#x3D;&quot;d-flex justify-content-center p-5&quot; *ngIf&#x3D;&quot;(cart$ | async)?._state &#x3D;&#x3D;&#x3D; &#x27;pending&#x27;; else ready&quot;&gt;
+          &lt;apt-spinner&gt;&lt;/apt-spinner&gt;
+        &lt;/div&gt;
+        &lt;ng-template #ready&gt;
+          &lt;div class&#x3D;&quot;card border-0&quot; *ngFor&#x3D;&quot;let alert of alertMessageList&quot;&gt;
+            &lt;div class&#x3D;&quot;card-header&quot; *ngIf&#x3D;&quot;alert.type !&#x3D;&#x3D; &#x27;success&#x27;&quot;&gt;
+              &lt;span class&#x3D;&quot;oi mr-2&quot; [ngClass]&#x3D;&quot;alert.icon + &#x27; text-&#x27; + alert.type&quot;&gt;&lt;/span&gt;
+              {{alert.actions?.length}} {{alert?.title | translate}} {{&#x27;CONSTRAINT_SIDE_MENU.MESSAGES&#x27; | translate}}.
+            &lt;/div&gt;
+            &lt;div *ngIf&#x3D;&quot;detailPageAlert; else cart&quot;&gt;
+              &lt;div class&#x3D;&quot;card-body p-2&quot; *ngIf&#x3D;&quot;alert.type !&#x3D;&#x3D; &#x27;success&#x27;&quot;&gt;
+                &lt;div *ngFor&#x3D;&quot;let action of alert?.actions; let i&#x3D; index&quot;
+                  class&#x3D;&quot;border-bottom border-gray my-3 px-2 pb-2&quot;&gt;
+                  &lt;div&gt;{{&#x27;CONSTRAINT_SIDE_MENU.OPTIONS&#x27; | translate}}
+                    &lt;span [innerHTML]&#x3D;&quot;action.Message&quot;&gt;&lt;/span&gt;
+                    &lt;strong *ngIf&#x3D;&quot;alert?.conditions?.length &gt; i&quot;&gt;{{alert?.conditions[i]?.Product?.Name}}&lt;/strong&gt;
+                  &lt;/div&gt;
+                  &lt;ng-container *ngIf&#x3D;&quot;action?.ProductScope &#x3D;&#x3D;&#x3D; &#x27;Product&#x27;&quot;&gt;
+                    &lt;div class&#x3D;&quot;mt-3&quot;&gt;
+                      &lt;strong&gt;
+                        &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;d-block&quot;&gt;
+                          {{action?.Product?.Name}}&lt;/a&gt;
+                      &lt;/strong&gt;
+                      &lt;form class&#x3D;&quot;d-flex justify-content-between&quot; *ngIf&#x3D;&quot;action?.ActionType !&#x3D;&#x3D; &#x27;Exclusion&#x27;&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                          &lt;label&gt; {{&#x27;COMMON.PRODUCT_PRICE&#x27; | translate}}&lt;/label&gt;
+                          &lt;div class&#x3D;&quot;pt-1&quot;&gt;
+                            &lt;apt-price [record]&#x3D;&quot;action?.Product&quot;&gt;&lt;/apt-price&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                          &lt;label for&#x3D;&quot;qty&quot;&gt;{{&#x27;COMMON.QTY2&#x27; | translate}}&lt;/label&gt;
+                          &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control mr-2&quot; min&#x3D;&quot;1&quot; id&#x3D;&quot;qty&quot; name&#x3D;&quot;quantity&quot;
+                            [(ngModel)]&#x3D;&quot;getOptionValue(action)._metadata.quantity&quot; /&gt;
+                        &lt;/div&gt;
+                      &lt;/form&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;d-flex justify-content-end&quot;&gt;
+                      &lt;button class&#x3D;&quot;btn btn-primary btn-sm&quot; *ngIf&#x3D;&quot;action?.ActionType &#x3D;&#x3D;&#x3D; &#x27;Exclusion&#x27;; else add&quot;
+                        data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot; [ladda]&#x3D;&quot;action?._metadata?.loading&quot;
+                        (click)&#x3D;&quot;selectConfigOption(action?.Product, action?._metadata?.quantity, false, alert.conditions, alert.actions,&#x27;Exclusion&#x27;)&quot;&gt;
+                        {{&#x27;CONSTRAINT_SIDE_MENU.DESELECT_OPTION&#x27; | translate}}
+                      &lt;/button&gt;
+                      &lt;ng-template #add&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-sm&quot; data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot;
+                          [ladda]&#x3D;&quot;action?._metadata?.loading&quot;
+                          (click)&#x3D;&quot;selectConfigOption(action?.Product, action?._metadata?.quantity, true, alert.conditions, alert.actions, &#x27;Inclusion&#x27;)&quot;&gt;
+                          {{&#x27;CONSTRAINT_SIDE_MENU.SELECT_OPTION&#x27; | translate}}
+                        &lt;/button&gt;
+                      &lt;/ng-template&gt;
+                    &lt;/div&gt;
+                  &lt;/ng-container&gt;
+                  &lt;ng-container *ngIf&#x3D;&quot;action?.ProductScope !&#x3D;&#x3D; &#x27;Product&#x27;&quot;&gt;
+                    &lt;div *ngFor&#x3D;&quot;let product of action?._metadata?.actionList&quot;&gt;
+                      &lt;div div class&#x3D;&quot;mt-3&quot;&gt;
+                        &lt;strong&gt;
+                          &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;d-block&quot;&gt;
+                            {{product?.Name}}&lt;/a&gt;
+                        &lt;/strong&gt;
+                        &lt;form class&#x3D;&quot;d-flex justify-content-between&quot; *ngIf&#x3D;&quot;action?.ActionType !&#x3D;&#x3D; &#x27;Exclusion&#x27;&quot;&gt;
+                          &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label&gt; {{&#x27;COMMON.PRODUCT_PRICE&#x27; | translate}}&lt;/label&gt;
+                            &lt;div class&#x3D;&quot;pt-1&quot;&gt;
+                              &lt;apt-price [record]&#x3D;&quot;product&quot;&gt;&lt;/apt-price&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label for&#x3D;&quot;qty&quot;&gt;{{&#x27;COMMON.QTY2&#x27; | translate}}&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control mr-2&quot; min&#x3D;&quot;1&quot; id&#x3D;&quot;qty&quot; name&#x3D;&quot;quantity&quot;
+                              [(ngModel)]&#x3D;&quot;getOptionValue(product)._metadata.quantity&quot; /&gt;
+                          &lt;/div&gt;
+                        &lt;/form&gt;
+                      &lt;/div&gt;
+                      &lt;div class&#x3D;&quot;d-flex justify-content-end&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-sm&quot; *ngIf&#x3D;&quot;action?.ActionType &#x3D;&#x3D;&#x3D; &#x27;Exclusion&#x27;; else add&quot;
+                          data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot; [ladda]&#x3D;&quot;action?._metadata?.loading&quot;
+                          [disabled]&#x3D;&quot;!isProductSelected(product.Id)&quot;
+                          (click)&#x3D;&quot;selectConfigOption(product, product?._metadata?.quantity, false, alert.conditions, alert.actions,&#x27;Exclusion&#x27;)&quot;&gt;
+                          {{&#x27;CONSTRAINT_SIDE_MENU.DESELECT_OPTION&#x27; | translate}}
+                        &lt;/button&gt;
+                        &lt;ng-template #add&gt;
+                          &lt;button class&#x3D;&quot;btn btn-primary btn-sm&quot; data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot;
+                            [ladda]&#x3D;&quot;action?._metadata?.loading&quot; [disabled]&#x3D;&quot;isProductSelected(product.Id)&quot;
+                            (click)&#x3D;&quot;selectConfigOption(product, product?._metadata?.quantity, true, alert.conditions, alert.actions, &#x27;Inclusion&#x27;)&quot;&gt;
+                            {{&#x27;CONSTRAINT_SIDE_MENU.SELECT_OPTION&#x27; | translate}}
+                          &lt;/button&gt;
+                        &lt;/ng-template&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/ng-container&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ng-template #cart&gt;
+              &lt;div *ngFor&#x3D;&quot;let action of alert.actions&quot; class&#x3D;&quot;border-bottom border-gray my-3 px-2&quot;&gt;
+                &lt;div [innerHTML]&#x3D;&quot;action.Message&quot;&gt;&lt;/div&gt;
+                &lt;ng-container *ngFor&#x3D;&quot;let product of action?._metadata?.productList&quot;&gt;
+                  &lt;div *ngIf&#x3D;&quot;action?.ConstraintRuleAction?.ActionType !&#x3D;&#x3D; &#x27;Exclusion&#x27;&quot; class&#x3D;&quot;mt-3&quot;&gt;
+                    &lt;strong&gt;
+                      &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;d-block&quot; *ngIf&#x3D;&quot;product &amp;&amp; product[identifier]&quot;
+                        [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, product[identifier]]&quot;&gt;
+                        {{product?.Name}}&lt;/a&gt;
+                    &lt;/strong&gt;
+                    &lt;small class&#x3D;&quot;d-flex justify-content-between my-1 font-weight-bold&quot;&gt;
+                      &lt;span&gt;{{&#x27;COMMON.PRODUCT_PRICE&#x27; | translate}}&lt;/span&gt;
+                      &lt;apt-price [record]&#x3D;&quot;product&quot;&gt;&lt;/apt-price&gt;
+                    &lt;/small&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;d-flex justify-content-center mr-4 mt-4 mb-2&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-sm&quot;
+                      *ngIf&#x3D;&quot;action?.ConstraintRuleAction?.MatchInOptions; else updateCartBtn&quot;
+                      (click)&#x3D;&quot;updateConfiguration(action)&quot; data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot;
+                      [ladda]&#x3D;&quot;action?._metadata?.loading&quot;&gt;
+                      &lt;span class&#x3D;&quot;oi oi-wrench&quot;&gt;&lt;/span&gt;
+                      {{&#x27;CONSTRAINT_SIDE_MENU.CHANGE_CONFIGURATION&#x27; | translate}}
+                    &lt;/button&gt;
+                    &lt;ng-template #updateCartBtn&gt;
+                      &lt;button class&#x3D;&quot;btn btn-link btn-sm&quot;
+                        *ngIf&#x3D;&quot;action?.ConstraintRuleAction?.ActionType &#x3D;&#x3D;&#x3D; &#x27;Exclusion&#x27;; else add&quot;
+                        (click)&#x3D;&quot;removeItem(action)&quot; data-style&#x3D;&quot;zoom-in&quot; data-spinner-color&#x3D;&quot;black&quot;
+                        [ladda]&#x3D;&quot;action?._metadata?.loading&quot;&gt;
+                        &lt;span class&#x3D;&quot;oi oi-trash&quot;&gt;&lt;/span&gt;
+                        {{&#x27;CONSTRAINT_SIDE_MENU.REMOVE_FROM_CART&#x27; | translate}}
+                      &lt;/button&gt;
+                      &lt;ng-template #add&gt;
+                        &lt;apt-add-to-cart [configurationEnabled]&#x3D;&quot;false&quot; [product]&#x3D;&quot;product&quot; class&#x3D;&quot;w-75&quot;&gt;&lt;/apt-add-to-cart&gt;
+                      &lt;/ng-template&gt;
+                    &lt;/ng-template&gt;
+                  &lt;/div&gt;
+                &lt;/ng-container&gt;
+              &lt;/div&gt;
+            &lt;/ng-template&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./constraint-side-menu.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+.modal.show {
+    .modal-dialog.crMenu{
+        right: -1px;
+    }
+}
+    
+.modal-dialog.crMenu{
+    position: absolute;
+    transition: right 300ms;
+    margin: -1px 0 0 0;
+    right: -20rem;
+    width: 20rem;
+    .modal-content{
+        height: 100vh;
+    }
+    .list-group-flush .list-group-item{
+        border: 0;
+    }
+    .card-body{
+        font-size: smaller;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div bsModal #rulesModal="bs-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">  <div class="modal-dialog modal-lg crMenu">    <div class="modal-content">      <div class="modal-body p-0">        <div class="d-flex justify-content-center p-5" *ngIf="(cart$ | async)?._state === \'pending\'; else ready">          <apt-spinner></apt-spinner>        </div>        <ng-template #ready>          <div class="card border-0" *ngFor="let alert of alertMessageList">            <div class="card-header" *ngIf="alert.type !== \'success\'">              <span class="oi mr-2" [ngClass]="alert.icon + \' text-\' + alert.type"></span>              {{alert.actions?.length}} {{alert?.title | translate}} {{\'CONSTRAINT_SIDE_MENU.MESSAGES\' | translate}}.            </div>            <div *ngIf="detailPageAlert; else cart">              <div class="card-body p-2" *ngIf="alert.type !== \'success\'">                <div *ngFor="let action of alert?.actions; let i= index"                  class="border-bottom border-gray my-3 px-2 pb-2">                  <div>{{\'CONSTRAINT_SIDE_MENU.OPTIONS\' | translate}}                    <span [innerHTML]="action.Message"></span>                    <strong *ngIf="alert?.conditions?.length > i">{{alert?.conditions[i]?.Product?.Name}}</strong>                  </div>                  <ng-container *ngIf="action?.ProductScope === \'Product\'">                    <div class="mt-3">                      <strong>                        <a href="javascript:void(0)" class="d-block">                          {{action?.Product?.Name}}</a>                      </strong>                      <form class="d-flex justify-content-between" *ngIf="action?.ActionType !== \'Exclusion\'">                        <div class="form-group col">                          <label> {{\'COMMON.PRODUCT_PRICE\' | translate}}</label>                          <div class="pt-1">                            <apt-price [record]="action?.Product"></apt-price>                          </div>                        </div>                        <div class="form-group col">                          <label for="qty">{{\'COMMON.QTY2\' | translate}}</label>                          <input type="number" class="form-control mr-2" min="1" id="qty" name="quantity"                            [(ngModel)]="getOptionValue(action)._metadata.quantity" />                        </div>                      </form>                    </div>                    <div class="d-flex justify-content-end">                      <button class="btn btn-primary btn-sm" *ngIf="action?.ActionType === \'Exclusion\'; else add"                        data-style="zoom-in" data-spinner-color="black" [ladda]="action?._metadata?.loading"                        (click)="selectConfigOption(action?.Product, action?._metadata?.quantity, false, alert.conditions, alert.actions,\'Exclusion\')">                        {{\'CONSTRAINT_SIDE_MENU.DESELECT_OPTION\' | translate}}                      </button>                      <ng-template #add>                        <button class="btn btn-primary btn-sm" data-style="zoom-in" data-spinner-color="black"                          [ladda]="action?._metadata?.loading"                          (click)="selectConfigOption(action?.Product, action?._metadata?.quantity, true, alert.conditions, alert.actions, \'Inclusion\')">                          {{\'CONSTRAINT_SIDE_MENU.SELECT_OPTION\' | translate}}                        </button>                      </ng-template>                    </div>                  </ng-container>                  <ng-container *ngIf="action?.ProductScope !== \'Product\'">                    <div *ngFor="let product of action?._metadata?.actionList">                      <div div class="mt-3">                        <strong>                          <a href="javascript:void(0)" class="d-block">                            {{product?.Name}}</a>                        </strong>                        <form class="d-flex justify-content-between" *ngIf="action?.ActionType !== \'Exclusion\'">                          <div class="form-group col">                            <label> {{\'COMMON.PRODUCT_PRICE\' | translate}}</label>                            <div class="pt-1">                              <apt-price [record]="product"></apt-price>                            </div>                          </div>                          <div class="form-group col">                            <label for="qty">{{\'COMMON.QTY2\' | translate}}</label>                            <input type="number" class="form-control mr-2" min="1" id="qty" name="quantity"                              [(ngModel)]="getOptionValue(product)._metadata.quantity" />                          </div>                        </form>                      </div>                      <div class="d-flex justify-content-end">                        <button class="btn btn-primary btn-sm" *ngIf="action?.ActionType === \'Exclusion\'; else add"                          data-style="zoom-in" data-spinner-color="black" [ladda]="action?._metadata?.loading"                          [disabled]="!isProductSelected(product.Id)"                          (click)="selectConfigOption(product, product?._metadata?.quantity, false, alert.conditions, alert.actions,\'Exclusion\')">                          {{\'CONSTRAINT_SIDE_MENU.DESELECT_OPTION\' | translate}}                        </button>                        <ng-template #add>                          <button class="btn btn-primary btn-sm" data-style="zoom-in" data-spinner-color="black"                            [ladda]="action?._metadata?.loading" [disabled]="isProductSelected(product.Id)"                            (click)="selectConfigOption(product, product?._metadata?.quantity, true, alert.conditions, alert.actions, \'Inclusion\')">                            {{\'CONSTRAINT_SIDE_MENU.SELECT_OPTION\' | translate}}                          </button>                        </ng-template>                      </div>                    </div>                  </ng-container>                </div>              </div>            </div>            <ng-template #cart>              <div *ngFor="let action of alert.actions" class="border-bottom border-gray my-3 px-2">                <div [innerHTML]="action.Message"></div>                <ng-container *ngFor="let product of action?._metadata?.productList">                  <div *ngIf="action?.ConstraintRuleAction?.ActionType !== \'Exclusion\'" class="mt-3">                    <strong>                      <a href="javascript:void(0)" class="d-block" *ngIf="product && product[identifier]"                        [routerLink]="[\'/products\', product[identifier]]">                        {{product?.Name}}</a>                    </strong>                    <small class="d-flex justify-content-between my-1 font-weight-bold">                      <span>{{\'COMMON.PRODUCT_PRICE\' | translate}}</span>                      <apt-price [record]="product"></apt-price>                    </small>                  </div>                  <div class="d-flex justify-content-center mr-4 mt-4 mb-2">                    <button class="btn btn-link btn-sm"                      *ngIf="action?.ConstraintRuleAction?.MatchInOptions; else updateCartBtn"                      (click)="updateConfiguration(action)" data-style="zoom-in" data-spinner-color="black"                      [ladda]="action?._metadata?.loading">                      <span class="oi oi-wrench"></span>                      {{\'CONSTRAINT_SIDE_MENU.CHANGE_CONFIGURATION\' | translate}}                    </button>                    <ng-template #updateCartBtn>                      <button class="btn btn-link btn-sm"                        *ngIf="action?.ConstraintRuleAction?.ActionType === \'Exclusion\'; else add"                        (click)="removeItem(action)" data-style="zoom-in" data-spinner-color="black"                        [ladda]="action?._metadata?.loading">                        <span class="oi oi-trash"></span>                        {{\'CONSTRAINT_SIDE_MENU.REMOVE_FROM_CART\' | translate}}                      </button>                      <ng-template #add>                        <apt-add-to-cart [configurationEnabled]="false" [product]="product" class="w-75"></apt-add-to-cart>                      </ng-template>                    </ng-template>                  </div>                </ng-container>              </div>            </ng-template>          </div>        </ng-template>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CRSideMenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CRSideMenuComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

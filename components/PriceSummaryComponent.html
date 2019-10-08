@@ -1,0 +1,917 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>PriceSummaryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/price-summary/price-summary.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The price summary component displays the total price, promotion(s) applied, tax, sub total and action button(s) as per the need.</p>
+<h3>Preview</h3>
+<img class="jumbotron" src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/priceSummary.png" style="max-width: 100%">
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceSummaryModule } from &#39;&#64;apttus/elements&#39;;
+
+&#64;NgModule({
+  imports: [PriceSummaryModule, ...]
+})
+export class AppModule {}</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;apt-price-summary
+   [record]=&quot;cart&quot;
+   [form]=&quot;form&quot;
+   [spinner]=&quot;isLoading&quot;
+   [page]=&quot;'checkout'&quot;
+   (onSubmitOrder)=&quot;handleClick()&quot;
+   (onRequestQuote)=&quot;handleClick()&quot;
+&gt;&lt;/apt-price-summary&gt;</code></pre>
+                </div>
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-price-summary</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./price-summary.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./price-summary.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disableSubmit">disableSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#form">form</a>
+                            </li>
+                            <li>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                <a href="#page">page</a>
+                            </li>
+                            <li>
+                                <a href="#paymentState">paymentState</a>
+                            </li>
+                            <li>
+                                <a href="#record">record</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onPaymentRequest">onPaymentRequest</a>
+                            </li>
+                            <li>
+                                <a href="#onRequestQuote">onRequestQuote</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmitOrder">onSubmitOrder</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(storefrontService: <a href="../injectables/StorefrontService.html">StorefrontService</a>, userService: <a href="../injectables/UserService.html">UserService</a>, crService: <a href="../injectables/ConstraintRuleService.html">ConstraintRuleService</a>, modalService: BsModalService, quoteService: <a href="../classes/Quote.html">QuoteService</a>, cartService: <a href="../injectables/CartService.html">CartService</a>, taxService: <a href="../injectables/TaxService.html">TaxService</a>, exceptionService: <a href="../injectables/ExceptionService.html">ExceptionService</a>, proposalTaxService: <a href="../injectables/ProposalTaxService.html">ProposalTaxService</a>, orderTaxService: <a href="../injectables/OrderTaxService.html">OrderTaxService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, accountService: <a href="../injectables/AccountService.html">AccountService</a>, orderService: <a href="../injectables/OrderService.html">OrderService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>storefrontService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StorefrontService.html" target="_self" >StorefrontService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>crService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintRuleService.html" target="_self" >ConstraintRuleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>quoteService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Quote.html" target="_self" >QuoteService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>taxService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TaxService.html" target="_self" >TaxService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>exceptionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExceptionService.html" target="_self" >ExceptionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>proposalTaxService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProposalTaxService.html" target="_self" >ProposalTaxService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderTaxService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderTaxService.html" target="_self" >OrderTaxService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>accountService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AccountService.html" target="_self" >AccountService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disableSubmit"></a>
+                        <b>disableSubmit</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to disable the submit button.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <b>form</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The input form to validate the parent component&#39;s Form on submit</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <b>loading</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set the loading spinner active </p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="page"></a>
+                        <b>page</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Order.html" target="_self" >&quot;manage-cart&quot; | &quot;checkout&quot; | &quot;create-proposal&quot; | &quot;quote-details&quot; | &quot;order-details&quot; | &quot;paymentForOrder&quot; | &quot;carts&quot; | &quot;&quot;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The input page to manage UI element(s)&#39;s visibility (show/hide) based on the page where this component is being used</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paymentState"></a>
+                        <b>paymentState</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;PONUMBER&quot; | &quot;INVOICE&quot; | &quot;PAYNOW&quot; | &quot;&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Payment state such as Card and Invoice</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="record"></a>
+                        <b>record</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Cart | Quote | Order</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The input record to display the price summary for. Can be of type Cart, Quote and Order</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onPaymentRequest"></a>
+                        <b>onPaymentRequest</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitter fired when the make payment button is pressed.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onRequestQuote"></a>
+                        <b>onRequestQuote</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitter fired when the request quote button is pressed.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSubmitOrder"></a>
+                        <b>onSubmitOrder</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event emitter fired when the order is summited.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;view$ | async as view&quot;&gt;
+    &lt;div class&#x3D;&quot;card &quot; *ngIf&#x3D;&quot;record&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header&quot;&gt;
+            &lt;h5 class&#x3D;&quot;card-title mb-0&quot;&gt;{{&#x27;DETAILS.PRICE_SUMMARY&#x27; | translate }}&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+                &lt;span&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.TOTAL_PRICE&#x27; | translate }} &lt;/span&gt;
+                &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;
+                    &lt;apt-price [record]&#x3D;&quot;record&quot; type&#x3D;&quot;baseExtended&quot;&gt;&lt;/apt-price&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Promotion field for Manage Cart &amp; Checkout pages which does require storefront.EnablePromotions check --&gt;
+            &lt;div *ngIf&#x3D;&quot;view?.storefront?.EnablePromotions&quot; class&#x3D;&quot;d-flex mt-2 justify-content-between&quot;&gt;
+                &lt;span&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.PROMOTIONS_APPLIED&#x27; | translate }} &lt;/span&gt;
+                &lt;span&gt;{{view?.totalPromotions | localCurrency | async}}&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Tax field is required only on Quote Details, Create Proposal &amp; Checkout pages --&gt;
+            &lt;div class&#x3D;&quot;d-flex mt-2 justify-content-between&quot; *ngIf&#x3D;&quot;view?.totalEstimatedTax !&#x3D; null &amp;&amp; view?.showTaxLink&quot;&gt;
+                &lt;span&gt;
+                    &lt;button [popover]&#x3D;&quot;taxPophover&quot; [outsideClick]&#x3D;&quot;true&quot; class&#x3D;&quot;btn btn-link text-primary text-capitalize p-0&quot;
+                        *ngIf&#x3D;&quot;view?.totalEstimatedTax !&#x3D;&#x3D; 0&quot; data-toggle&#x3D;&quot;popover&quot; data-placement&#x3D;&quot;auto bottom&quot;
+                        (click)&#x3D;&quot;openEstimateTaxPopup()&quot;&gt;
+                        {{&#x27;MANAGE_CART.CART_SUMMARY.TAX&#x27; | translate }} &lt;/button&gt;
+                    &lt;span *ngIf&#x3D;&quot;view?.totalEstimatedTax &#x3D;&#x3D;&#x3D; 0&quot;&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.TAX&#x27; | translate }} &lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span&gt;{{view?.totalEstimatedTax | localCurrency | async}}&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;hr class&#x3D;&quot;mt-3 mb-2&quot; /&gt;
+
+            &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+                &lt;span&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.SUB_TOTAL&#x27; | translate }} &lt;/span&gt;
+                &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;
+                    &lt;ng-container *ngIf&#x3D;&quot;!view?.showTaxLink; else showNetPrice&quot;&gt;
+                        &lt;apt-price [record]&#x3D;&quot;record&quot; type&#x3D;&quot;listExtended&quot;&gt;&lt;/apt-price&gt;
+                    &lt;/ng-container&gt;
+                    &lt;ng-template #showNetPrice&gt;
+                        &lt;apt-price [record]&#x3D;&quot;record&quot; type&#x3D;&quot;net&quot;&gt;&lt;/apt-price&gt;
+                    &lt;/ng-template&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Show order payment status on order details page --&gt;
+            &lt;hr class&#x3D;&quot;mt-3 mb-2&quot; *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;order-details&#x27;&quot;/&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-between&quot; *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;order-details&#x27;&quot;&gt;
+                &lt;span&gt;Payment Status&lt;/span&gt;
+
+                &lt;div role&#x3D;&quot;group&quot; [ngSwitch]&#x3D;&quot;view?.paymentStatus&quot;&gt;
+                    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;Pending&#x27;&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-circle text-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt; {{view?.paymentStatus}}&lt;/span&gt;
+                    &lt;/ng-container&gt;
+                
+                    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;Processed&#x27;&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-circle text-success&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt; {{view?.paymentStatus}}&lt;/span&gt;
+                    &lt;/ng-container&gt;
+                
+                    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;Error&#x27;&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-circle text-danger&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt; {{view?.paymentStatus}}&lt;/span&gt;
+                    &lt;/ng-container&gt;
+                    &lt;ng-container *ngSwitchDefault&gt;
+                        &lt;i class&#x3D;&quot;fas fa-circle text-warning&quot;&gt;&lt;/i&gt;
+                        &lt;span&gt; Pending&lt;/span&gt;
+                    &lt;/ng-container&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Few pages doesn&#x27;t require any action button; in that case no need to show &lt;hr&gt; --&gt;
+            &lt;hr class&#x3D;&quot;mt-2 mb-3&quot; *ngIf&#x3D;&quot;page !&#x3D;&#x3D; &#x27;quote-details&#x27; &amp;&amp; page !&#x3D;&#x3D; &#x27;order-details&#x27;&quot; /&gt;
+
+            &lt;!-- Action buttons for Manage Cart page --&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-end&quot; *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;carts&#x27; &amp;&amp; !view?.quote?.Id &amp;&amp; !view?.order?.Id&quot;&gt;
+                &lt;button *ngIf&#x3D;&quot;view?.isLoggedIn &amp;&amp; view?.storefront?.EnableRequestQuote&quot; class&#x3D;&quot;btn btn-link&quot;
+                    [routerLink]&#x3D;&quot;[&#x27;/proposals/create&#x27;]&quot; [hidden]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;
+                    [disabled]&#x3D;&quot;!(view?.lineItemCount &gt; 0) || view?.hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+                    {{&#x27;COMMON.REQUEST_QUOTE&#x27; | translate }}
+                &lt;/button&gt;
+                &lt;button class&#x3D;&quot;btn btn-primary btn-raised&quot; [routerLink]&#x3D;&quot;[&#x27;/checkout&#x27;]&quot; [ladda]&#x3D;&quot;view?.loading&quot;
+                    data-style&#x3D;&quot;zoom-in&quot; [disabled]&#x3D;&quot;!(view?.lineItemCount &gt; 0) || view?.hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+                    {{ &#x27;COMMON.PLACE_ORDER&#x27; | translate }}
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-end&quot; *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;carts&#x27; &amp;&amp; (view?.quote?.Id || view?.order?.Id)&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-outline-danger mr-2&quot; (click)&#x3D;&quot;openDiscardChageModals()&quot; [hidden]&#x3D;&quot;view?.loading&quot;
+                    data-style&#x3D;&quot;zoom-in&quot; [disabled]&#x3D;&quot;!(view?.lineItemCount &gt; 0) || view?.hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+                    {{&#x27;MANAGE_CART.CART_SUMMARY.DISCARD_CHANGES&#x27; | translate }}
+                &lt;/button&gt;
+                &lt;button *ngIf&#x3D;&quot;view?.quote?.Id&quot; class&#x3D;&quot;btn btn-primary btn-raised px-2&quot; [routerLink]&#x3D;&quot;[&#x27;/proposals/create&#x27;]&quot; [ladda]&#x3D;&quot;view?.loading&quot;
+                    data-style&#x3D;&quot;zoom-in&quot; [disabled]&#x3D;&quot;!(view?.lineItemCount &gt; 0) || view?.hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+                    {{&#x27;MANAGE_CART.CART_SUMMARY.FINALIZE_AND_SUBMIT&#x27; | translate }}
+                &lt;/button&gt;
+                &lt;button *ngIf&#x3D;&quot;view?.order?.Id&quot; class&#x3D;&quot;btn btn-primary btn-raised px-2&quot; (click)&#x3D;&quot;confirmOrderChanges()&quot; [ladda]&#x3D;&quot;view?.loading&quot;
+                    data-style&#x3D;&quot;zoom-in&quot; [disabled]&#x3D;&quot;!(view?.lineItemCount &gt; 0) || view?.hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+                    {{&#x27;COMMON.CONFIRM_CHANGES&#x27; | translate }}
+                &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Action buttons for Checkout page --&gt;
+            &lt;div *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;checkout&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;d-flex&quot; *ngIf&#x3D;&quot;!view?.accountId &amp;&amp; !view?.isLoggedIn; else showButton&quot;
+                    tooltip&#x3D;&quot;{{&#x27;CART.DEFAULT_ACC_NOT_AVAILABLE&#x27; | translate}}&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-primary btn-block btn-raised&quot; [ladda]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;
+                        (click)&#x3D;&quot;submitOrder()&quot; [disabled]&#x3D;&quot;true&quot;&gt;
+                        {{ &#x27;COMMON.PLACE_ORDER&#x27; | translate }}
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;ng-template #showButton&gt;
+                    &lt;div class&#x3D;&quot;d-flex&quot;&gt;
+                        &lt;ng-content select&#x3D;&quot;.cancel-button&quot;&gt;&lt;/ng-content&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-block btn-raised&quot; [ladda]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;
+                            (click)&#x3D;&quot;submitOrder()&quot; [disabled]&#x3D;&quot;!form.valid || !(view?.lineItemCount &gt; 0)&quot;&gt;
+                            &lt;span *ngIf&#x3D;&quot;paymentState !&#x3D; &#x27;PAYNOW&#x27;&quot;&gt;{{ &#x27;COMMON.PLACE_ORDER&#x27; | translate }}&lt;/span&gt;
+                            &lt;span *ngIf&#x3D;&quot;paymentState &#x3D;&#x3D;&#x3D; &#x27;PAYNOW&#x27;&quot;&gt;{{ &#x27;COMMON.PLACE_ORDER_PAY&#x27; | translate }}&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/ng-template&gt;
+            &lt;/div&gt;
+            &lt;div *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;paymentForOrder&#x27;&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-primary btn-block btn-raised&quot; [ladda]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;
+                    (click)&#x3D;&quot;submitPayment()&quot;&gt;
+                    MAKE PAYMENT
+                &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Action buttons for Create Proposal page --&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-end&quot; *ngIf&#x3D;&quot;page &#x3D;&#x3D;&#x3D; &#x27;create-proposal&#x27;&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-link&quot; [routerLink]&#x3D;&quot;[&#x27;/cart&#x27;]&quot; [hidden]&#x3D;&quot;view?.loading&quot;&gt;
+                    {{&#x27;COMMON.CANCEL&#x27; | translate }}
+                &lt;/button&gt;
+                &lt;button class&#x3D;&quot;btn btn-primary btn-raised&quot; (click)&#x3D;&quot;requestQuote()&quot; *ngIf&#x3D;&quot;!view?.quote?.Id&quot;
+                    [ladda]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;&gt;
+                    {{&#x27;COMMON.REQUEST_QUOTE&#x27; | translate }}
+                &lt;/button&gt;
+                &lt;button class&#x3D;&quot;btn btn-primary btn-raised&quot; (click)&#x3D;&quot;requestQuote()&quot; [disabled]&#x3D;&quot;disableSubmit&quot; *ngIf&#x3D;&quot;view?.quote?.Id&quot;
+                    [ladda]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;&gt;
+                    {{&#x27;COMMON.SUBMIT&#x27; | translate }}
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ng-template #taxPophover&gt;
+        &lt;apt-tax-pophover [taxItems]&#x3D;&quot;view?.taxItems&quot; [totalEstimatedTax]&#x3D;&quot;view?.totalEstimatedTax&quot; class&#x3D;&quot;small&quot; [showTaxPopUp]&#x3D;&quot;true&quot;&gt;
+        &lt;/apt-tax-pophover&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template #discardChangesTemplate&gt;
+        &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+            &lt;h4 class&#x3D;&quot;modal-title pull-left&quot;&gt; {{&#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_TITLE&#x27; | translate}}
+            &lt;/h4&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close pull-right&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;discardChangesModal.hide()&quot;&gt;
+                &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;modal-body flex-column justify-content-center&quot;&gt;
+            &lt;p&gt;{{&#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_Message&#x27; | translate}}&lt;/p&gt;
+            &lt;p&gt;{{&#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_CONFIRMATION&#x27; | translate}}&lt;/p&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-end flex-wrap flex-md-nowrap&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-link&quot; (click)&#x3D;&quot;discardChangesModal.hide()&quot;&gt; {{ &#x27;COMMON.CANCEL&#x27; | translate }}
+                &lt;/button&gt;
+                &lt;button class&#x3D;&quot;btn btn-primary btn-raised m-2&quot; (click)&#x3D;&quot;onDiscardChages()&quot; [ladda]&#x3D;&quot;view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot;&gt;
+                    {{ &#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES&#x27; | translate }} &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+&lt;/ng-container&gt;
+
+&lt;!--
+Not part of Nov 15 deliverable
+--&gt;
+&lt;!-- &lt;div class&#x3D;&quot;card mt-3&quot; *ngIf&#x3D;&quot;cart&quot;&gt;
+&lt;div class&#x3D;&quot;card-header&quot;&gt;
+    Request a Quote
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;small class&#x3D;&quot;mb-3 d-block&quot;&gt;
+    Request a quote for your configuration and someone will be in touch to discuss next steps.
+    &lt;/small&gt;
+    &lt;button class&#x3D;&quot;btn btn-block btn-outline-primary&quot; [ladda]&#x3D;&quot;state.requestQuote view?.loading&quot; data-style&#x3D;&quot;zoom-in&quot; (click)&#x3D;&quot;createQuote()&quot;
+    data-spinner-color&#x3D;&quot;black&quot; [disabled]&#x3D;&quot;!record?.LineItems || view?.lineItemCount &#x3D;&#x3D;&#x3D; 0&quot;&gt;Request a Quote&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt; --&gt;
+
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./price-summary.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="view$ | async as view">    <div class="card " *ngIf="record">        <div class="card-header">            <h5 class="card-title mb-0">{{\'DETAILS.PRICE_SUMMARY\' | translate }}</h5>        </div>        <div class="card-body">            <div class="d-flex justify-content-between">                <span> {{\'MANAGE_CART.CART_SUMMARY.TOTAL_PRICE\' | translate }} </span>                <span class="font-weight-bold">                    <apt-price [record]="record" type="baseExtended"></apt-price>                </span>            </div>            <!-- Promotion field for Manage Cart & Checkout pages which does require storefront.EnablePromotions check -->            <div *ngIf="view?.storefront?.EnablePromotions" class="d-flex mt-2 justify-content-between">                <span> {{\'MANAGE_CART.CART_SUMMARY.PROMOTIONS_APPLIED\' | translate }} </span>                <span>{{view?.totalPromotions | localCurrency | async}}</span>            </div>            <!-- Tax field is required only on Quote Details, Create Proposal & Checkout pages -->            <div class="d-flex mt-2 justify-content-between" *ngIf="view?.totalEstimatedTax != null && view?.showTaxLink">                <span>                    <button [popover]="taxPophover" [outsideClick]="true" class="btn btn-link text-primary text-capitalize p-0"                        *ngIf="view?.totalEstimatedTax !== 0" data-toggle="popover" data-placement="auto bottom"                        (click)="openEstimateTaxPopup()">                        {{\'MANAGE_CART.CART_SUMMARY.TAX\' | translate }} </button>                    <span *ngIf="view?.totalEstimatedTax === 0"> {{\'MANAGE_CART.CART_SUMMARY.TAX\' | translate }} </span>                </span>                <span>{{view?.totalEstimatedTax | localCurrency | async}}</span>            </div>            <hr class="mt-3 mb-2" />            <div class="d-flex justify-content-between">                <span> {{\'MANAGE_CART.CART_SUMMARY.SUB_TOTAL\' | translate }} </span>                <span class="font-weight-bold">                    <ng-container *ngIf="!view?.showTaxLink; else showNetPrice">                        <apt-price [record]="record" type="listExtended"></apt-price>                    </ng-container>                    <ng-template #showNetPrice>                        <apt-price [record]="record" type="net"></apt-price>                    </ng-template>                </span>            </div>            <!-- Show order payment status on order details page -->            <hr class="mt-3 mb-2" *ngIf="page === \'order-details\'"/>            <div class="d-flex justify-content-between" *ngIf="page === \'order-details\'">                <span>Payment Status</span>                <div role="group" [ngSwitch]="view?.paymentStatus">                    <ng-container *ngSwitchCase="\'Pending\'">                        <i class="fas fa-circle text-warning"></i>                        <span> {{view?.paymentStatus}}</span>                    </ng-container>                                    <ng-container *ngSwitchCase="\'Processed\'">                        <i class="fas fa-circle text-success"></i>                        <span> {{view?.paymentStatus}}</span>                    </ng-container>                                    <ng-container *ngSwitchCase="\'Error\'">                        <i class="fas fa-circle text-danger"></i>                        <span> {{view?.paymentStatus}}</span>                    </ng-container>                    <ng-container *ngSwitchDefault>                        <i class="fas fa-circle text-warning"></i>                        <span> Pending</span>                    </ng-container>                </div>            </div>            <!-- Few pages doesn\'t require any action button; in that case no need to show <hr> -->            <hr class="mt-2 mb-3" *ngIf="page !== \'quote-details\' && page !== \'order-details\'" />            <!-- Action buttons for Manage Cart page -->            <div class="d-flex justify-content-end" *ngIf="page === \'carts\' && !view?.quote?.Id && !view?.order?.Id">                <button *ngIf="view?.isLoggedIn && view?.storefront?.EnableRequestQuote" class="btn btn-link"                    [routerLink]="[\'/proposals/create\']" [hidden]="view?.loading" data-style="zoom-in"                    [disabled]="!(view?.lineItemCount > 0) || view?.hasErrors === true">                    {{\'COMMON.REQUEST_QUOTE\' | translate }}                </button>                <button class="btn btn-primary btn-raised" [routerLink]="[\'/checkout\']" [ladda]="view?.loading"                    data-style="zoom-in" [disabled]="!(view?.lineItemCount > 0) || view?.hasErrors === true">                    {{ \'COMMON.PLACE_ORDER\' | translate }}                </button>            </div>            <div class="d-flex justify-content-end" *ngIf="page === \'carts\' && (view?.quote?.Id || view?.order?.Id)">                <button class="btn btn-outline-danger mr-2" (click)="openDiscardChageModals()" [hidden]="view?.loading"                    data-style="zoom-in" [disabled]="!(view?.lineItemCount > 0) || view?.hasErrors === true">                    {{\'MANAGE_CART.CART_SUMMARY.DISCARD_CHANGES\' | translate }}                </button>                <button *ngIf="view?.quote?.Id" class="btn btn-primary btn-raised px-2" [routerLink]="[\'/proposals/create\']" [ladda]="view?.loading"                    data-style="zoom-in" [disabled]="!(view?.lineItemCount > 0) || view?.hasErrors === true">                    {{\'MANAGE_CART.CART_SUMMARY.FINALIZE_AND_SUBMIT\' | translate }}                </button>                <button *ngIf="view?.order?.Id" class="btn btn-primary btn-raised px-2" (click)="confirmOrderChanges()" [ladda]="view?.loading"                    data-style="zoom-in" [disabled]="!(view?.lineItemCount > 0) || view?.hasErrors === true">                    {{\'COMMON.CONFIRM_CHANGES\' | translate }}                </button>            </div>            <!-- Action buttons for Checkout page -->            <div *ngIf="page === \'checkout\'">                <div class="d-flex" *ngIf="!view?.accountId && !view?.isLoggedIn; else showButton"                    tooltip="{{\'CART.DEFAULT_ACC_NOT_AVAILABLE\' | translate}}">                    <button class="btn btn-primary btn-block btn-raised" [ladda]="view?.loading" data-style="zoom-in"                        (click)="submitOrder()" [disabled]="true">                        {{ \'COMMON.PLACE_ORDER\' | translate }}                    </button>                </div>                <ng-template #showButton>                    <div class="d-flex">                        <ng-content select=".cancel-button"></ng-content>                        <button class="btn btn-primary btn-block btn-raised" [ladda]="view?.loading" data-style="zoom-in"                            (click)="submitOrder()" [disabled]="!form.valid || !(view?.lineItemCount > 0)">                            <span *ngIf="paymentState != \'PAYNOW\'">{{ \'COMMON.PLACE_ORDER\' | translate }}</span>                            <span *ngIf="paymentState === \'PAYNOW\'">{{ \'COMMON.PLACE_ORDER_PAY\' | translate }}</span>                        </button>                    </div>                </ng-template>            </div>            <div *ngIf="page === \'paymentForOrder\'">                <button class="btn btn-primary btn-block btn-raised" [ladda]="view?.loading" data-style="zoom-in"                    (click)="submitPayment()">                    MAKE PAYMENT                </button>            </div>            <!-- Action buttons for Create Proposal page -->            <div class="d-flex justify-content-end" *ngIf="page === \'create-proposal\'">                <button class="btn btn-link" [routerLink]="[\'/cart\']" [hidden]="view?.loading">                    {{\'COMMON.CANCEL\' | translate }}                </button>                <button class="btn btn-primary btn-raised" (click)="requestQuote()" *ngIf="!view?.quote?.Id"                    [ladda]="view?.loading" data-style="zoom-in">                    {{\'COMMON.REQUEST_QUOTE\' | translate }}                </button>                <button class="btn btn-primary btn-raised" (click)="requestQuote()" [disabled]="disableSubmit" *ngIf="view?.quote?.Id"                    [ladda]="view?.loading" data-style="zoom-in">                    {{\'COMMON.SUBMIT\' | translate }}                </button>            </div>        </div>    </div>    <ng-template #taxPophover>        <apt-tax-pophover [taxItems]="view?.taxItems" [totalEstimatedTax]="view?.totalEstimatedTax" class="small" [showTaxPopUp]="true">        </apt-tax-pophover>    </ng-template>    <ng-template #discardChangesTemplate>        <div class="modal-header">            <h4 class="modal-title pull-left"> {{\'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_TITLE\' | translate}}            </h4>            <button type="button" class="close pull-right" aria-label="Close" (click)="discardChangesModal.hide()">                <span aria-hidden="true">&times;</span>            </button>        </div>        <div class="modal-body flex-column justify-content-center">            <p>{{\'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_Message\' | translate}}</p>            <p>{{\'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_CONFIRMATION\' | translate}}</p>            <div class="d-flex justify-content-end flex-wrap flex-md-nowrap">                <button class="btn btn-link" (click)="discardChangesModal.hide()"> {{ \'COMMON.CANCEL\' | translate }}                </button>                <button class="btn btn-primary btn-raised m-2" (click)="onDiscardChages()" [ladda]="view?.loading" data-style="zoom-in">                    {{ \'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES\' | translate }} </button>            </div>        </div>    </ng-template></ng-container><!--Not part of Nov 15 deliverable--><!-- <div class="card mt-3" *ngIf="cart"><div class="card-header">    Request a Quote</div><div class="card-body">    <small class="mb-3 d-block">    Request a quote for your configuration and someone will be in touch to discuss next steps.    </small>    <button class="btn btn-block btn-outline-primary" [ladda]="state.requestQuote view?.loading" data-style="zoom-in" (click)="createQuote()"    data-spinner-color="black" [disabled]="!record?.LineItems || view?.lineItemCount === 0">Request a Quote</button></div></div> --></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PriceSummaryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PriceSummaryComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

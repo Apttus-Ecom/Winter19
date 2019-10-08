@@ -1,0 +1,658 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>LineItemTableRowComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/line-item-table-row/line-item-table-row.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Line item table row component is used to display line items on cart, quote, and order detail pages.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { LineItemTableRowModule } from &#39;&#64;apttus/elements&#39;;
+
+&#64;NgModule({
+  imports: [LineItemTableRowModule, ...]
+})
+export class AppModule {}</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;apt-line-item-table-row
+  [cart]=&quot;cart&quot;
+  [parent]=&quot;parentItem&quot;
+  [children]=&quot;childItems&quot;
+  [index]=&quot;index&quot;
+&gt;&lt;/apt-line-item-table-row&gt;</code></pre>
+                </div>
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-line-item-table-row</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./line-item-table-row.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./line-item-table-row.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cart">cart</a>
+                            </li>
+                            <li>
+                                <a href="#children">children</a>
+                            </li>
+                            <li>
+                                <a href="#editableFields">editableFields</a>
+                            </li>
+                            <li>
+                                <a href="#index">index</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                            <li>
+                                <a href="#parent">parent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cartService: <a href="../injectables/CartService.html">CartService</a>, storefrontService: <a href="../injectables/StorefrontService.html">StorefrontService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storefrontService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StorefrontService.html" target="_self" >StorefrontService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cart"></a>
+                        <b>cart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Reference to the current cart.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="children"></a>
+                        <b>children</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Non primary child line items associated with this row.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editableFields"></a>
+                        <b>editableFields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag defines whether line item fields should be editable.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="index"></a>
+                        <b>index</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The index of the row in the parent table</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <b>options</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Taking product options for tax breakup items.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parent"></a>
+                        <b>parent</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Primary line item to show in table.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;parent?.LineType &#x3D;&#x3D;&#x3D; &#x27;Product/Service&#x27;&quot;&gt;
+  &lt;tr&gt;
+    &lt;td width&#x3D;&quot;15%&quot; class&#x3D;&quot;pt-4&quot;&gt;
+      &lt;img [src]&#x3D;&quot;parent.Product.IconId | image&quot; class&#x3D;&quot;w-100&quot; /&gt;
+    &lt;/td&gt;
+    &lt;td class&#x3D;&quot;w-50 pt-4 &quot;&gt;
+      &lt;div class&#x3D;&quot;h-100 d-flex flex-column border-right pr-2&quot;&gt;
+        &lt;div class&#x3D;&quot;d-flex align-items-center mb-2&quot;&gt;
+          &lt;h5 class&#x3D;&quot;mr-2 mb-0&quot;&gt;
+            &lt;a href&#x3D;&quot;javascript:void(0)&quot; *ngIf&#x3D;&quot;parent?.Product &amp;&amp; parent?.Product[identifier]&quot;
+              [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, parent.Product[identifier]]&quot;&gt;
+              {{parent.Product.Name}}
+            &lt;/a&gt;
+            &lt;span *ngIf&#x3D;&quot;parent.Product.HasAttributes || parent.Product.HasOptions&quot;&gt;
+              &lt;button class&#x3D;&quot;text-muted btn btn-link btn-sm p-0&quot; (click)&#x3D;&quot;productConfiguration.show()&quot;&gt;
+                &lt;span class&#x3D;&quot;oi oi-wrench&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/span&gt;
+          &lt;/h5&gt;
+          &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;statusBadge&quot; [ngTemplateOutletContext]&#x3D;&quot;{cartItem: parent}&quot;&gt;&lt;/ng-template&gt;
+        &lt;/div&gt;
+  
+        &lt;p class&#x3D;&quot;text-muted&quot;&gt;
+          {{parent.Product?.ProductCode}} | {{parent.Product?.Family}} | {{parent.PriceListItem?.ChargeType}}
+        &lt;/p&gt;
+        &lt;p class&#x3D;&quot;description&quot;&gt;
+          {{parent.Product.Description}}
+        &lt;/p&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;!-- For one time price frequency is alway --None--, so not showing it. --&gt;
+          &lt;div class&#x3D;&quot;col&quot; *ngIf&#x3D;&quot;parent.PriceListItem?.PriceType !&#x3D;&#x3D; &#x27;One Time&#x27;&quot;&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;parent.PriceListItem&quot; field&#x3D;&quot;Frequency&quot; layout&#x3D;&quot;stacked&quot;
+              [editable]&#x3D;&quot;editableFields&quot;&gt;&lt;/apt-output-field&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;parent.PriceListItem&quot; field&#x3D;&quot;PriceType&quot; layout&#x3D;&quot;stacked&quot;
+              [editable]&#x3D;&quot;editableFields&quot;&gt;&lt;/apt-output-field&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;parent&quot; field&#x3D;&quot;SellingTerm&quot; layout&#x3D;&quot;stacked&quot; [editable]&#x3D;&quot;editableFields&quot;&gt;
+            &lt;/apt-output-field&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;apt-input-field [(ngModel)]&#x3D;&quot;parent.Quantity&quot; field&#x3D;&quot;Quantity&quot; (change)&#x3D;&quot;changeItemQuantity(parent)&quot; [entity]&#x3D;&quot;parent&quot;
+              [readonly]&#x3D;&quot;parent?.LineStatus?.toLowerCase() &#x3D;&#x3D;&#x3D;&#x27;cancelled&#x27;&quot; class&#x3D;&quot;w-75&quot; *ngIf&#x3D;&quot;!readonly&quot;&gt;&lt;/apt-input-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;parent&quot; field&#x3D;&quot;Quantity&quot; class&#x3D;&quot;w-75&quot; *ngIf&#x3D;&quot;readonly&quot; [editable]&#x3D;&quot;editableFields&quot;&gt;
+            &lt;/apt-output-field&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;div class&#x3D;&quot;col-8&quot;
+            *ngIf&#x3D;&quot;parent.PriceListItem?.PriceType &#x3D;&#x3D;&#x3D; &#x27;Recurring&#x27; || parent.PriceListItem?.PriceType &#x3D;&#x3D;&#x3D; &#x27;Usage&#x27;&quot;&gt;
+            &lt;apt-date-range-input
+              [disableStartDate]&#x3D;&quot;parent?.LineStatus?.toLowerCase() &#x3D;&#x3D;&#x3D;&#x27;cancelled&#x27; || parent?.LineStatus?.toLowerCase() &#x3D;&#x3D;&#x3D;&#x27;renewed&#x27;&quot;
+              (onStartDateChange)&#x3D;&quot;changeItemQuantity(parent)&quot; (onEndDateChange)&#x3D;&quot;changeItemQuantity(parent)&quot;
+              class&#x3D;&quot;d-block mr-3 mt-3&quot; [cartItem]&#x3D;&quot;parent&quot; [readonly]&#x3D;&quot;readonly&quot;&gt;
+            &lt;/apt-date-range-input&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class&#x3D;&quot;pt-4 w-25&quot;&gt;
+      &lt;div class&#x3D;&quot;d-flex flex-column h-100 justify-content-between&quot; *ngIf&#x3D;&quot;(storefront$ | async) as storefront&quot;&gt;
+        &lt;div&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-between align-items-center text-muted mt-1&quot;&gt;
+            &lt;span&gt; {{&#x27;MANAGE_CART.CART_TABLE.STANDARD_PRICE&#x27; | translate }} &lt;/span&gt;
+            &lt;span&gt;
+              &lt;apt-price [record]&#x3D;&quot;parent&quot; type&#x3D;&quot;list&quot;&gt;&lt;/apt-price&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-between align-items-center text-muted mt-1&quot;
+            *ngIf&#x3D;&quot;parent?.IncentiveAdjustmentAmount &amp;&amp; storefront?.EnablePromotions&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-link text-primary btn-sm text-capitalize p-0&quot;
+              (click)&#x3D;&quot;promotionModal.openLineItemModal(parent)&quot;&gt;{{&#x27;PROMOTION.PROMOTION_APPLIED_TO&#x27; | translate}}&lt;/button&gt;
+            &lt;span&gt;{{parent?.IncentiveAdjustmentAmount | localCurrency | async}}&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-between small mt-1 text-muted&quot;
+            *ngIf&#x3D;&quot;storefront?.EnableTaxCalculations &amp;&amp; showTaxPopupLink();&quot;&gt;
+            &lt;span&gt;
+              &lt;button placement&#x3D;&quot;auto&quot; [popover]&#x3D;&quot;popTemplate&quot; [outsideClick]&#x3D;&quot;true&quot;
+                class&#x3D;&quot;btn btn-link text-primary btn-sm text-capitalize p-0&quot; data-toggle&#x3D;&quot;popover&quot; data-placement&#x3D;&quot;bottom&quot;
+                (click)&#x3D;&quot;openEstimateTaxPopup(parent?.TaxBreakupItems)&quot;&gt;
+                {{&#x27;MANAGE_CART.CART_SUMMARY.TAX&#x27; | translate }} &lt;/button&gt;
+            &lt;/span&gt;
+            &lt;span&gt;{{totalEstimatedTax | localCurrency | async}}&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-between mt-1&quot;&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;parent&quot; field&#x3D;&quot;NetPrice&quot; [labelOnly]&#x3D;&quot;true&quot; [labelClass]&#x3D;&quot;&#x27;font-weight-normal&#x27;&quot;&gt;
+            &lt;/apt-output-field&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;storefront?.EnableTaxCalculations &amp;&amp; !showTaxPopupLink(); else showNetPrice&quot;&gt;
+              &lt;apt-price [record]&#x3D;&quot;parent&quot; type&#x3D;&quot;baseExtended&quot;&gt;&lt;/apt-price&gt;
+            &lt;/ng-container&gt;
+            &lt;ng-template #showNetPrice&gt;
+            &lt;apt-price [record]&#x3D;&quot;parent&quot; type&#x3D;&quot;net&quot;&gt;&lt;/apt-price&gt;
+            &lt;/ng-template&gt;
+          &lt;/div&gt;
+          &lt;ng-template #popTemplate&gt;
+            &lt;apt-tax-pophover *ngIf&#x3D;&quot;showTaxPopUp&quot; [taxItems]&#x3D;&quot;taxItems&quot; [totalEstimatedTax]&#x3D;&quot;totalEstimatedTax&quot;
+              [showTaxPopUp]&#x3D;&quot;true&quot;&gt;&lt;/apt-tax-pophover&gt;
+          &lt;/ng-template&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;d-flex justify-content-end my-3&quot;&gt;
+          &lt;button *ngIf&#x3D;&quot;parent?.IsPrimaryLine &amp;&amp; !readonly&quot; class&#x3D;&quot;btn btn-outline-primary&quot;
+            (click)&#x3D;&quot;removeCartItem(parent, $event)&quot; [ladda]&#x3D;&quot;parent?._metadata?._loading&quot; data-style&#x3D;&quot;zoom-in&quot;
+            data-spinner-color&#x3D;&quot;black&quot;&gt;
+            {{&#x27;MANAGE_CART.CART_TABLE.REMOVE&#x27; | translate }}
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr *ngIf&#x3D;&quot;children&quot;&gt;
+    &lt;td class&#x3D;&quot;border-0&quot; width&#x3D;&quot;15%&quot;&gt;&lt;/td&gt;
+    &lt;td class&#x3D;&quot;border-0 pb-0&quot; colspan&#x3D;&quot;2&quot;&gt;
+      &lt;div class&#x3D;&quot;accordion&quot;&gt;
+        &lt;apt-table-row-sub-item *ngFor&#x3D;&quot;let subItem of children; trackBy: trackById&quot; [subItem]&#x3D;&quot;subItem&quot; [cart]&#x3D;&quot;cart&quot;
+          [editableFields]&#x3D;&quot;editableFields&quot;&gt;&lt;/apt-table-row-sub-item&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template #statusBadge let-cartItem&#x3D;&quot;cartItem&quot;&gt;
+  &lt;ng-container [ngSwitch]&#x3D;&quot;cartItem?.LineStatus&quot;&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-danger&quot; *ngSwitchCase&#x3D;&quot;&#x27;Cancelled&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-warning&quot; *ngSwitchCase&#x3D;&quot;&#x27;Renewed&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-info&quot; *ngSwitchCase&#x3D;&quot;&#x27;Upgraded&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-warning&quot; *ngSwitchCase&#x3D;&quot;&#x27;Amended&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+    &lt;span class&#x3D;&quot;badge ml-2 badge-warning&quot; *ngSwitchCase&#x3D;&quot;&#x27;Incremented&#x27;&quot;&gt;
+      {{cartItem?.LineStatus}}
+    &lt;/span&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-template&gt;
+
+&lt;apt-pr-modal #promotionModal&gt;&lt;/apt-pr-modal&gt;
+
+&lt;apt-product-configuration-summary [product]&#x3D;&quot;parent?.Product&quot; [relatedTo]&#x3D;&quot;parent&quot; #productConfiguration&gt;
+&lt;/apt-product-configuration-summary&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./line-item-table-row.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: contents;
+  font-size: smaller;
+}
+.description{
+  max-height: 50px;
+  overflow-y: hidden;
+}
+.quantity{
+  width: 4rem;
+}
+u{
+  text-decoration: underline;
+  cursor: pointer;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="parent?.LineType === \'Product/Service\'">  <tr>    <td width="15%" class="pt-4">      <img [src]="parent.Product.IconId | image" class="w-100" />    </td>    <td class="w-50 pt-4 ">      <div class="h-100 d-flex flex-column border-right pr-2">        <div class="d-flex align-items-center mb-2">          <h5 class="mr-2 mb-0">            <a href="javascript:void(0)" *ngIf="parent?.Product && parent?.Product[identifier]"              [routerLink]="[\'/products\', parent.Product[identifier]]">              {{parent.Product.Name}}            </a>            <span *ngIf="parent.Product.HasAttributes || parent.Product.HasOptions">              <button class="text-muted btn btn-link btn-sm p-0" (click)="productConfiguration.show()">                <span class="oi oi-wrench"></span>              </button>            </span>          </h5>          <ng-template [ngTemplateOutlet]="statusBadge" [ngTemplateOutletContext]="{cartItem: parent}"></ng-template>        </div>          <p class="text-muted">          {{parent.Product?.ProductCode}} | {{parent.Product?.Family}} | {{parent.PriceListItem?.ChargeType}}        </p>        <p class="description">          {{parent.Product.Description}}        </p>        <div class="row">          <!-- For one time price frequency is alway --None--, so not showing it. -->          <div class="col" *ngIf="parent.PriceListItem?.PriceType !== \'One Time\'">            <apt-output-field [record]="parent.PriceListItem" field="Frequency" layout="stacked"              [editable]="editableFields"></apt-output-field>          </div>          <div class="col">            <apt-output-field [record]="parent.PriceListItem" field="PriceType" layout="stacked"              [editable]="editableFields"></apt-output-field>          </div>          <div class="col">            <apt-output-field [record]="parent" field="SellingTerm" layout="stacked" [editable]="editableFields">            </apt-output-field>          </div>          <div class="col">            <apt-input-field [(ngModel)]="parent.Quantity" field="Quantity" (change)="changeItemQuantity(parent)" [entity]="parent"              [readonly]="parent?.LineStatus?.toLowerCase() ===\'cancelled\'" class="w-75" *ngIf="!readonly"></apt-input-field>            <apt-output-field [record]="parent" field="Quantity" class="w-75" *ngIf="readonly" [editable]="editableFields">            </apt-output-field>          </div>        </div>        <div class="row">          <div class="col-8"            *ngIf="parent.PriceListItem?.PriceType === \'Recurring\' || parent.PriceListItem?.PriceType === \'Usage\'">            <apt-date-range-input              [disableStartDate]="parent?.LineStatus?.toLowerCase() ===\'cancelled\' || parent?.LineStatus?.toLowerCase() ===\'renewed\'"              (onStartDateChange)="changeItemQuantity(parent)" (onEndDateChange)="changeItemQuantity(parent)"              class="d-block mr-3 mt-3" [cartItem]="parent" [readonly]="readonly">            </apt-date-range-input>          </div>        </div>      </div>    </td>    <td class="pt-4 w-25">      <div class="d-flex flex-column h-100 justify-content-between" *ngIf="(storefront$ | async) as storefront">        <div>          <div class="d-flex justify-content-between align-items-center text-muted mt-1">            <span> {{\'MANAGE_CART.CART_TABLE.STANDARD_PRICE\' | translate }} </span>            <span>              <apt-price [record]="parent" type="list"></apt-price>            </span>          </div>          <div class="d-flex justify-content-between align-items-center text-muted mt-1"            *ngIf="parent?.IncentiveAdjustmentAmount && storefront?.EnablePromotions">            <button class="btn btn-link text-primary btn-sm text-capitalize p-0"              (click)="promotionModal.openLineItemModal(parent)">{{\'PROMOTION.PROMOTION_APPLIED_TO\' | translate}}</button>            <span>{{parent?.IncentiveAdjustmentAmount | localCurrency | async}}</span>          </div>          <div class="d-flex justify-content-between small mt-1 text-muted"            *ngIf="storefront?.EnableTaxCalculations && showTaxPopupLink();">            <span>              <button placement="auto" [popover]="popTemplate" [outsideClick]="true"                class="btn btn-link text-primary btn-sm text-capitalize p-0" data-toggle="popover" data-placement="bottom"                (click)="openEstimateTaxPopup(parent?.TaxBreakupItems)">                {{\'MANAGE_CART.CART_SUMMARY.TAX\' | translate }} </button>            </span>            <span>{{totalEstimatedTax | localCurrency | async}}</span>          </div>          <div class="d-flex justify-content-between mt-1">            <apt-output-field [record]="parent" field="NetPrice" [labelOnly]="true" [labelClass]="\'font-weight-normal\'">            </apt-output-field>            <ng-container *ngIf="storefront?.EnableTaxCalculations && !showTaxPopupLink(); else showNetPrice">              <apt-price [record]="parent" type="baseExtended"></apt-price>            </ng-container>            <ng-template #showNetPrice>            <apt-price [record]="parent" type="net"></apt-price>            </ng-template>          </div>          <ng-template #popTemplate>            <apt-tax-pophover *ngIf="showTaxPopUp" [taxItems]="taxItems" [totalEstimatedTax]="totalEstimatedTax"              [showTaxPopUp]="true"></apt-tax-pophover>          </ng-template>        </div>        <div class="d-flex justify-content-end my-3">          <button *ngIf="parent?.IsPrimaryLine && !readonly" class="btn btn-outline-primary"            (click)="removeCartItem(parent, $event)" [ladda]="parent?._metadata?._loading" data-style="zoom-in"            data-spinner-color="black">            {{\'MANAGE_CART.CART_TABLE.REMOVE\' | translate }}          </button>        </div>      </div>    </td>  </tr>  <tr *ngIf="children">    <td class="border-0" width="15%"></td>    <td class="border-0 pb-0" colspan="2">      <div class="accordion">        <apt-table-row-sub-item *ngFor="let subItem of children; trackBy: trackById" [subItem]="subItem" [cart]="cart"          [editableFields]="editableFields"></apt-table-row-sub-item>      </div>    </td>  </tr></ng-container><ng-template #statusBadge let-cartItem="cartItem">  <ng-container [ngSwitch]="cartItem?.LineStatus">    <span class="badge ml-2 badge-danger" *ngSwitchCase="\'Cancelled\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-warning" *ngSwitchCase="\'Renewed\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-info" *ngSwitchCase="\'Upgraded\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-warning" *ngSwitchCase="\'Amended\'">      {{cartItem?.LineStatus}}    </span>    <span class="badge ml-2 badge-warning" *ngSwitchCase="\'Incremented\'">      {{cartItem?.LineStatus}}    </span>  </ng-container></ng-template><apt-pr-modal #promotionModal></apt-pr-modal><apt-product-configuration-summary [product]="parent?.Product" [relatedTo]="parent" #productConfiguration></apt-product-configuration-summary></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LineItemTableRowComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LineItemTableRowComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

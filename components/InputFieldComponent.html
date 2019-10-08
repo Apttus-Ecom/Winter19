@@ -1,0 +1,1312 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>InputFieldComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/input-field/input-field.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The Input field component displays the field values as a radio button, checkbox, dropdown, a text area or a label value, depending upon the field type.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { InputFieldModule } from &#39;&#64;apttus/elements&#39;;
+
+&#64;NgModule({
+  imports: [InputFieldModule, ...]
+})
+export class AppModule {}</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">// Basic Usage
+&lt;apt-input-field
+  [(ngModel)]=&quot;myModel&quot;
+  [field]=&quot;fieldApiName&quot;
+  [entity]=&quot;entityApiName&quot;
+&gt;&lt;/apt-input-field&gt;
+
+// All inputs and outputs
+&lt;apt-input-field
+  [(ngModel)]=&quot;myModel&quot;
+  (ngModelChange)=&quot;handleChange($event)&quot;
+  [field]=&quot;fieldApiName&quot;
+  [entity]=&quot;entityApiName&quot;
+  [label]=&quot;label&quot;
+  [readonly]=&quot;isReadOnly&quot;
+  [allowEmpty]=&quot;allowEmpty&quot;
+  [disabledValues]=&quot;disabledValues&quot;
+  [hiddenValues]=&quot;hiddenValues&quot;
+  [inline]=&quot;isInline&quot;
+  [small]=&quot;isSmall&quot;
+  [rows]=&quot;2&quot;
+  [placeholder]=&quot;myPlaceholder&quot;
+  [required]=&quot;true&quot;
+  [errorMsg]=&quot;errorMessage&quot;
+  [showLabel]=&quot;true&quot;
+  [labelClass]=&quot;labelClass&quot;
+  [filterValues]=&quot;filterValues&quot;
+  [hideOptions]=&quot;true&quot;
+  [hide]=&quot;true&quot;
+  [defaultValue]=&quot;true&quot;
+  [enableValues]=&quot;values&quot;
+  [lookupOptions]=&quot;lookupOptions&quot;
+&gt;&lt;/apt-input-field&gt;</code></pre>
+                </div>
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../components/InputFieldComponent.html" target="_self" >{
+    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() &#x3D;&gt; InputFieldComponent), multi: true
+}</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-input-field</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./input-field.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./input-field.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allowEmpty">allowEmpty</a>
+                            </li>
+                            <li>
+                                <a href="#defaultValue">defaultValue</a>
+                            </li>
+                            <li>
+                                <a href="#disabledValues">disabledValues</a>
+                            </li>
+                            <li>
+                                <a href="#enableValues">enableValues</a>
+                            </li>
+                            <li>
+                                <a href="#entity">entity</a>
+                            </li>
+                            <li>
+                                <a href="#errorMsg">errorMsg</a>
+                            </li>
+                            <li>
+                                <a href="#field">field</a>
+                            </li>
+                            <li>
+                                <a href="#filterValues">filterValues</a>
+                            </li>
+                            <li>
+                                <a href="#hiddenValues">hiddenValues</a>
+                            </li>
+                            <li>
+                                <a href="#hide">hide</a>
+                            </li>
+                            <li>
+                                <a href="#hideOptions">hideOptions</a>
+                            </li>
+                            <li>
+                                <a href="#inline">inline</a>
+                            </li>
+                            <li>
+                                <a href="#label">label</a>
+                            </li>
+                            <li>
+                                <a href="#labelClass">labelClass</a>
+                            </li>
+                            <li>
+                                <a href="#lookupOptions">lookupOptions</a>
+                            </li>
+                            <li>
+                                <a href="#multiple">multiple</a>
+                            </li>
+                            <li>
+                                <a href="#placeholder">placeholder</a>
+                            </li>
+                            <li>
+                                <a href="#readonly">readonly</a>
+                            </li>
+                            <li>
+                                <a href="#required">required</a>
+                            </li>
+                            <li>
+                                <a href="#rows">rows</a>
+                            </li>
+                            <li>
+                                <a href="#showLabel">showLabel</a>
+                            </li>
+                            <li>
+                                <a href="#small">small</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cacheService: CacheService, translateService: TranslateService, aobjectService: AObjectService, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, metadataService: MetadataService)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cacheService</td>
+                                                  
+                                                        <td>
+                                                                    <code>CacheService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translateService</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>aobjectService</td>
+                                                  
+                                                        <td>
+                                                                    <code>AObjectService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>metadataService</td>
+                                                  
+                                                        <td>
+                                                                    <code>MetadataService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allowEmpty"></a>
+                        <b>allowEmpty</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to allow this input to be empty.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultValue"></a>
+                        <b>defaultValue</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Boolean value when set to true will populate the incoming field with Salesforce&#39;s default value</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabledValues"></a>
+                        <b>disabledValues</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Set&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Set&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set of disabled values.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="enableValues"></a>
+                        <b>enableValues</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>List of enabled values.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="entity"></a>
+                        <b>entity</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ClassType&lt;AObject&gt; | AObject</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The model class</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorMsg"></a>
+                        <b>errorMsg</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Property to show error message</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="field"></a>
+                        <b>field</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Field property of the model class</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterValues"></a>
+                        <b>filterValues</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array of string of values to be available in picklist</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hiddenValues"></a>
+                        <b>hiddenValues</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Set&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Set&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set of hidden values.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hide"></a>
+                        <b>hide</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Boolean value to show or hide the component.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hideOptions"></a>
+                        <b>hideOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Boolean value to show default picklist values or not.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inline"></a>
+                        <b>inline</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set this input as inline.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="label"></a>
+                        <b>label</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Label override</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="labelClass"></a>
+                        <b>labelClass</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>String of bootstrap classes to ovverride the default styling of input field label.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lookupOptions"></a>
+                        <b>lookupOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>LookupOptions</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    primaryTextField: &#x27;Name&#x27; // If lookup options won&#x27;t be passed then this property should be set with by default value &#x27;Name&#x27; as UI needs that to render items/options
+  }</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Object to set primary text field, secondary text field, thumbnail field, conditions, filters etc</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="multiple"></a>
+                        <b>multiple</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set the picklist to a multipicklist</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="placeholder"></a>
+                        <b>placeholder</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Placeholder string for the input.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="readonly"></a>
+                        <b>readonly</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set this input as read only.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="required"></a>
+                        <b>required</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set this input as required.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rows"></a>
+                        <b>rows</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>3</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>rows override for textarea</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLabel"></a>
+                        <b>showLabel</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Label to be shown on this input.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="small"></a>
+                        <b>small</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set this element as a small input.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;view$ | async as view&quot;&gt;
+  &lt;div [ngSwitch]&#x3D;&quot;view?.metadata?.type&quot; class&#x3D;&quot;form-group align-items-center&quot; [class.d-flex]&#x3D;&quot;inline&quot;
+    [id]&#x3D;&quot;uuid + &#x27;-container&#x27;&quot;&gt;
+    &lt;label *ngIf&#x3D;&quot;showLabel&quot; [class.col-form-label-sm]&#x3D;&quot;small&quot; [class.m-0]&#x3D;&quot;inline&quot; [class.mr-2]&#x3D;&quot;inline&quot; [ngClass]&#x3D;&quot;{&#x27;font-weight-bold&#x27;: !labelClass}&quot;&gt;{{(label) ? label : view?.metadata?.label}}&lt;/label&gt;
+    &lt;i *ngIf&#x3D;&quot;required&quot; class&#x3D;&quot;fa fa-asterisk text-danger font-weight-normal custom-asterisk p-1&quot;&gt;&lt;/i&gt;
+    
+    
+    &lt;!--Picklist--&gt;
+    &lt;div *ngSwitchCase&#x3D;&quot;&#x27;picklist&#x27;&quot;&gt;
+      &lt;ng-select class&#x3D;&quot;form-control picklist p-0&quot; [searchable]&#x3D;&quot;false&quot; [(ngModel)]&#x3D;&quot;value&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot; [loading]&#x3D;&quot;loading&quot; [disabled]&#x3D;&quot;readonly&quot;
+        (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; #picklist&#x3D;&quot;ngModel&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: picklist.invalid &amp;&amp; (picklist.touched || picklist.dirty) }&quot; [items]&#x3D;&quot;options&quot; [multiple]&#x3D;&quot;multiple&quot; bindValue&#x3D;&quot;value&quot; bindLabel&#x3D;&quot;label&quot;&gt;
+        &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;
+          {{errorMsg}}
+        &lt;/div&gt;
+      &lt;/ng-select&gt;
+  
+      &lt;ng-template #checkboxes&gt;
+        &lt;div *ngFor&#x3D;&quot;let option of options$ | async&quot; class&#x3D;&quot;custom-control custom-radio&quot; [class.custom-radio-sm]&#x3D;&quot;small&quot; [class.custom-control-inline]&#x3D;&quot;inline&quot;&gt;
+          &lt;input type&#x3D;&quot;radio&quot; class&#x3D;&quot;custom-control-input&quot; [name]&#x3D;&quot;uuid + &#x27;_&#x27; + view?.metadata.name&quot; [value]&#x3D;&quot;option.value&quot; [id]&#x3D;&quot;uuid + &#x27;_&#x27; + view?.metadata.name + &#x27;_&#x27; + option.value&quot;
+            [(ngModel)]&#x3D;&quot;value&quot; (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; [disabled]&#x3D;&quot;readonly || option.disabled&quot; [required]&#x3D;&quot;required&quot;&gt;
+          &lt;label class&#x3D;&quot;custom-control-label mr-auto&quot; [for]&#x3D;&quot;uuid + &#x27;_&#x27; + view?.metadata.name + &#x27;_&#x27; + option.value&quot;&gt;
+            {{option.label}}
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+  
+    &lt;!--Checkbox--&gt;
+    &lt;select class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; *ngSwitchCase&#x3D;&quot;&#x27;boolean&#x27;&quot; [(ngModel)]&#x3D;&quot;value&quot; [class.custom-control-inline]&#x3D;&quot;inline&quot;
+      (ngModelChange)&#x3D;&quot;onBooleanChange(value)&quot; [required]&#x3D;&quot;required&quot;&gt;
+      &lt;option [value]&#x3D;&quot;true&quot;&gt; {{&#x27;COMMON.YES&#x27; | translate}} &lt;/option&gt;
+      &lt;option [value]&#x3D;&quot;false&quot;&gt; {{&#x27;COMMON.NO&#x27; | translate}} &lt;/option&gt;
+    &lt;/select&gt;
+  
+    &lt;!--Multi select picklist--&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;multipicklist&#x27;&quot;&gt;
+      &lt;div *ngFor&#x3D;&quot;let option of view?.metadata.picklistValues&quot; class&#x3D;&quot;custom-control custom-checkbox&quot; [class.custom-checkbox-sm]&#x3D;&quot;small&quot;
+        [class.custom-control-inline]&#x3D;&quot;inline&quot;&gt;
+        &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;custom-control-input&quot; [checked]&#x3D;&quot;value?.indexOf(option.value) &gt; -1&quot; [id]&#x3D;&quot;uuid + &#x27;_&#x27; + view?.metadata.name + &#x27;_&#x27; + option.value&quot;
+          [(ngModel)]&#x3D;&quot;getsetValue(option.value).value&quot; (ngModelChange)&#x3D;&quot;onMultiChange(option.value)&quot; [disabled]&#x3D;&quot;(enableValues?.length &gt; 0 &amp;&amp; enableValues?.indexOf(option.value) &#x3D;&#x3D;&#x3D; -1) || readonly ? true : false&quot;
+          [required]&#x3D;&quot;required&quot;&gt;
+        &lt;label class&#x3D;&quot;custom-control-label&quot; [for]&#x3D;&quot;uuid + &#x27;_&#x27; + view?.metadata.name + &#x27;_&#x27; + option.value&quot;&gt;{{option.label}}&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  
+  
+    &lt;!-- Number --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;double&#x27;&quot;&gt;
+      &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [id]&#x3D;&quot;value&quot; [(ngModel)]&#x3D;&quot;value&quot; [disabled]&#x3D;&quot;readonly&quot;
+        (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot; #num&#x3D;&quot;ngModel&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: num.invalid &amp;&amp; (num.touched || num.dirty) }&quot;
+      /&gt;
+        &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;
+            {{errorMsg}}
+        &lt;/div&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- String --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;string&#x27;&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [id]&#x3D;&quot;value&quot; [(ngModel)]&#x3D;&quot;value&quot; (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; [disabled]&#x3D;&quot;readonly&quot;
+        [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot; #txt&#x3D;&quot;ngModel&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: txt.invalid &amp;&amp; (txt.touched || txt.dirty) }&quot;
+      /&gt;
+      &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;
+        {{errorMsg}}
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- Email --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;email&#x27;&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [id]&#x3D;&quot;value&quot; [(ngModel)]&#x3D;&quot;value&quot; (ngModelChange)&#x3D;&quot;propagateChange(value)&quot;
+        [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot; #email&#x3D;&quot;ngModel&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: email.invalid &amp;&amp; (email.touched || email.dirty) }&quot;
+      /&gt;
+      &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;
+        {{errorMsg}}
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- Textarea --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;textarea&#x27;&quot;&gt;
+      &lt;textarea [(ngModel)]&#x3D;&quot;value&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; (ngModelChange)&#x3D;&quot;propagateChange(value)&quot;
+        [maxlength]&#x3D;&quot;view?.metadata?.length&quot; [rows]&#x3D;&quot;rows&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot;&gt;&lt;/textarea&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- Date --&gt;
+    &lt;div class&#x3D;&quot;date-form&quot; *ngSwitchCase&#x3D;&quot;&#x27;date&#x27;&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; [id]&#x3D;&quot;uuid&quot; class&#x3D;&quot;form-control&quot; bsDatepicker [class.form-control-sm]&#x3D;&quot;small&quot; [value]&#x3D;&quot;value&quot;
+        (bsValueChange)&#x3D;&quot;onDateChange($event)&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot; [bsConfig]&#x3D;&quot;{ adaptivePosition: true }&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+
+  &lt;!-- Datetime --&gt;
+    &lt;div class&#x3D;&quot;date-form&quot; *ngSwitchCase&#x3D;&quot;&#x27;datetime&#x27;&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; [id]&#x3D;&quot;uuid&quot; class&#x3D;&quot;form-control&quot; bsDatepicker [class.form-control-sm]&#x3D;&quot;small&quot; [value]&#x3D;&quot;value&quot;
+        (bsValueChange)&#x3D;&quot;writeValue($event)&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot;
+        [bsConfig]&#x3D;&quot;{ adaptivePosition: true }&quot;&gt;
+      &lt;i class&#x3D;&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  
+    &lt;!-- Percentage --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;percent&#x27;&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; [id]&#x3D;&quot;uuid&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [ngModel]&#x3D;&quot;value/100 | percent:&#x27;1.2&#x27;&quot;
+        (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot;&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- Currency --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;currency&#x27;&quot;&gt;
+      &lt;!-- &lt;input type&#x3D;&quot;text&quot; [id]&#x3D;&quot;uuid&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [(ngModel)]&#x3D;&quot;value&quot;
+        (ngModelChange)&#x3D;&quot;onCurrencyChange(value)&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot;&gt; --&gt;
+      &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [id]&#x3D;&quot;value&quot; [(ngModel)]&#x3D;&quot;value&quot; [disabled]&#x3D;&quot;readonly&quot; step&#x3D;&quot;.01&quot;
+        (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; [required]&#x3D;&quot;required&quot; [placeholder]&#x3D;&quot;placeholder&quot; #num&#x3D;&quot;ngModel&quot; [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: num.invalid &amp;&amp; (num.touched || num.dirty) }&quot;
+      /&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- Reference --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;reference&#x27;&quot;&gt;
+      &lt;ng-select class&#x3D;&quot;form-control aptSingleSelectLookup p-0&quot; [class.form-control-sm]&#x3D;&quot;small&quot; [class.contacts]&#x3D;&quot;lookupOptions?.secondaryTextField&quot;
+        [(ngModel)]&#x3D;&quot;value&quot; [items]&#x3D;&quot;view?.lookupResults&quot; (search)&#x3D;&quot;onLookupSearch($event)&quot; [required]&#x3D;&quot;required&quot; [bindLabel]&#x3D;&quot;lookupOptions?.primaryTextField&quot;
+        bindValue&#x3D;&quot;Id&quot; [placeholder]&#x3D;&quot;placeholder&quot; [loading]&#x3D;&quot;loading&quot; (ngModelChange)&#x3D;&quot;propagateChange(value)&quot; #select&#x3D;&quot;ngModel&quot;
+        [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: select.invalid &amp;&amp; (select.touched || select.dirty) }&quot; [disabled]&#x3D;&quot;readonly&quot;&gt;
+        &lt;ng-template ng-option-tmp let-item&#x3D;&quot;item&quot; let-index&#x3D;&quot;index&quot; let-search&#x3D;&quot;searchTerm&quot;&gt;
+          &lt;span *ngIf&#x3D;&quot;!lookupOptions?.secondaryTextField&quot; class&#x3D;&quot;basicOption&quot; [ngOptionHighlight]&#x3D;&quot;search&quot;&gt;
+            {{item[lookupOptions?.primaryTextField]}}
+          &lt;/span&gt;
+          &lt;div *ngIf&#x3D;&quot;lookupOptions?.secondaryTextField&quot; class&#x3D;&quot;d-flex align-items-center contactOption&quot;&gt;
+            &lt;img *ngIf&#x3D;&quot;lookupOptions?.thumbnailField&quot; class&#x3D;&quot;rounded-circle mr-4&quot; width&#x3D;&quot;32&quot; height&#x3D;&quot;32&quot; src&#x3D;&quot;./assets/images/default.png&quot; alt&#x3D;&quot;Contact Image&quot;&gt;
+            &lt;div class&#x3D;&quot;d-flex flex-column h-100 justify-content-around&quot;&gt;
+              &lt;span [ngOptionHighlight]&#x3D;&quot;search&quot;&gt;{{item[lookupOptions?.primaryTextField]}}&lt;/span&gt;
+              &lt;i class&#x3D;&quot;small&quot; *ngIf&#x3D;&quot;lookupOptions?.secondaryTextField&quot;&gt;{{item[lookupOptions?.secondaryTextField]}}&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template ng-loadingspinner-tmp&gt;
+          &lt;apt-spinner&gt;&lt;/apt-spinner&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-select&gt;
+      &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;
+        {{errorMsg}}
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  
+    &lt;!-- Address --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;&#x27;address&#x27;&quot;&gt;
+      &lt;apt-address [(ngModel)]&#x3D;&quot;value&quot;&gt;&lt;/apt-address&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/ng-container&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./input-field.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">apt-input-field {
+    display: block;
+   
+    .custom-asterisk {
+        font-size: 8px;
+    }
+
+    select{
+        text-indent: 5px;
+    }
+    
+    .date-form{
+        position: relative;
+        i{
+            position: absolute;
+            top: 25%;
+            right: 3%;
+        }
+    }
+    .ng-select.picklist {
+        .ng-select-container {
+            border: 0px;
+            border-radius: 0px;
+            height: 100%;
+            min-height:100%;
+        }
+    }
+    .ng-select.aptSingleSelectLookup {
+        font-size: 14px;
+
+        &amp;.ng-select-focused:not(.ng-select-opened)
+        &gt;.ng-select-container {
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .ng-select-container {
+            background-color: transparent;
+            border-radius: 0px;
+            min-height: 34px;
+            height: 34px;
+            border-width: 0px;
+      
+            .ng-arrow-wrapper {
+                display: none;
+            }
+
+            apt-spinner {
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+      
+            .ng-clear-wrapper {
+                width: 24px;
+                height: 24px;
+        
+                &amp;:hover
+                .ng-clear {
+                    opacity: 1;
+                }
+        
+                .ng-clear {
+                    width: 24px;
+                    height: 24px;
+                    color: transparent;
+                    content: &#x27;&#x27;;
+                    background-image: url(&quot;data:image/svg+xml,%3Csvg fill&#x3D;&#x27;%23000&#x27; xmlns&#x3D;&#x27;http://www.w3.org/2000/svg&#x27; xmlns:xlink&#x3D;&#x27;http://www.w3.org/1999/xlink&#x27; width&#x3D;&#x27;24&#x27; height&#x3D;&#x27;24&#x27; viewBox&#x3D;&#x27;0 0 24 24&#x27; class&#x3D;&#x27;ng-scope&#x27;%3E%3Cpolygon points&#x3D;&#x27;20 5.611 18.389 4 12 10.389 5.611 4 4 5.611 10.389 12 4 18.389 5.611 20 12 13.611 18.389 20 20 18.389 13.611 12&#x27;%3E%3C/polygon%3E%3C/svg%3E&quot;);
+                    opacity: .5;
+                }
+            }
+      
+            &amp;::before {
+                width: 24px;
+                height: 24px;
+                content: &#x27;&#x27;;
+                background-image: url(&quot;data:image/svg+xml,%3Csvg fill&#x3D;&#x27;%23000&#x27; xmlns&#x3D;&#x27;http://www.w3.org/2000/svg&#x27; xmlns:xlink&#x3D;&#x27;http://www.w3.org/1999/xlink&#x27; width&#x3D;&#x27;24&#x27; height&#x3D;&#x27;24&#x27; viewBox&#x3D;&#x27;0 0 24 24&#x27; class&#x3D;&#x27;ng-scope&#x27;%3E%3Cpath d&#x3D;&#x27;M18.6455153,18.9378179 L14.5224384,14.8455103 C15.3532076,13.6762795 15.7839769,12.1993564 15.5685923,10.6301256 C15.1993615,7.9839718 13.0455153,5.8916641 10.3685923,5.64551026 C6.73782302,5.27627949 3.66089994,8.35320257 4.03013071,12.014741 C4.27628456,14.6608949 6.36859225,16.8455103 9.0147461,17.214741 C10.5839769,17.4301256 12.0608999,16.9993564 13.2301307,16.1685872 L17.3224384,20.2608949 C17.5070538,20.4455103 17.7839769,20.4455103 17.9685923,20.2608949 L18.6147461,19.614741 C18.7993615,19.4301256 18.7993615,19.1224333 18.6455153,18.9378179 L18.6455153,18.9378179 Z M5.84551533,11.4301256 C5.84551533,9.24551026 7.63013071,7.46089487 9.8147461,7.46089487 C11.9993615,7.46089487 13.7839769,9.24551026 13.7839769,11.4301256 C13.7839769,13.614741 11.9993615,15.3993564 9.8147461,15.3993564 C7.63013071,15.3993564 5.84551533,13.6455103 5.84551533,11.4301256 Z M17.0267206,3 L17.0267206,5.35789474 L19.3846154,5.35789474 L19.3846154,6.53684211 L17.0267206,6.53684211 L17.0267206,8.89473684 L15.8477733,8.89473684 L15.8477733,6.53684211 L13.4898785,6.53684211 L13.4898785,5.35789474 L15.8477733,5.35789474 L15.8477733,3 L17.0267206,3 Z&#x27;%3E%3C/path%3E%3C/svg%3E&quot;);
+            }
+      
+        }
+      
+        &amp;.ng-select-single
+         .ng-select-container
+         .ng-value-container
+         .ng-input {
+            padding-left: 34px;
+            padding-right: 36px;
+            &amp; &gt; input {
+                cursor: text;
+            }
+        }
+      
+        &amp;.contacts {
+            .ng-dropdown-panel {
+                .ng-dropdown-panel-items {
+                    max-height: 320px;
+                }
+            }
+        }
+      
+        .ng-dropdown-panel {
+            .ng-dropdown-header {
+                font-size: 12px;
+                padding-left: 14px;
+                border: none;
+            }
+            .ng-dropdown-panel-items {
+                max-height: 400px;
+        
+                .ng-option {
+                    min-height: 40px;
+                    padding: 4px 10px 4px 14px;
+        
+                    .basicOption {
+                        line-height: 32px;
+                    }
+            
+                    .contactOption {
+                        height: 56px;
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="view$ | async as view">  <div [ngSwitch]="view?.metadata?.type" class="form-group align-items-center" [class.d-flex]="inline"    [id]="uuid + \'-container\'">    <label *ngIf="showLabel" [class.col-form-label-sm]="small" [class.m-0]="inline" [class.mr-2]="inline" [ngClass]="{\'font-weight-bold\': !labelClass}">{{(label) ? label : view?.metadata?.label}}</label>    <i *ngIf="required" class="fa fa-asterisk text-danger font-weight-normal custom-asterisk p-1"></i>            <!--Picklist-->    <div *ngSwitchCase="\'picklist\'">      <ng-select class="form-control picklist p-0" [searchable]="false" [(ngModel)]="value" [required]="required" [placeholder]="placeholder" [loading]="loading" [disabled]="readonly"        (ngModelChange)="propagateChange(value)" #picklist="ngModel" [ngClass]="{ \'is-invalid\': picklist.invalid && (picklist.touched || picklist.dirty) }" [items]="options" [multiple]="multiple" bindValue="value" bindLabel="label">        <div class="invalid-feedback">          {{errorMsg}}        </div>      </ng-select>        <ng-template #checkboxes>        <div *ngFor="let option of options$ | async" class="custom-control custom-radio" [class.custom-radio-sm]="small" [class.custom-control-inline]="inline">          <input type="radio" class="custom-control-input" [name]="uuid + \'_\' + view?.metadata.name" [value]="option.value" [id]="uuid + \'_\' + view?.metadata.name + \'_\' + option.value"            [(ngModel)]="value" (ngModelChange)="propagateChange(value)" [disabled]="readonly || option.disabled" [required]="required">          <label class="custom-control-label mr-auto" [for]="uuid + \'_\' + view?.metadata.name + \'_\' + option.value">            {{option.label}}          </label>        </div>      </ng-template>    </div>      <!--Checkbox-->    <select class="form-control" [class.form-control-sm]="small" *ngSwitchCase="\'boolean\'" [(ngModel)]="value" [class.custom-control-inline]="inline"      (ngModelChange)="onBooleanChange(value)" [required]="required">      <option [value]="true"> {{\'COMMON.YES\' | translate}} </option>      <option [value]="false"> {{\'COMMON.NO\' | translate}} </option>    </select>      <!--Multi select picklist-->    <ng-container *ngSwitchCase="\'multipicklist\'">      <div *ngFor="let option of view?.metadata.picklistValues" class="custom-control custom-checkbox" [class.custom-checkbox-sm]="small"        [class.custom-control-inline]="inline">        <input type="checkbox" class="custom-control-input" [checked]="value?.indexOf(option.value) > -1" [id]="uuid + \'_\' + view?.metadata.name + \'_\' + option.value"          [(ngModel)]="getsetValue(option.value).value" (ngModelChange)="onMultiChange(option.value)" [disabled]="(enableValues?.length > 0 && enableValues?.indexOf(option.value) === -1) || readonly ? true : false"          [required]="required">        <label class="custom-control-label" [for]="uuid + \'_\' + view?.metadata.name + \'_\' + option.value">{{option.label}}</label>      </div>    </ng-container>        <!-- Number -->    <ng-container *ngSwitchCase="\'double\'">      <input type="number" class="form-control" [class.form-control-sm]="small" [id]="value" [(ngModel)]="value" [disabled]="readonly"        (ngModelChange)="propagateChange(value)" [required]="required" [placeholder]="placeholder" #num="ngModel" [ngClass]="{ \'is-invalid\': num.invalid && (num.touched || num.dirty) }"      />        <div class="invalid-feedback">            {{errorMsg}}        </div>    </ng-container>      <!-- String -->    <ng-container *ngSwitchCase="\'string\'">      <input type="text" class="form-control" [class.form-control-sm]="small" [id]="value" [(ngModel)]="value" (ngModelChange)="propagateChange(value)" [disabled]="readonly"        [required]="required" [placeholder]="placeholder" #txt="ngModel" [ngClass]="{ \'is-invalid\': txt.invalid && (txt.touched || txt.dirty) }"      />      <div class="invalid-feedback">        {{errorMsg}}      </div>    </ng-container>      <!-- Email -->    <ng-container *ngSwitchCase="\'email\'">      <input type="text" class="form-control" [class.form-control-sm]="small" [id]="value" [(ngModel)]="value" (ngModelChange)="propagateChange(value)"        [required]="required" [placeholder]="placeholder" #email="ngModel" [ngClass]="{ \'is-invalid\': email.invalid && (email.touched || email.dirty) }"      />      <div class="invalid-feedback">        {{errorMsg}}      </div>    </ng-container>      <!-- Textarea -->    <ng-container *ngSwitchCase="\'textarea\'">      <textarea [(ngModel)]="value" class="form-control" [class.form-control-sm]="small" (ngModelChange)="propagateChange(value)"        [maxlength]="view?.metadata?.length" [rows]="rows" [required]="required" [placeholder]="placeholder"></textarea>    </ng-container>      <!-- Date -->    <div class="date-form" *ngSwitchCase="\'date\'">      <input type="text" [id]="uuid" class="form-control" bsDatepicker [class.form-control-sm]="small" [value]="value"        (bsValueChange)="onDateChange($event)" [required]="required" [placeholder]="placeholder" [bsConfig]="{ adaptivePosition: true }">      <i class="fa fa-calendar"></i>    </div>  <!-- Datetime -->    <div class="date-form" *ngSwitchCase="\'datetime\'">      <input type="text" [id]="uuid" class="form-control" bsDatepicker [class.form-control-sm]="small" [value]="value"        (bsValueChange)="writeValue($event)" [required]="required" [placeholder]="placeholder"        [bsConfig]="{ adaptivePosition: true }">      <i class="fa fa-calendar"></i>    </div>      <!-- Percentage -->    <ng-container *ngSwitchCase="\'percent\'">      <input type="text" [id]="uuid" class="form-control" [class.form-control-sm]="small" [ngModel]="value/100 | percent:\'1.2\'"        (ngModelChange)="propagateChange(value)" [required]="required" [placeholder]="placeholder">    </ng-container>      <!-- Currency -->    <ng-container *ngSwitchCase="\'currency\'">      <!-- <input type="text" [id]="uuid" class="form-control" [class.form-control-sm]="small" [(ngModel)]="value"        (ngModelChange)="onCurrencyChange(value)" [required]="required" [placeholder]="placeholder"> -->      <input type="number" class="form-control" [class.form-control-sm]="small" [id]="value" [(ngModel)]="value" [disabled]="readonly" step=".01"        (ngModelChange)="propagateChange(value)" [required]="required" [placeholder]="placeholder" #num="ngModel" [ngClass]="{ \'is-invalid\': num.invalid && (num.touched || num.dirty) }"      />    </ng-container>      <!-- Reference -->    <ng-container *ngSwitchCase="\'reference\'">      <ng-select class="form-control aptSingleSelectLookup p-0" [class.form-control-sm]="small" [class.contacts]="lookupOptions?.secondaryTextField"        [(ngModel)]="value" [items]="view?.lookupResults" (search)="onLookupSearch($event)" [required]="required" [bindLabel]="lookupOptions?.primaryTextField"        bindValue="Id" [placeholder]="placeholder" [loading]="loading" (ngModelChange)="propagateChange(value)" #select="ngModel"        [ngClass]="{ \'is-invalid\': select.invalid && (select.touched || select.dirty) }" [disabled]="readonly">        <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">          <span *ngIf="!lookupOptions?.secondaryTextField" class="basicOption" [ngOptionHighlight]="search">            {{item[lookupOptions?.primaryTextField]}}          </span>          <div *ngIf="lookupOptions?.secondaryTextField" class="d-flex align-items-center contactOption">            <img *ngIf="lookupOptions?.thumbnailField" class="rounded-circle mr-4" width="32" height="32" src="./assets/images/default.png" alt="Contact Image">            <div class="d-flex flex-column h-100 justify-content-around">              <span [ngOptionHighlight]="search">{{item[lookupOptions?.primaryTextField]}}</span>              <i class="small" *ngIf="lookupOptions?.secondaryTextField">{{item[lookupOptions?.secondaryTextField]}}</i>            </div>          </div>        </ng-template>        <ng-template ng-loadingspinner-tmp>          <apt-spinner></apt-spinner>        </ng-template>      </ng-select>      <div class="invalid-feedback">        {{errorMsg}}      </div>    </ng-container>      <!-- Address -->    <ng-container *ngSwitchCase="\'address\'">      <apt-address [(ngModel)]="value"></apt-address>    </ng-container>  </div></ng-container></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InputFieldComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InputFieldComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

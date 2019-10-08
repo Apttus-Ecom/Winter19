@@ -1,0 +1,329 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content additional-page">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+<h1 id="spring-v1901-to-summer-v1902-migration-guide">Spring v1901 to Summer v1902 Migration Guide</h1>
+<p>This guide is designed to step you through the process of migrating your ecommerce application from the Spring 2019 release to the Summer 2019 release.</p>
+<h2 id="update-apttus-libraries">Update Apttus Libraries</h2>
+<p>The Summer 2019 release no longer uses the following libraries and <strong><em>should be removed from your package.json file</em></strong>:</p>
+<ul>
+<li><code>@apttus/promotion</code></li>
+<li><code>@apttus/abo</code></li>
+<li><code>@apttus/constraint-rules</code></li>
+</ul>
+<p>The following packages should be updated to the latest version:</p>
+<ul>
+<li><code>@apttus/core</code> <em>^1901.0.7 --&gt;</em> <strong><em>~1902.0.0</em></strong></li>
+<li><code>@apttus/ecommerce</code> <em>^1901.0.7 --&gt;</em> <strong><em>~1902.0.0</em></strong></li>
+<li><code>@apttus/elements</code> <em>^1901.0.7 --&gt;</em> <strong><em>~1902.0.0</em></strong></li>
+</ul>
+<p>Once done, your <code>package.json</code> should have the following packages under dependencies:</p>
+<div><pre class="line-numbers"><code class="language-json">    ...
+    &quot;&#64;apttus/core&quot;: &quot;~1902.0.0&quot;,
+    &quot;&#64;apttus/ecommerce&quot;: &quot;~1902.0.0&quot;,
+    &quot;&#64;apttus/elements&quot;: &quot;~1902.0.0&quot;,
+    ...</code></pre></div><h3 id="add-new-dependencies">Add new dependencies</h3>
+<p>There are a few new dependencies that need to be added to the <code>package.json</code> file and installed with your project. These libraries include:</p>
+<ul>
+<li><code>@angular/cdk@^7.3.7</code></li>
+<li><code>lodash-decorators@^6.0.1</code></li>
+<li><code>ngx-indexed-db@^2.0.8</code></li>
+<li><code>ngx-scrollbar^4.2.0</code></li>
+</ul>
+<p>These libraries can be installed and saved to the <code>package.json</code> file with the following command.</p>
+<div><pre class="line-numbers"><code class="language-console">$ npm install &#64;angular/cdk&#64;^7.3.7 lodash-decorators&#64;^6.0.1 ngx-indexed-db&#64;^2.0.8 ngx-scrollbar^4.2.0 --save</code></pre></div><h3 id="install-the-new-libraries">Install the New Libraries</h3>
+<p>Run the following command to install the Apttus libraries for the Summer 2019 release from npm.</p>
+<div><pre class="line-numbers"><code class="language-console">$ npm install</code></pre></div><h2 id="new-service-locations">New Service Locations</h2>
+<p>Some services that were in the <code>@apttus/constraint-rules</code>, <code>@apttus/abo</code>, and <code>@apttus/promotion</code> libraries have been moved into <code>@apttus/ecommerce</code>. This will require imports to be changed from within component typescript files.</p>
+<h2 id="cartservice-method-updates">CartService method updates</h2>
+<p>The CartService has been updated and some of the previous methods have either been renamed, inputs refactored, or moved to another service. Make the following changes throughout your application:</p>
+<ul>
+<li><code>refreshCart()</code> method now accepts no arguments.</li>
+<li><code>updateQuantity()</code> method has been renamed to <code>updateCartItems()</code>.</li>
+<li><code>getCartItem()</code> method has been moved to the <code>CartItemService</code> and is named <code>getCartItemsForProduct()</code> which returns an Observable array of CartItem objects.</li>
+</ul>
+<h2 id="component-updates">Component Updates</h2>
+<p>Some components have been updated with different inputs which will need to be changed in order to work with the new libraries.</p>
+<h3 id="inputselectcomponent"><code>InputSelectComponent</code></h3>
+<p>The InputSelectComponent no longer uses describe information to form the list of select options. The updated version of the component simply takes in a list of elements and uses them for the select. Use the <code>picklistValues</code> input to pass in your list of values.</p>
+<hr>
+<h3 id="productcardcomponent"><code>ProductCardComponent</code></h3>
+<p>The ProductCardComponent no longer has a <code>constraintRuleList</code> input. This must be removed from existing templates.</p>
+<hr>
+<h3 id="pricecomponent"><code>PriceComponent</code></h3>
+<p>The PriceComponent no longer has the <code>options</code> or <code>attributes</code> inputs. New inputs include:</p>
+<ul>
+<li><code>attributeValue</code></li>
+<li><code>bundle</code></li>
+<li><code>term</code></li>
+</ul>
+<hr>
+<h3 id="addtocartcomponent"><code>AddToCartComponent</code></h3>
+<p>The AddToCartComponent no longer has the <code>productAttributes</code>, <code>productOptions</code>, or <code>constraintRuleList</code> inputs.</p>
+<hr>
+<h3 id="productconfigurationcomponent"><code>ProductConfigurationComponent</code></h3>
+<p>All inputs for the ProductConfigurationComponent have changed. Please view the <a href="../components/ProductConfigurationComponent.html">component documentation</a> for details on how to use this component.</p>
+<hr>
+<h3 id="productconfigurationsummarycomponent"><code>ProductConfigurationSummaryComponent</code></h3>
+<p>All inputs for the ProductConfigurationSummaryComponent have changed. Please view the <a href="../components/ProductConfigurationSummaryComponent.html">component documentation</a> for details on how to use this component.</p>
+<hr>
+<h3 id="promotionappliedtolineitemcomponent"><code>PromotionAppliedtoLineitemComponent</code></h3>
+<p>The PromotionAppliedtoLineitemComponent has been removed.</p>
+<hr>
+<h3 id="promotioncomponent"><code>PromotionComponent</code></h3>
+<p>The PromotionComponent has changed the name of its input from <code>appliedpromos</code> to <code>cart</code>.</p>
+<hr>
+<h3 id="assetlistcomponent"><code>AssetListComponent</code></h3>
+<p>The <code>assets</code> input on AssetListComponent has removed. The <code>pageAssets</code> input now accepts an array of <code>AccordionRows</code> objects instead of an array of AssetLineItems.</p>
+<h2 id="file-updates">File Updates</h2>
+<h3 id="environmentts--environmentprodts"><code>environment.ts</code> &amp; <code>environment.prod.ts</code></h3>
+<p>Change the name of the property <code>cartDebounceTime</code> to <code>debounceTime</code>.</p>
+<p>Add the following properties to your configuration file:</p>
+<div><pre class="line-numbers"><code class="language-typescript">  ...
+  sentryDsn: null,
+  useIndexedDB: true,
+  ...</code></pre></div><p><strong><em>Note:</em></strong> The <code>useIndexDB: true</code> property may not be required after patch fixes are implemented. If you are getting the error <code>Cannot read property &#39;delete&#39; of undefined at CacheService.push</code> this will fix that error.</p>
+<hr>
+<h3 id="angularjson"><code>angular.json</code></h3>
+<p>Add the following block of code to the project assets section.</p>
+<div><pre class="line-numbers"><code class="language-json">  {
+    &quot;glob&quot;: &quot;**/*&quot;,
+    &quot;input&quot;: &quot;./node_modules/crypto-js&quot;,
+    &quot;output&quot;: &quot;./assets/scripts/&quot;
+  }</code></pre></div><p>Here is an expanded view to show the exact location where this should be added.</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;projects&quot;: {
+    &quot;reference-base&quot;: {
+      &quot;architect&quot;: {
+        &quot;build&quot;: {
+          &quot;options&quot;: {
+            &quot;assets&quot;: [
+              &quot;src/favicon.ico&quot;,
+              &quot;src/assets&quot;,
+              &quot;src/manifest.json&quot;,
+              &quot;src/apttus-worker.js&quot;,
+              {
+                &quot;glob&quot;: &quot;**/*&quot;,
+                &quot;input&quot;: &quot;./node_modules/crypto-js&quot;,
+                &quot;output&quot;: &quot;./assets/scripts/&quot;
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</code></pre></div><h2 id="default-template-specific-changes">Default Template Specific Changes</h2>
+<p>If you are using the default template the following is a list of all the files that must be updated with the changes needed in order to use the new Apttus libraries.</p>
+<h3 id="appmodulets"><code>app.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>ConstraintRulesModule</li>
+<li>PromotionModule</li>
+<li>AboModule</li>
+</ul>
+<hr>
+<h3 id="appcomponentts"><code>app.component.ts</code></h3>
+<p>If you are using the default template remove this block of code from the <code>app.component.ts</code> file&#39;s <code>ngOnInit()</code> method.</p>
+<div><pre class="line-numbers"><code class="language-typescript">this.subs.push(this.platformService.onRefreshHome.subscribe(res =&gt; {
+  if (res) {
+    this.router.navigateByUrl(&#39;/&#39;);
+    localStorage.setItem(&#39;Show Toastr&#39;, &#39;true&#39;);
+    window.location.reload();
+  }
+}));
+
+if (localStorage.getItem(&#39;Show Toastr&#39;)) {
+  if (localStorage.getItem(&#39;Show Toastr&#39;).valueOf()) {
+    setTimeout(() =&gt; this.toastr.warning(&#39;This page has been reloaded.&#39;, &#39;Session Expired&#39;));
+    localStorage.removeItem(&#39;Show Toastr&#39;);
+  }
+}</code></pre></div><hr>
+<h3 id="componentmodule"><code>component.module</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>AboModule</li>
+<li>StoreModule</li>
+<li>CartModule</li>
+<li>PricingModule</li>
+<li>CatalogModule</li>
+<li>CrmModule</li>
+<li>ConstraintRulesModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+<hr>
+<h3 id="cartmodulets"><code>cart.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CartModule as cModule</li>
+<li>StoreModule</li>
+<li>PricingModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+<hr>
+<h3 id="comparemodulets"><code>compare.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CartModule</li>
+<li>StoreModule</li>
+<li>CatalogModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+<hr>
+<h3 id="detailsmodulets"><code>details.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>PromotionAppliedtoLineitemModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+<hr>
+<h3 id="homemodulets"><code>home.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CatalogModule</li>
+<li>StoreModule</li>
+<li>ConstraintRulesModule</li>
+</ul>
+<hr>
+<h3 id="installed-productsmodulets"><code>installed-products.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CatalogModule</li>
+<li>StoreModule</li>
+<li>AboModule</li>
+</ul>
+<hr>
+<h3 id="manage-cartmodulets"><code>manage-cart.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CatalogModule</li>
+<li>StoreModule</li>
+<li>AboModule</li>
+<li>CartModule</li>
+<li>PromotionAppliedtoLineitemModule</li>
+<li>ConstraintRulesModule</li>
+</ul>
+<hr>
+<h3 id="my-accountmodulets"><code>my-account.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>StoreModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+<hr>
+<h3 id="product-detailsmodulets"><code>product-details.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CatalogModule</li>
+<li>StoreModule</li>
+<li>CartModule</li>
+<li>ConstraintRulesModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+<hr>
+<h3 id="product-listmodulets"><code>product-list.module.ts</code></h3>
+<p>Remove the following modules:</p>
+<ul>
+<li>CatalogModule</li>
+<li>StoreModule</li>
+<li>AboModule</li>
+<li>ConstraintRulesModule</li>
+</ul>
+<p>Rename the <code>MdSpinnerModule</code> to <code>IconModule</code></p>
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
+            var COMPODOC_CURRENT_PAGE_URL = 'spring-v1901-to-summer-v1902.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

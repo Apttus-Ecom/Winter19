@@ -1,0 +1,1484 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/data/table/table.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-table</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./table.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./table.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disableGrouping">disableGrouping</a>
+                            </li>
+                            <li>
+                                <a href="#expanded">expanded</a>
+                            </li>
+                            <li>
+                                <a href="#page">page</a>
+                            </li>
+                            <li>
+                                <a href="#searchString">searchString</a>
+                            </li>
+                            <li>
+                                <a href="#sortColumn">sortColumn</a>
+                            </li>
+                            <li>
+                                <a href="#sortDirection">sortDirection</a>
+                            </li>
+                            <li>
+                                <a href="#subscription">subscription</a>
+                            </li>
+                            <li>
+                                <a href="#view$">view$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#executeAction">executeAction</a>
+                            </li>
+                            <li>
+                                <a href="#loadData">loadData</a>
+                            </li>
+                            <li>
+                                <a href="#onLimitChange">onLimitChange</a>
+                            </li>
+                            <li>
+                                <a href="#onPageChange">onPageChange</a>
+                            </li>
+                            <li>
+                                <a href="#reset">reset</a>
+                            </li>
+                            <li>
+                                <a href="#sort">sort</a>
+                            </li>
+                            <li>
+                                <a href="#toggleAll">toggleAll</a>
+                            </li>
+                            <li>
+                                <a href="#toggleGroup">toggleGroup</a>
+                            </li>
+                            <li>
+                                <a href="#toggleRecord">toggleRecord</a>
+                            </li>
+                            <li>
+                                <a href="#trackById">trackById</a>
+                            </li>
+                            <li>
+                                <a href="#updateView">updateView</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                            <li>
+                                <a href="#type">type</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(metadataService: MetadataService)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>metadataService</td>
+                                                  
+                                                        <td>
+                                                                    <code>MetadataService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <b>options</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/TableOptions.html" target="_self" >TableOptions</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="type"></a>
+                        <b>type</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ClassType&lt;AObject&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="executeAction"></a>
+                    <span class="name">
+                        <b>
+                            executeAction
+                        </b>
+                        <a href="#executeAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>executeAction(action: <a href="../interfaces/TableAction.html">TableAction</a>, record: AObject | Array<AObject>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="../interfaces/TableAction.html" target="_self" >TableAction</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                            <code>AObject | Array&lt;AObject&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadData"></a>
+                    <span class="name">
+                        <b>
+                            loadData
+                        </b>
+                        <a href="#loadData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadData()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLimitChange"></a>
+                    <span class="name">
+                        <b>
+                            onLimitChange
+                        </b>
+                        <a href="#onLimitChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onLimitChange()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onPageChange"></a>
+                    <span class="name">
+                        <b>
+                            onPageChange
+                        </b>
+                        <a href="#onPageChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onPageChange(evt)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>evt</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reset"></a>
+                    <span class="name">
+                        <b>
+                            reset
+                        </b>
+                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reset()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sort"></a>
+                    <span class="name">
+                        <b>
+                            sort
+                        </b>
+                        <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sort(column: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>column</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleAll"></a>
+                    <span class="name">
+                        <b>
+                            toggleAll
+                        </b>
+                        <a href="#toggleAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleAll()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleGroup"></a>
+                    <span class="name">
+                        <b>
+                            toggleGroup
+                        </b>
+                        <a href="#toggleGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleGroup(group: <a href="../interfaces/TableGroup.html">TableGroup</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>group</td>
+                                    <td>
+                                                <code><a href="../interfaces/TableGroup.html" target="_self" >TableGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleRecord"></a>
+                    <span class="name">
+                        <b>
+                            toggleRecord
+                        </b>
+                        <a href="#toggleRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleRecord(record: AObject, group?: <a href="../interfaces/TableGroup.html">TableGroup</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                            <code>AObject</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>group</td>
+                                    <td>
+                                                <code><a href="../interfaces/TableGroup.html" target="_self" >TableGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trackById"></a>
+                    <span class="name">
+                        <b>
+                            trackById
+                        </b>
+                        <a href="#trackById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>trackById(index, record)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>record</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateView"></a>
+                    <span class="name">
+                        <b>
+                            updateView
+                        </b>
+                        <a href="#updateView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateView()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disableGrouping"></a>
+                        <span class="name">
+                            <b>
+                            disableGrouping</b>
+                            <a href="#disableGrouping"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expanded"></a>
+                        <span class="name">
+                            <b>
+                            expanded</b>
+                            <a href="#expanded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="page"></a>
+                        <span class="name">
+                            <b>
+                            page</b>
+                            <a href="#page"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchString"></a>
+                        <span class="name">
+                            <b>
+                            searchString</b>
+                            <a href="#searchString"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortColumn"></a>
+                        <span class="name">
+                            <b>
+                            sortColumn</b>
+                            <a href="#sortColumn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortDirection"></a>
+                        <span class="name">
+                            <b>
+                            sortDirection</b>
+                            <a href="#sortDirection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>&quot;ASC&quot; | &quot;DESC&quot;</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                            subscription</b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="view$"></a>
+                        <span class="name">
+                            <b>
+                            view$</b>
+                            <a href="#view$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/TableView.html" target="_self" >BehaviorSubject&lt;TableView&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject&lt;TableView&gt;(null)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngTemplateOutlet&#x3D;&quot;dataTable; context: {view: view$ | async}&quot;&gt;&lt;/ng-container&gt;
+
+&lt;ng-template #dataTable let-view&#x3D;&quot;view&quot;&gt;
+    &lt;div&gt;
+        &lt;div class&#x3D;&quot;border border-gray&quot;&gt;
+            &lt;div class&#x3D;&quot;table-controls&quot;&gt;
+                &lt;div class&#x3D;&quot;row border-bottom py-2 no-gutters align-items-center&quot;&gt;
+                    &lt;form class&#x3D;&quot;input-group input-group-sm col-4&quot; (ngSubmit)&#x3D;&quot;loadData()&quot;&gt;
+                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;search&quot; [(ngModel)]&#x3D;&quot;searchString&quot;
+                            name&#x3D;&quot;searchString&quot;&gt;
+                        &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-link&quot;&gt;
+                                &lt;i class&#x3D;&quot;fas fa-search&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+
+                    &lt;div class&#x3D;&quot;col-8 d-flex justify-content-end&quot; *ngIf&#x3D;&quot;view?.pageStats&quot;&gt;
+                        &lt;div class&#x3D;&quot;border-right d-flex&quot;&gt;
+                            &lt;div class&#x3D;&quot;px-2&quot;&gt;
+                                {{&#x27;PRODUCT_LIST.SHOW_COUNT_OF_RECORDS_MESSAGE&#x27; | translate:view?.pageStats}}
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;px-3 d-flex&quot;&gt;
+                                &lt;pagination [totalItems]&#x3D;&quot;view?.totalRecords&quot; [(ngModel)]&#x3D;&quot;page&quot; [maxSize]&#x3D;&quot;1&quot;
+                                    pageBtnClass&#x3D;&quot;btn btn-link&quot; (pageChanged)&#x3D;&quot;onPageChange($event)&quot; nextText&#x3D;&quot;&amp;nbsp;&quot;
+                                    previousText&#x3D;&quot;&amp;nbsp;&quot;&gt;&lt;/pagination&gt;
+                                &lt;span&gt;of {{view?.totalPages}}&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;input-group input-group-sm px-3&quot;&gt;
+                            &lt;select class&#x3D;&quot;custom-select custom-select-sm&quot; id&#x3D;&quot;size&quot; [(ngModel)]&#x3D;&quot;view.limit&quot; name&#x3D;&quot;limit&quot;
+                                (change)&#x3D;&quot;onLimitChange()&quot;&gt;
+                                &lt;option [value]&#x3D;&quot;option&quot; *ngFor&#x3D;&quot;let option of view?.limitOptions&quot;&gt;{{option}}&lt;/option&gt;
+                            &lt;/select&gt;
+                            &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+                                &lt;label class&#x3D;&quot;input-group-text&quot; for&#x3D;&quot;sort&quot;&gt;per page&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div *ngIf&#x3D;&quot;options?.groupBy&quot; class&#x3D;&quot;border-left d-flex align-items-center&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-link&quot; [class.disabled]&#x3D;&quot;disableGrouping !&#x3D;&#x3D; true&quot; [disabled]&#x3D;&quot;disableGrouping !&#x3D;&#x3D; true&quot; (click)&#x3D;&quot;disableGrouping &#x3D; false&quot;&gt;
+                                &lt;i class&#x3D;&quot;fa fa-layer-group&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-link&quot; [class.disabled]&#x3D;&quot;disableGrouping &#x3D;&#x3D;&#x3D; true&quot; [disabled]&#x3D;&quot;disableGrouping &#x3D;&#x3D;&#x3D; true&quot; (click)&#x3D;&quot;disableGrouping &#x3D; true&quot;&gt;
+                                &lt;i class&#x3D;&quot;fa fa-list&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;d-flex&quot; *ngIf&#x3D;&quot;options?.actions?.length&quot;&gt;
+                    &lt;div class&#x3D;&quot;border-right pr-3&quot;&gt;
+                        Selected {{view?.label}} ({{view?.selectedItemCount}})
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;d-flex&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-link&quot; [ngClass]&#x3D;&quot;&#x27;btn-&#x27; + action?.theme&quot; *ngFor&#x3D;&quot;let action of view?.actions&quot; [disabled]&#x3D;&quot;!action.enabled&quot; (click)&#x3D;&quot;executeAction(action, view.data)&quot;&gt;
+                            &lt;i class&#x3D;&quot;fa&quot; [ngClass]&#x3D;&quot;action?.icon&quot;&gt;&lt;/i&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;d-flex align-items-stretch&quot; *ngIf&#x3D;&quot;view?.data?.length &gt; 0&quot;&gt;
+                &lt;div class&#x3D;&quot;border-right&quot;&gt;
+                    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;table; context: {view: view, columns: view?.stickyColumns, actions: options?.actions?.length &gt; 0}&quot;&gt;
+                    &lt;/ng-container&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+                    &lt;ng-scrollbar [track]&#x3D;&quot;&#x27;horizontal&#x27;&quot;&gt;
+                        &lt;ng-container *ngTemplateOutlet&#x3D;&quot;table; context: {view: view, columns: view?.columns, actions: false}&quot;&gt;
+                        &lt;/ng-container&gt;
+                    &lt;/ng-scrollbar&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;ng-container #empty *ngIf&#x3D;&quot;view?.data?.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+                &lt;div class&#x3D;&quot;d-flex justify-content-center align-items-center m-5 p-5 flex-column&quot;&gt;
+                    &lt;i class&#x3D;&quot;fa fa-database fa-5x text-primary xl text-faded&quot;&gt;&lt;/i&gt;
+                    &lt;div class&#x3D;&quot;mt-4&quot;&gt;No data to display&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ng-container&gt;
+
+            &lt;ng-container #dataLoading *ngIf&#x3D;&quot;!view?.data&quot;&gt;
+                &lt;div class&#x3D;&quot;d-flex justify-content-center align-items-center m-5 p-5 flex-column&quot;&gt;
+                    &lt;apt-dots&gt;&lt;/apt-dots&gt;
+                &lt;/div&gt;
+            &lt;/ng-container&gt;
+
+            &lt;ng-template #table let-actions&#x3D;&quot;actions&quot; let-view&#x3D;&quot;view&quot; let-columns&#x3D;&quot;columns&quot;&gt;
+                &lt;table class&#x3D;&quot;table table-sm mb-0&quot;&gt;
+                    &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+                        &lt;tr&gt;
+                            &lt;!-- Checkbox header --&gt;
+                            &lt;th scope&#x3D;&quot;col&quot; class&#x3D;&quot;action&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
+                                &lt;div class&#x3D;&quot;custom-control custom-checkbox pl-5&quot;&gt;
+                                    &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;custom-control-input&quot; id&#x3D;&quot;mainCheckbox&quot;
+                                        [indeterminate]&#x3D;&quot;view?.checkState &#x3D;&#x3D;&#x3D; &#x27;indeterminate&#x27;&quot;
+                                        [checked]&#x3D;&quot;view?.checkState &#x3D;&#x3D;&#x3D; &#x27;checked&#x27;&quot; (click)&#x3D;&quot;toggleAll()&quot;&gt;
+                                    &lt;label class&#x3D;&quot;custom-control-label&quot; for&#x3D;&quot;mainCheckbox&quot;&gt;&amp;nbsp;&lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/th&gt;
+
+                            &lt;!-- Action header --&gt;
+                            &lt;th scope&#x3D;&quot;col&quot; class&#x3D;&quot;action px-4&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
+                                &amp;nbsp;
+                            &lt;/th&gt;
+
+                            &lt;!-- Column headers --&gt;
+                            &lt;th scope&#x3D;&quot;col&quot; *ngFor&#x3D;&quot;let column of columns; let f &#x3D; first&quot;&gt;
+                                &lt;div class&#x3D;&quot;pr-4 d-flex&quot;&gt;
+                                    &lt;button class&#x3D;&quot;btn btn-link btn-sm chevron p-0&quot; *ngIf&#x3D;&quot;options?.groupBy &amp;&amp; f &amp;&amp; actions&quot;
+                                        [attr.aria-expanded]&#x3D;&quot;expanded&quot; (click)&#x3D;&quot;expanded &#x3D; !expanded&quot;&gt;&lt;/button&gt;
+                                    &lt;button class&#x3D;&quot;btn btn-sm btn-icon p-0 text-truncate&quot; (click)&#x3D;&quot;sort(column.prop)&quot;&gt;
+                                        &lt;apt-output-field [record]&#x3D;&quot;view?.type&quot; [field]&#x3D;&quot;column.prop&quot; layout&#x3D;&quot;inline&quot;
+                                            [labelOnly]&#x3D;&quot;true&quot;&gt;
+                                            &lt;i class&#x3D;&quot;fa fa-chevron-down ml-2&quot; *ngIf&#x3D;&quot;column.prop &#x3D;&#x3D;&#x3D; sortColumn&quot;
+                                                [class.fa-chevron-down]&#x3D;&quot;sortDirection &#x3D;&#x3D;&#x3D; &#x27;DESC&#x27;&quot;
+                                                [class.fa-chevron-up]&#x3D;&quot;sortDirection &#x3D;&#x3D;&#x3D; &#x27;ASC&#x27;&quot;&gt;&lt;/i&gt;
+                                        &lt;/apt-output-field&gt;
+                                    &lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;ng-container *ngIf&#x3D;&quot;view?.groups?.length &gt; 0 &amp;&amp; !disableGrouping; else flat&quot;&gt;
+                            &lt;ng-container *ngFor&#x3D;&quot;let group of view?.groups; let i &#x3D; index&quot;&gt;
+                                &lt;tr class&#x3D;&quot;table-info&quot;&gt;
+
+                                    &lt;!-- Checkbox column --&gt;
+                                    &lt;td class&#x3D;&quot;action&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
+                                        &lt;div class&#x3D;&quot;custom-control custom-checkbox pl-5&quot;&gt;
+                                            &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;custom-control-input&quot; [id]&#x3D;&quot;&#x27;check-&#x27;+ group.label&quot;
+                                                [indeterminate]&#x3D;&quot;group.state &#x3D;&#x3D;&#x3D; &#x27;indeterminate&#x27;&quot; [checked]&#x3D;&quot;group.state &#x3D;&#x3D;&#x3D; &#x27;checked&#x27;&quot;
+                                                (click)&#x3D;&quot;toggleGroup(group)&quot;&gt;
+                                            &lt;label class&#x3D;&quot;custom-control-label&quot; [for]&#x3D;&quot;&#x27;check-&#x27;+ group.label&quot;&gt;&amp;nbsp;&lt;/label&gt;
+                                        &lt;/div&gt;
+                                    &lt;/td&gt;
+                                    &lt;td  *ngIf&#x3D;&quot;actions&quot;&gt;&amp;nbsp;&lt;/td&gt;
+
+                                    &lt;!-- Data columns --&gt;
+                                    &lt;td [attr.colspan]&#x3D;&quot;columns?.length&quot; class&#x3D;&quot;text-truncate&quot;&gt;
+                                        &lt;button class&#x3D;&quot;btn btn-link btn-sm chevron&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot;
+                                            [attr.data-target]&#x3D;&quot;&#x27;#child-&#x27; + i&quot; [attr.aria-expanded]&#x3D;&quot;expanded&quot; *ngIf&#x3D;&quot;options?.groupBy &amp;&amp; actions&quot;&gt;
+                                            {{group?.label}}
+                                        &lt;/button&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;ng-container
+                                    *ngTemplateOutlet&#x3D;&quot;rowData; context: {data: view?.groupedData[group.label], group: group, groupIndex: i, actions: actions, columns: columns, route: view?.route}&quot;&gt;
+                                &lt;/ng-container&gt;
+                            &lt;/ng-container&gt;
+                        &lt;/ng-container&gt;
+                        &lt;ng-template #flat&gt;
+                            &lt;ng-container *ngTemplateOutlet&#x3D;&quot;rowData; context: {data: view?.data, actions: actions, columns: columns, route: view?.route}&quot;&gt;&lt;/ng-container&gt;
+                        &lt;/ng-template&gt;
+
+                        &lt;ng-template #rowData let-data&#x3D;&quot;data&quot; let-group&#x3D;&quot;group&quot; let-groupIndex&#x3D;&quot;groupIndex&quot; let-actions&#x3D;&quot;actions&quot; let-columns&#x3D;&quot;columns&quot; let-route&#x3D;&quot;route&quot;&gt;
+                            &lt;tr *ngFor&#x3D;&quot;let record of data; trackBy: trackById&quot; class&#x3D;&quot;collapse childSection&quot; [class.show]&#x3D;&quot;expanded&quot;
+                                [id]&#x3D;&quot;&#x27;child-&#x27; + groupIndex&quot;
+                                [class.table-primary]&#x3D;&quot;record?._metadata?.state &#x3D;&#x3D;&#x3D; &#x27;indeterminate&#x27; || record?._metadata?.state &#x3D;&#x3D;&#x3D; &#x27;checked&#x27;&quot;&gt;
+
+                                &lt;!-- Checkbox column --&gt;
+                                &lt;td class&#x3D;&quot;action&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
+                                    &lt;div class&#x3D;&quot;custom-control custom-checkbox pl-5&quot; *ngIf&#x3D;&quot;record?.get(&#x27;actions&#x27;)?.length &gt; 0&quot;&gt;
+                                        &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;custom-control-input&quot; [id]&#x3D;&quot;&#x27;check-&#x27; + record?.Id&quot;
+                                            [checked]&#x3D;&quot;record?.get(&#x27;state&#x27;) &#x3D;&#x3D;&#x3D; &#x27;checked&#x27;&quot; (click)&#x3D;&quot;toggleRecord(record, group)&quot;&gt;
+                                        &lt;label class&#x3D;&quot;custom-control-label&quot; [for]&#x3D;&quot;&#x27;check-&#x27; + record?.Id&quot;&gt;&amp;nbsp;&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/td&gt;
+
+                                &lt;!-- Action columns --&gt;
+                                &lt;td class&#x3D;&quot;action&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
+                                    &lt;div class&#x3D;&quot;dropdown&quot; *ngIf&#x3D;&quot;record?.get(&#x27;actions&#x27;)?.length &gt; 0&quot; dropdown&gt;
+                                        &lt;button class&#x3D;&quot;btn btn-link&quot; dropdownToggle&gt;
+                                            &lt;i class&#x3D;&quot;fa fa-ellipsis-v d-flex align-self-center fa-lg&quot;&gt;&lt;/i&gt;
+                                        &lt;/button&gt;
+                                        &lt;div *dropdownMenu class&#x3D;&quot;dropdown-menu&quot;&gt;
+                                            &lt;h6 class&#x3D;&quot;dropdown-header font-weight-bold&quot;&gt;{{record?.Name}}&lt;/h6&gt;
+                                            &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+                                            &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;dropdown-item&quot;  *ngFor&#x3D;&quot;let action of record?.get(&#x27;actions&#x27;)&quot; [ngClass]&#x3D;&quot;&#x27;text-&#x27; + action?.theme&quot; (click)&#x3D;&quot;executeAction(action, record)&quot;&gt;
+                                                &lt;i class&#x3D;&quot;fa mr-2&quot; [ngClass]&#x3D;&quot;action?.icon&quot;&gt;&lt;/i&gt;
+                                                {{action?.label}}
+                                            &lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    
+                                &lt;/td&gt;
+
+                                &lt;td *ngFor&#x3D;&quot;let column of columns; let firstColumn &#x3D; first&quot; class&#x3D;&quot;text-truncate&quot;&gt;
+                                    &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[route, record?.Id]&quot; *ngIf&#x3D;&quot;column.prop &#x3D;&#x3D;&#x3D; &#x27;Name&#x27;; else read&quot;&gt;
+                                        &lt;apt-output-field [record]&#x3D;&quot;record&quot; [field]&#x3D;&quot;column.prop&quot; valueOnly&#x3D;&quot;true&quot; [editable]&#x3D;&quot;false&quot;&gt;
+                                        &lt;/apt-output-field&gt;
+                                    &lt;/a&gt;
+                                    &lt;ng-template #read&gt;
+                                        &lt;div&gt;
+                                            &lt;apt-output-field [record]&#x3D;&quot;record&quot; [field]&#x3D;&quot;column.prop&quot; valueOnly&#x3D;&quot;true&quot; [editable]&#x3D;&quot;false&quot; [showQuickView]&#x3D;&quot;true&quot;&gt;
+                                            &lt;/apt-output-field&gt;
+                                        &lt;/div&gt;
+                                    &lt;/ng-template&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/ng-template&gt;
+
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/ng-template&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./table.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">apt-table{
+    .collapsing {
+        -webkit-transition: none;
+        transition: none;
+        display: none;
+    }
+    .table-controls{
+        &gt;div{
+            padding: 0 .5rem 0 1rem;
+        }
+        div.d-flex{
+            align-items: center;
+        }
+        .input-group{
+            width: initial;
+            align-items: center;
+        }
+        pagination{
+            ul{
+                margin-bottom: 0;
+            }
+            li.pagination-next&gt;a:before{
+                font-family: &quot;Font Awesome 5 Free&quot;;
+                font-weight: 400;
+                content: &quot;\f054&quot;;
+            }
+            li.pagination-prev&gt;a:before{
+                font-family: &quot;Font Awesome 5 Free&quot;;
+                font-weight: 400;
+                content: &quot;\f053&quot;;
+            }
+            li.page-item.active .page-link{
+                background-color: inherit;
+                color: inherit;
+            }
+            .page-link{
+                border: none;
+            }
+        }
+        button.btn.btn-link{
+            padding: .25rem .5rem;
+        }
+    }
+    table.table{
+        thead{
+            th{
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+        }
+        td, th{
+            vertical-align: middle;
+            height: 39px;
+        }
+        .action{
+            width: 3rem;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .loading-indicator{
+            height: 10px;
+            border-radius: 5px;
+        }
+    }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngTemplateOutlet="dataTable; context: {view: view$ | async}"></ng-container><ng-template #dataTable let-view="view">    <div>        <div class="border border-gray">            <div class="table-controls">                <div class="row border-bottom py-2 no-gutters align-items-center">                    <form class="input-group input-group-sm col-4" (ngSubmit)="loadData()">                        <input type="text" class="form-control" placeholder="search" [(ngModel)]="searchString"                            name="searchString">                        <div class="input-group-append">                            <button class="btn btn-link">                                <i class="fas fa-search"></i>                            </button>                        </div>                    </form>                    <div class="col-8 d-flex justify-content-end" *ngIf="view?.pageStats">                        <div class="border-right d-flex">                            <div class="px-2">                                {{\'PRODUCT_LIST.SHOW_COUNT_OF_RECORDS_MESSAGE\' | translate:view?.pageStats}}                            </div>                            <div class="px-3 d-flex">                                <pagination [totalItems]="view?.totalRecords" [(ngModel)]="page" [maxSize]="1"                                    pageBtnClass="btn btn-link" (pageChanged)="onPageChange($event)" nextText="&nbsp;"                                    previousText="&nbsp;"></pagination>                                <span>of {{view?.totalPages}}</span>                            </div>                        </div>                        <div class="input-group input-group-sm px-3">                            <select class="custom-select custom-select-sm" id="size" [(ngModel)]="view.limit" name="limit"                                (change)="onLimitChange()">                                <option [value]="option" *ngFor="let option of view?.limitOptions">{{option}}</option>                            </select>                            <div class="input-group-append">                                <label class="input-group-text" for="sort">per page</label>                            </div>                        </div>                        <div *ngIf="options?.groupBy" class="border-left d-flex align-items-center">                            <button class="btn btn-link" [class.disabled]="disableGrouping !== true" [disabled]="disableGrouping !== true" (click)="disableGrouping = false">                                <i class="fa fa-layer-group"></i>                            </button>                            <button class="btn btn-link" [class.disabled]="disableGrouping === true" [disabled]="disableGrouping === true" (click)="disableGrouping = true">                                <i class="fa fa-list"></i>                            </button>                        </div>                    </div>                </div>                <div class="d-flex" *ngIf="options?.actions?.length">                    <div class="border-right pr-3">                        Selected {{view?.label}} ({{view?.selectedItemCount}})                    </div>                    <div class="d-flex">                        <button class="btn btn-link" [ngClass]="\'btn-\' + action?.theme" *ngFor="let action of view?.actions" [disabled]="!action.enabled" (click)="executeAction(action, view.data)">                            <i class="fa" [ngClass]="action?.icon"></i>                        </button>                    </div>                </div>            </div>            <div class="d-flex align-items-stretch" *ngIf="view?.data?.length > 0">                <div class="border-right">                    <ng-container *ngTemplateOutlet="table; context: {view: view, columns: view?.stickyColumns, actions: options?.actions?.length > 0}">                    </ng-container>                </div>                <div class="table-responsive">                    <ng-scrollbar [track]="\'horizontal\'">                        <ng-container *ngTemplateOutlet="table; context: {view: view, columns: view?.columns, actions: false}">                        </ng-container>                    </ng-scrollbar>                </div>            </div>                        <ng-container #empty *ngIf="view?.data?.length === 0">                <div class="d-flex justify-content-center align-items-center m-5 p-5 flex-column">                    <i class="fa fa-database fa-5x text-primary xl text-faded"></i>                    <div class="mt-4">No data to display</div>                </div>            </ng-container>            <ng-container #dataLoading *ngIf="!view?.data">                <div class="d-flex justify-content-center align-items-center m-5 p-5 flex-column">                    <apt-dots></apt-dots>                </div>            </ng-container>            <ng-template #table let-actions="actions" let-view="view" let-columns="columns">                <table class="table table-sm mb-0">                    <thead class="thead-light">                        <tr>                            <!-- Checkbox header -->                            <th scope="col" class="action" *ngIf="actions">                                <div class="custom-control custom-checkbox pl-5">                                    <input type="checkbox" class="custom-control-input" id="mainCheckbox"                                        [indeterminate]="view?.checkState === \'indeterminate\'"                                        [checked]="view?.checkState === \'checked\'" (click)="toggleAll()">                                    <label class="custom-control-label" for="mainCheckbox">&nbsp;</label>                                </div>                            </th>                            <!-- Action header -->                            <th scope="col" class="action px-4" *ngIf="actions">                                &nbsp;                            </th>                            <!-- Column headers -->                            <th scope="col" *ngFor="let column of columns; let f = first">                                <div class="pr-4 d-flex">                                    <button class="btn btn-link btn-sm chevron p-0" *ngIf="options?.groupBy && f && actions"                                        [attr.aria-expanded]="expanded" (click)="expanded = !expanded"></button>                                    <button class="btn btn-sm btn-icon p-0 text-truncate" (click)="sort(column.prop)">                                        <apt-output-field [record]="view?.type" [field]="column.prop" layout="inline"                                            [labelOnly]="true">                                            <i class="fa fa-chevron-down ml-2" *ngIf="column.prop === sortColumn"                                                [class.fa-chevron-down]="sortDirection === \'DESC\'"                                                [class.fa-chevron-up]="sortDirection === \'ASC\'"></i>                                        </apt-output-field>                                    </button>                                </div>                            </th>                        </tr>                    </thead>                    <tbody>                        <ng-container *ngIf="view?.groups?.length > 0 && !disableGrouping; else flat">                            <ng-container *ngFor="let group of view?.groups; let i = index">                                <tr class="table-info">                                    <!-- Checkbox column -->                                    <td class="action" *ngIf="actions">                                        <div class="custom-control custom-checkbox pl-5">                                            <input type="checkbox" class="custom-control-input" [id]="\'check-\'+ group.label"                                                [indeterminate]="group.state === \'indeterminate\'" [checked]="group.state === \'checked\'"                                                (click)="toggleGroup(group)">                                            <label class="custom-control-label" [for]="\'check-\'+ group.label">&nbsp;</label>                                        </div>                                    </td>                                    <td  *ngIf="actions">&nbsp;</td>                                    <!-- Data columns -->                                    <td [attr.colspan]="columns?.length" class="text-truncate">                                        <button class="btn btn-link btn-sm chevron" type="button" data-toggle="collapse"                                            [attr.data-target]="\'#child-\' + i" [attr.aria-expanded]="expanded" *ngIf="options?.groupBy && actions">                                            {{group?.label}}                                        </button>                                    </td>                                </tr>                                <ng-container                                    *ngTemplateOutlet="rowData; context: {data: view?.groupedData[group.label], group: group, groupIndex: i, actions: actions, columns: columns, route: view?.route}">                                </ng-container>                            </ng-container>                        </ng-container>                        <ng-template #flat>                            <ng-container *ngTemplateOutlet="rowData; context: {data: view?.data, actions: actions, columns: columns, route: view?.route}"></ng-container>                        </ng-template>                        <ng-template #rowData let-data="data" let-group="group" let-groupIndex="groupIndex" let-actions="actions" let-columns="columns" let-route="route">                            <tr *ngFor="let record of data; trackBy: trackById" class="collapse childSection" [class.show]="expanded"                                [id]="\'child-\' + groupIndex"                                [class.table-primary]="record?._metadata?.state === \'indeterminate\' || record?._metadata?.state === \'checked\'">                                <!-- Checkbox column -->                                <td class="action" *ngIf="actions">                                    <div class="custom-control custom-checkbox pl-5" *ngIf="record?.get(\'actions\')?.length > 0">                                        <input type="checkbox" class="custom-control-input" [id]="\'check-\' + record?.Id"                                            [checked]="record?.get(\'state\') === \'checked\'" (click)="toggleRecord(record, group)">                                        <label class="custom-control-label" [for]="\'check-\' + record?.Id">&nbsp;</label>                                    </div>                                </td>                                <!-- Action columns -->                                <td class="action" *ngIf="actions">                                    <div class="dropdown" *ngIf="record?.get(\'actions\')?.length > 0" dropdown>                                        <button class="btn btn-link" dropdownToggle>                                            <i class="fa fa-ellipsis-v d-flex align-self-center fa-lg"></i>                                        </button>                                        <div *dropdownMenu class="dropdown-menu">                                            <h6 class="dropdown-header font-weight-bold">{{record?.Name}}</h6>                                            <div class="dropdown-divider"></div>                                            <a href="javascript:void(0)" class="dropdown-item"  *ngFor="let action of record?.get(\'actions\')" [ngClass]="\'text-\' + action?.theme" (click)="executeAction(action, record)">                                                <i class="fa mr-2" [ngClass]="action?.icon"></i>                                                {{action?.label}}                                            </a>                                        </div>                                    </div>                                                                    </td>                                <td *ngFor="let column of columns; let firstColumn = first" class="text-truncate">                                    <a href="javascript:void(0)" [routerLink]="[route, record?.Id]" *ngIf="column.prop === \'Name\'; else read">                                        <apt-output-field [record]="record" [field]="column.prop" valueOnly="true" [editable]="false">                                        </apt-output-field>                                    </a>                                    <ng-template #read>                                        <div>                                            <apt-output-field [record]="record" [field]="column.prop" valueOnly="true" [editable]="false" [showQuickView]="true">                                            </apt-output-field>                                        </div>                                    </ng-template>                                </td>                            </tr>                        </ng-template>                    </tbody>                </table>            </ng-template>        </div>    </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TableComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

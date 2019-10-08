@@ -1,0 +1,883 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProductConfigurationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/apttus/elements/src/lib/product-configuration/product-configuration.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Product configuration component is used to show the hierarchical view of the configurations for a given product or cart line item.</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductConfigurationModule } from &#39;&#64;apttus/elements&#39;;
+
+&#64;NgModule({
+  imports: [ProductConfigurationModule, ...]
+})
+export class AppModule {}</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;apt-product-configuration
+    [product]=&quot;product&quot;
+    [relatedTo]=&quot;parent&quot;
+    (configurationChange)=&quot;handleConfigurationChange($event)&quot;
+&gt;&lt;/apt-product-configuration&gt;</code></pre>
+                </div>
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>apt-product-configuration</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./product-configuration.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./product-configuration.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disableAccordion">disableAccordion</a>
+                            </li>
+                            <li>
+                                <a href="#searchText">searchText</a>
+                            </li>
+                            <li>
+                                <a href="#selectedOptionList$">selectedOptionList$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#product">product</a>
+                            </li>
+                            <li>
+                                <a href="#relatedTo">relatedTo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#configurationChange">configurationChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, productOptionService: <a href="../injectables/ProductOptionService.html">ProductOptionService</a>, cartItemService: <a href="../injectables/CartItemService.html">CartItemService</a>, cartService: <a href="../injectables/CartService.html">CartService</a>, alertService: <a href="../injectables/ConstraintAlertService.html">ConstraintAlertService</a>, crService: <a href="../injectables/ConstraintRuleService.html">ConstraintRuleService</a>, sideMenuService: <a href="../injectables/ConstraintSideMenuService.html">ConstraintSideMenuService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productOptionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductOptionService.html" target="_self" >ProductOptionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartItemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartItemService.html" target="_self" >CartItemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintAlertService.html" target="_self" >ConstraintAlertService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>crService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintRuleService.html" target="_self" >ConstraintRuleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sideMenuService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintSideMenuService.html" target="_self" >ConstraintSideMenuService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="product"></a>
+                        <b>product</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | BundleProduct</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Instance of product or a string value representing the product Id.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="relatedTo"></a>
+                        <b>relatedTo</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Instance of cart item or a string value representing the line item Id.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="configurationChange"></a>
+                        <b>configurationChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disableAccordion"></a>
+                        <span class="name">
+                            <b>
+                            disableAccordion</b>
+                            <a href="#disableAccordion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchText"></a>
+                        <span class="name">
+                            <b>
+                            searchText</b>
+                            <a href="#searchText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedOptionList$"></a>
+                        <span class="name">
+                            <b>
+                            selectedOptionList$</b>
+                            <a href="#selectedOptionList$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>BehaviorSubject&lt;Array&lt;ProductOptionComponent&gt;&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new BehaviorSubject&lt;Array&lt;ProductOptionComponent&gt;&gt;([])</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;apt-cr-constraint-alert [detailPageAlert]&#x3D;&#x27;true&#x27;&gt;&lt;/apt-cr-constraint-alert&gt;
+
+&lt;ng-container *ngIf&#x3D;&quot;(view$ | async) as view; else loading&quot;&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;view?.product?.OptionGroups?.length &gt; 0 || view?.product?.HasAttributes &amp;&amp; view?.product?.AttributeGroups?.length &gt; 0
+                    ; else empty&quot;&gt;
+        &lt;div&gt;
+            &lt;div class&#x3D;&quot;d-flex justify-content-between mb-2&quot;&gt;
+                &lt;form&gt;
+                    &lt;div class&#x3D;&quot;input-group search&quot;&gt;
+                        &lt;input type&#x3D;&quot;search&quot; class&#x3D;&quot;form-control&quot;
+                            placeholder&#x3D;&quot;{{&#x27;COMMON.SEARCH_CONFIGURATION&#x27; | translate}}&quot; [(ngModel)]&#x3D;&quot;searchText&quot;
+                            name&#x3D;&quot;searchText&quot;&gt;
+                        &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+                            &lt;span class&#x3D;&quot;input-group-text&quot;&gt;
+                                &lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+                &lt;div&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link&quot; [disabled]&#x3D;&quot;!disableAccordion&quot; (click)&#x3D;&quot;disableAccordion &#x3D; false&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa fa-angle-double-up fa-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link&quot; [disabled]&#x3D;&quot;disableAccordion&quot; (click)&#x3D;&quot;disableAccordion &#x3D; true&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa fa-angle-double-down fa-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;accordion&quot; id&#x3D;&quot;optionAccordion&quot;&gt;
+                &lt;ng-container *ngIf&#x3D;&quot;view?.product?.AttributeGroups?.length &gt; 0&quot;&gt;
+                    &lt;apt-product-attribute [product]&#x3D;&quot;view.product&quot; [(productAttributeValue)]&#x3D;&quot;view.product._metadata.item.AttributeValue&quot; (productAttributeValueChange)&#x3D;&quot;onAttributeChange($event, view)&quot; container&#x3D;&quot;optionAccordion&quot;&gt;
+                    &lt;/apt-product-attribute&gt;
+                &lt;/ng-container&gt;
+
+
+                &lt;ng-container *ngIf&#x3D;&quot;view?.product?.HasOptions &amp;&amp; view?.product?.OptionGroups?.length &gt; 0&quot;&gt;
+                    &lt;div class&#x3D;&quot;card&quot;
+                        *ngFor&#x3D;&quot;let productOptionGroup of view?.product?.OptionGroups; let optionIndex &#x3D; index; trackBy: trackById&quot;&gt;
+                        &lt;div class&#x3D;&quot;card-header px-2 py-1&quot;&gt;
+                            &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                                &lt;button class&#x3D;&quot;btn btn-link&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot;
+                                    [attr.data-target]&#x3D;&quot;&#x27;#a&#x27; + productOptionGroup.Id&quot;
+                                    [attr.aria-expanded]&#x3D;&quot;(optionIndex + view?.product?.AttributeGroups?.length &#x3D;&#x3D;&#x3D; 0 || disableAccordion) ? &#x27;true&#x27; : &#x27;false&#x27;&quot;&gt;
+                                    {{productOptionGroup?.OptionGroup?.Name}}
+                                &lt;/button&gt;
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+
+                        &lt;div [id]&#x3D;&quot;&#x27;a&#x27; + productOptionGroup.Id&quot; class&#x3D;&quot;collapse&quot;
+                            [class.show]&#x3D;&quot;optionIndex + view?.product?.AttributeGroups?.length &#x3D;&#x3D;&#x3D; 0 || disableAccordion&quot;
+                            [attr.data-parent]&#x3D;&quot;(!disableAccordion) ? &#x27;#optionAccordion&#x27; : null&quot;&gt;
+                            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                                &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;productOptionGroupTemplate&quot;
+                                    [ngTemplateOutletContext]&#x3D;&quot;{optionGroupList: productOptionGroup?._metadata?.children, parent: productOptionGroup.Id}&quot;&gt;
+                                &lt;/ng-template&gt;
+                                &lt;div class&#x3D;&quot;pl-4&quot;&gt;
+                                    &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;componentListTemplate&quot;
+                                        [ngTemplateOutletContext]&#x3D;&quot;{componentList: productOptionGroup?.Options, parent: productOptionGroup.Id, group: productOptionGroup}&quot;&gt;
+                                    &lt;/ng-template&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/ng-container&gt;
+            &lt;/div&gt;
+
+            &lt;ng-template #productOptionGroupTemplate let-optionGroupList&#x3D;&quot;optionGroupList&quot; let-parent&#x3D;&quot;parent&quot; let-parentProduct&#x3D;&quot;parentProduct&quot;&gt;
+                &lt;div class&#x3D;&quot;accordion&quot; [id]&#x3D;&quot;parent&quot;&gt;
+
+                    &lt;div *ngFor&#x3D;&quot;let subProductOptionGroup of optionGroupList; let categoryIndex &#x3D; index; let l &#x3D; last; let f &#x3D; first; trackBy: trackById&quot;
+                        class&#x3D;&quot;mb-3&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;d-flex justify-content-between align-items-center border-bottom&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-link chevron&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot;
+                                [attr.data-target]&#x3D;&quot;&#x27;#&#x27; + parent + &#x27;-&#x27; + subProductOptionGroup.Id&quot;
+                                [attr.aria-expanded]&#x3D;&quot;false&quot;&gt;
+                                {{subProductOptionGroup?.OptionGroup?.Name}}
+                            &lt;/button&gt;
+                        &lt;/h5&gt;
+
+                        &lt;div [id]&#x3D;&quot;parent + &#x27;-&#x27; + subProductOptionGroup.Id&quot; class&#x3D;&quot;collapse pl-4&quot; [attr.data-parent]&#x3D;&quot;&#x27;#&#x27; + parent&quot;&gt;
+                            &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;componentListTemplate&quot;
+                                [ngTemplateOutletContext]&#x3D;&quot;{componentList: subProductOptionGroup?.Options, parent: parent + &#x27;-&#x27; + subProductOptionGroup.Id, group: subProductOptionGroup}&quot;&gt;
+                            &lt;/ng-template&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ng-template&gt;
+
+            &lt;ng-template #componentListTemplate let-componentList&#x3D;&quot;componentList&quot; let-parent&#x3D;&quot;parent&quot; let-group&#x3D;&quot;group&quot;&gt;
+                &lt;ng-container *ngIf&#x3D;&quot;componentList?.length &gt; 0 || group?._metadata?.children?.length &gt; 0; else cLoading&quot;&gt;
+                    &lt;div *ngFor&#x3D;&quot;let component of componentList; let f &#x3D; first; let l &#x3D; last; trackBy: trackById&quot; class&#x3D;&quot;option&quot;
+                        [class.border-bottom]&#x3D;&quot;!l &amp;&amp; !((component?.ComponentProduct.HasOptions || component?.ComponentProduct?.HasAttributes) &amp;&amp; component?.ComponentProduct?._metadata?.item)&quot;&gt;
+
+                        &lt;ng-template *ngIf&#x3D;&quot;component?.ComponentProduct?._metadata?.item?.Asset?.PriceType &#x3D;&#x3D;&#x3D; &#x27;One Time&#x27;&quot;
+                            [ngTemplateOutlet]&#x3D;&quot;readOnlyComponent&quot; [ngTemplateOutletContext]&#x3D;&quot;{
+                                                        component: component,
+                                                        parent: parent,
+                                                        selected: isItemSelected(component),
+                                                        cartItem: component?.ComponentProduct?._metadata?.item,
+                                                        group: group
+                                                    }&quot;&gt;&lt;/ng-template&gt;
+
+                        &lt;ng-template *ngIf&#x3D;&quot;component?.ComponentProduct?._metadata?.item?.Asset?.PriceType !&#x3D;&#x3D; &#x27;One Time&#x27;&quot;
+                            [ngTemplateOutlet]&#x3D;&quot;componentTemplate&quot; [ngTemplateOutletContext]&#x3D;&quot;{
+                                                    component: component, 
+                                                    parent: parent, 
+                                                    selected: isItemSelected(component), 
+                                                    cartItem: component?.ComponentProduct?._metadata?.item,
+                                                    group: group}&quot;&gt;
+                        &lt;/ng-template&gt;
+                    &lt;/div&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-template #cLoading&gt;
+                    &lt;div class&#x3D;&quot;d-flex justify-content-center pt-5&quot;&gt;
+                        &lt;apt-dots&gt;&lt;/apt-dots&gt;
+                    &lt;/div&gt;
+                &lt;/ng-template&gt;
+            &lt;/ng-template&gt;
+
+            &lt;ng-template #readOnlyComponent let-component&#x3D;&quot;component&quot; let-parent&#x3D;&quot;parent&quot; let-cartItem&#x3D;&quot;cartItem&quot; let-group&#x3D;&quot;group&quot; let-selected&#x3D;&quot;selected&quot;&gt;
+                &lt;div class&#x3D;&quot;d-flex py-2&quot;&gt;
+                    &lt;div class&#x3D;&quot;d-flex flex-grow-1&quot;&gt;
+                        &lt;div class&#x3D;&quot;d-flex&quot;&gt;
+                            &lt;div class&#x3D;&quot;mr-2&quot;&gt;
+                                &lt;i class&#x3D;&quot;fa fa-check-square-o fa-lg&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;image-container d-flex justify-content-center&quot;&gt;
+                                &lt;img [src]&#x3D;&quot;component?.ComponentProduct?.IconId | image&quot; height&#x3D;&quot;50&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mx-3&quot;&gt;
+                            &lt;p class&#x3D;&quot;m-0 font-weight-bold&quot;&gt;{{component?.ComponentProduct?.Name}}&lt;/p&gt;
+                            &lt;small class&#x3D;&quot;d-block desc&quot;&gt;{{component?.ComponentProduct?.Description}}&lt;/small&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;width-fixed border-left d-flex&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label&gt;{{&#x27;COMMON.PRICE&#x27; | translate}}&lt;/label&gt;
+                            &lt;h5 class&#x3D;&quot;pt-1&quot;&gt;
+                                &lt;apt-price [record]&#x3D;&quot;component?.ComponentProduct&quot; [quantity]&#x3D;&quot;1&quot;&gt;&lt;/apt-price&gt;
+                            &lt;/h5&gt;
+                        &lt;/div&gt;
+                
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label for&#x3D;&quot;qty&quot;&gt;{{&#x27;COMMON.QTY&#x27; | translate}}&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control form-control-sm text-center&quot; [disabled]&#x3D;&quot;true&quot; id&#x3D;&quot;qty&quot;
+                                [value]&#x3D;&quot;cartItem?.Quantity&quot; name&#x3D;&quot;quantity&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class&#x3D;&quot;pl-3&quot; [hidden]&#x3D;&quot;!selected&quot;&gt;
+                    &lt;ng-container *ngIf&#x3D;&quot;component?.ComponentProduct?._metadata?.item?.AttributeValue&quot;&gt;
+                        &lt;apt-product-attribute [product]&#x3D;&quot;component.ComponentProduct&quot; [container]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot;
+                            lineType&#x3D;&quot;Option&quot; [(productAttributeValue)]&#x3D;&quot;component.ComponentProduct._metadata.item.AttributeValue&quot;
+                            (productAttributeValueChange)&#x3D;&quot;onAttributeChange($event, view)&quot;&gt;&lt;/apt-product-attribute&gt;
+                    &lt;/ng-container&gt;
+                
+                
+                    &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;productOptionGroupTemplate&quot;
+                        [ngTemplateOutletContext]&#x3D;&quot;{optionGroupList: component?.ComponentProduct?.OptionGroups, parent: parent + &#x27;-&#x27; + component.Id, parentProduct: component?.ComponentProduct}&quot;&gt;
+                    &lt;/ng-template&gt;
+                &lt;/div&gt;
+            &lt;/ng-template&gt;
+
+            &lt;ng-template #componentTemplate let-component&#x3D;&quot;component&quot; let-parent&#x3D;&quot;parent&quot; let-selected&#x3D;&quot;selected&quot;
+                let-cartItem&#x3D;&quot;cartItem&quot; let-group&#x3D;&quot;group&quot;&gt;
+                &lt;div class&#x3D;&quot;d-flex py-2&quot;&gt;
+                    &lt;div class&#x3D;&quot;d-flex flex-grow-1&quot;&gt;
+                        &lt;div class&#x3D;&quot;d-flex cr-popover-container&quot;&gt;
+                            &lt;apt-cr-popover [ruleList]&#x3D;&quot;component?._metadata?.constraintRules&quot; [triggers]&#x3D;&quot;&#x27;&#x27;&quot; [outsideClick]&#x3D;&quot;false&quot; [optionRules]&#x3D;&quot;true&quot;
+                                [product]&#x3D;&quot;component?.ComponentProduct&quot; [parentProduct]&#x3D;&quot;view?.product&quot; [containerClass]&#x3D;&quot;&#x27;CRPopover optionPopover&#x27;&quot; [options]&#x3D;&quot;selectedOptionList$ | async&quot;&gt;
+                                &lt;div class&#x3D;&quot;custom-control custom-radio&quot; *ngIf&#x3D;&quot;group?.MaxOptions &#x3D;&#x3D;&#x3D; 1; else checkbox&quot;&gt;
+                                    &lt;input type&#x3D;&quot;radio&quot; [id]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot; [name]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot; [checked]&#x3D;&quot;selected&quot;
+                                        class&#x3D;&quot;custom-control-input&quot; [attr.data-checked]&#x3D;&quot;selected&quot; [disabled]&#x3D;&quot;group?._metadata?.summary?.disabled || component?._metadata?.disabled&quot;&gt;
+                                    &lt;label class&#x3D;&quot;custom-control-label&quot; [for]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot;
+                                        (click)&#x3D;&quot;toggleOption(component, group, parent, view)&quot;&gt;&amp;nbsp;&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;ng-template #checkbox&gt;
+                                    &lt;div class&#x3D;&quot;custom-control custom-checkbox&quot;&gt;
+                                        &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;custom-control-input&quot; [id]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot; [checked]&#x3D;&quot;selected&quot;
+                                            [disabled]&#x3D;&quot;group?._metadata?.summary?.disabled || component?._metadata?.disabled&quot;&gt;
+                                        &lt;label class&#x3D;&quot;custom-control-label&quot; [for]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot;
+                                            (click)&#x3D;&quot;toggleOption(component, group, parent, view, $event)&quot;&gt;&amp;nbsp;&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/ng-template&gt;
+                            &lt;/apt-cr-popover&gt;
+                            
+                            &lt;div class&#x3D;&quot;image-container d-flex justify-content-center&quot;&gt;
+                                &lt;img [src]&#x3D;&quot;component?.ComponentProduct?.IconId | image&quot; height&#x3D;&quot;50&quot;&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mx-3&quot;&gt;
+                            &lt;p class&#x3D;&quot;m-0 font-weight-bold&quot;&gt;{{component?.ComponentProduct?.Name}}&lt;/p&gt;
+                            &lt;small class&#x3D;&quot;d-block desc&quot;&gt;{{component?.ComponentProduct?.Description}}&lt;/small&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;width-fixed border-left d-flex&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label&gt;{{&#x27;COMMON.PRICE&#x27; | translate}}&lt;/label&gt;
+                            &lt;h5 class&#x3D;&quot;pt-1&quot;&gt;
+                                &lt;apt-price [record]&#x3D;&quot;component?.ComponentProduct&quot; [quantity]&#x3D;&quot;1&quot;&gt;&lt;/apt-price&gt;
+                            &lt;/h5&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                            &lt;label for&#x3D;&quot;qty&quot;&gt;{{&#x27;COMMON.QTY&#x27; | translate}}&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control form-control-sm text-center&quot;
+                                *ngIf&#x3D;&quot;cartItem; else disabledInput&quot; [disabled]&#x3D;&quot;!selected&quot; id&#x3D;&quot;qty&quot; placeholder&#x3D;&quot;1&quot;
+                                name&#x3D;&quot;quantity&quot; (change)&#x3D;&quot;emitChange(view)&quot; [(ngModel)]&#x3D;&quot;cartItem.Quantity&quot;&gt;
+                            &lt;ng-template #disabledInput&gt;
+                                &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control form-control-sm text-center&quot; [disabled]&#x3D;&quot;true&quot;
+                                    id&#x3D;&quot;qty&quot; placeholder&#x3D;&quot;0&quot; name&#x3D;&quot;quantity&quot;&gt;
+                            &lt;/ng-template&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;pl-3&quot; [hidden]&#x3D;&quot;!selected&quot;&gt;
+                    &lt;ng-container *ngIf&#x3D;&quot;component?.ComponentProduct?._metadata?.item?.AttributeValue&quot;&gt;
+                        &lt;apt-product-attribute [product]&#x3D;&quot;component.ComponentProduct&quot; [container]&#x3D;&quot;parent + &#x27;-&#x27; + component.Id&quot;
+                            lineType&#x3D;&quot;Option&quot; [(productAttributeValue)]&#x3D;&quot;component.ComponentProduct._metadata.item.AttributeValue&quot;
+                            (productAttributeValueChange)&#x3D;&quot;onAttributeChange($event, view)&quot;&gt;&lt;/apt-product-attribute&gt;
+                    &lt;/ng-container&gt;
+                    
+
+                    &lt;ng-template [ngTemplateOutlet]&#x3D;&quot;productOptionGroupTemplate&quot;
+                        [ngTemplateOutletContext]&#x3D;&quot;{optionGroupList: component?.ComponentProduct?.OptionGroups, parent: parent + &#x27;-&#x27; + component.Id, parentProduct: component?.ComponentProduct}&quot;&gt;
+                    &lt;/ng-template&gt;
+                &lt;/div&gt;
+            &lt;/ng-template&gt;
+        &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-template #empty&gt;
+        &lt;div class&#x3D;&quot;d-flex justify-content-center flex-column align-items-center py-5 my-5&quot;&gt;
+            &lt;i class&#x3D;&quot;fa fa-cog fa-5x text-primary xl text-faded&quot;&gt;&lt;/i&gt;
+            &lt;div class&#x3D;&quot;mt-4&quot;&gt;{{&#x27;CONFIGURATION.NO_CONFIGURATION&#x27; | translate}}&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+&lt;/ng-container&gt;
+&lt;ng-template #loading&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-center pt-5&quot;&gt;
+        &lt;apt-dots&gt;&lt;/apt-dots&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./product-configuration.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.accordion{
+    .cr-popover-container {
+        min-width: 10%;
+    }
+    .image-container{
+        width: 64px;
+        img{
+            max-height: 50px;
+            max-width: 64px;
+        }
+    }
+    
+    .form-group{
+        margin-bottom: 0;
+    }
+    input{
+        max-width: 70px;
+    }
+    .custom-control{
+        margin-top: -3px;
+    }
+
+    .width-fixed{
+        min-width: 20vw;
+        max-width: 20vw;
+    }
+    .desc{
+        max-height: 40px;
+        overflow-y: hidden;
+    }
+}
+.search{
+    min-width: 300px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    apt-product-configuration div.accordion div.card div.option div.py-2 div.mx-3 {
+        margin-left: 3rem;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><apt-cr-constraint-alert [detailPageAlert]=\'true\'></apt-cr-constraint-alert><ng-container *ngIf="(view$ | async) as view; else loading">    <ng-container *ngIf="view?.product?.OptionGroups?.length > 0 || view?.product?.HasAttributes && view?.product?.AttributeGroups?.length > 0                    ; else empty">        <div>            <div class="d-flex justify-content-between mb-2">                <form>                    <div class="input-group search">                        <input type="search" class="form-control"                            placeholder="{{\'COMMON.SEARCH_CONFIGURATION\' | translate}}" [(ngModel)]="searchText"                            name="searchText">                        <div class="input-group-append">                            <span class="input-group-text">                                <i class="fa fa-search"></i>                            </span>                        </div>                    </div>                </form>                <div>                    <button class="btn btn-link" [disabled]="!disableAccordion" (click)="disableAccordion = false">                        <i class="fa fa-angle-double-up fa-lg"></i>                    </button>                    <button class="btn btn-link" [disabled]="disableAccordion" (click)="disableAccordion = true">                        <i class="fa fa-angle-double-down fa-lg"></i>                    </button>                </div>            </div>            <div class="accordion" id="optionAccordion">                <ng-container *ngIf="view?.product?.AttributeGroups?.length > 0">                    <apt-product-attribute [product]="view.product" [(productAttributeValue)]="view.product._metadata.item.AttributeValue" (productAttributeValueChange)="onAttributeChange($event, view)" container="optionAccordion">                    </apt-product-attribute>                </ng-container>                <ng-container *ngIf="view?.product?.HasOptions && view?.product?.OptionGroups?.length > 0">                    <div class="card"                        *ngFor="let productOptionGroup of view?.product?.OptionGroups; let optionIndex = index; trackBy: trackById">                        <div class="card-header px-2 py-1">                            <h2 class="mb-0">                                <button class="btn btn-link" type="button" data-toggle="collapse"                                    [attr.data-target]="\'#a\' + productOptionGroup.Id"                                    [attr.aria-expanded]="(optionIndex + view?.product?.AttributeGroups?.length === 0 || disableAccordion) ? \'true\' : \'false\'">                                    {{productOptionGroup?.OptionGroup?.Name}}                                </button>                            </h2>                        </div>                        <div [id]="\'a\' + productOptionGroup.Id" class="collapse"                            [class.show]="optionIndex + view?.product?.AttributeGroups?.length === 0 || disableAccordion"                            [attr.data-parent]="(!disableAccordion) ? \'#optionAccordion\' : null">                            <div class="card-body">                                <ng-template [ngTemplateOutlet]="productOptionGroupTemplate"                                    [ngTemplateOutletContext]="{optionGroupList: productOptionGroup?._metadata?.children, parent: productOptionGroup.Id}">                                </ng-template>                                <div class="pl-4">                                    <ng-template [ngTemplateOutlet]="componentListTemplate"                                        [ngTemplateOutletContext]="{componentList: productOptionGroup?.Options, parent: productOptionGroup.Id, group: productOptionGroup}">                                    </ng-template>                                </div>                            </div>                        </div>                    </div>                </ng-container>            </div>            <ng-template #productOptionGroupTemplate let-optionGroupList="optionGroupList" let-parent="parent" let-parentProduct="parentProduct">                <div class="accordion" [id]="parent">                    <div *ngFor="let subProductOptionGroup of optionGroupList; let categoryIndex = index; let l = last; let f = first; trackBy: trackById"                        class="mb-3">                        <h5 class="d-flex justify-content-between align-items-center border-bottom">                            <button class="btn btn-link chevron" type="button" data-toggle="collapse"                                [attr.data-target]="\'#\' + parent + \'-\' + subProductOptionGroup.Id"                                [attr.aria-expanded]="false">                                {{subProductOptionGroup?.OptionGroup?.Name}}                            </button>                        </h5>                        <div [id]="parent + \'-\' + subProductOptionGroup.Id" class="collapse pl-4" [attr.data-parent]="\'#\' + parent">                            <ng-template [ngTemplateOutlet]="componentListTemplate"                                [ngTemplateOutletContext]="{componentList: subProductOptionGroup?.Options, parent: parent + \'-\' + subProductOptionGroup.Id, group: subProductOptionGroup}">                            </ng-template>                        </div>                    </div>                </div>            </ng-template>            <ng-template #componentListTemplate let-componentList="componentList" let-parent="parent" let-group="group">                <ng-container *ngIf="componentList?.length > 0 || group?._metadata?.children?.length > 0; else cLoading">                    <div *ngFor="let component of componentList; let f = first; let l = last; trackBy: trackById" class="option"                        [class.border-bottom]="!l && !((component?.ComponentProduct.HasOptions || component?.ComponentProduct?.HasAttributes) && component?.ComponentProduct?._metadata?.item)">                        <ng-template *ngIf="component?.ComponentProduct?._metadata?.item?.Asset?.PriceType === \'One Time\'"                            [ngTemplateOutlet]="readOnlyComponent" [ngTemplateOutletContext]="{                                                        component: component,                                                        parent: parent,                                                        selected: isItemSelected(component),                                                        cartItem: component?.ComponentProduct?._metadata?.item,                                                        group: group                                                    }"></ng-template>                        <ng-template *ngIf="component?.ComponentProduct?._metadata?.item?.Asset?.PriceType !== \'One Time\'"                            [ngTemplateOutlet]="componentTemplate" [ngTemplateOutletContext]="{                                                    component: component,                                                     parent: parent,                                                     selected: isItemSelected(component),                                                     cartItem: component?.ComponentProduct?._metadata?.item,                                                    group: group}">                        </ng-template>                    </div>                </ng-container>                <ng-template #cLoading>                    <div class="d-flex justify-content-center pt-5">                        <apt-dots></apt-dots>                    </div>                </ng-template>            </ng-template>            <ng-template #readOnlyComponent let-component="component" let-parent="parent" let-cartItem="cartItem" let-group="group" let-selected="selected">                <div class="d-flex py-2">                    <div class="d-flex flex-grow-1">                        <div class="d-flex">                            <div class="mr-2">                                <i class="fa fa-check-square-o fa-lg"></i>                            </div>                            <div class="image-container d-flex justify-content-center">                                <img [src]="component?.ComponentProduct?.IconId | image" height="50">                            </div>                        </div>                        <div class="mx-3">                            <p class="m-0 font-weight-bold">{{component?.ComponentProduct?.Name}}</p>                            <small class="d-block desc">{{component?.ComponentProduct?.Description}}</small>                        </div>                    </div>                    <div class="width-fixed border-left d-flex">                        <div class="form-group col">                            <label>{{\'COMMON.PRICE\' | translate}}</label>                            <h5 class="pt-1">                                <apt-price [record]="component?.ComponentProduct" [quantity]="1"></apt-price>                            </h5>                        </div>                                        <div class="form-group col">                            <label for="qty">{{\'COMMON.QTY\' | translate}}</label>                            <input type="number" class="form-control form-control-sm text-center" [disabled]="true" id="qty"                                [value]="cartItem?.Quantity" name="quantity">                        </div>                    </div>                </div>                                <div class="pl-3" [hidden]="!selected">                    <ng-container *ngIf="component?.ComponentProduct?._metadata?.item?.AttributeValue">                        <apt-product-attribute [product]="component.ComponentProduct" [container]="parent + \'-\' + component.Id"                            lineType="Option" [(productAttributeValue)]="component.ComponentProduct._metadata.item.AttributeValue"                            (productAttributeValueChange)="onAttributeChange($event, view)"></apt-product-attribute>                    </ng-container>                                                    <ng-template [ngTemplateOutlet]="productOptionGroupTemplate"                        [ngTemplateOutletContext]="{optionGroupList: component?.ComponentProduct?.OptionGroups, parent: parent + \'-\' + component.Id, parentProduct: component?.ComponentProduct}">                    </ng-template>                </div>            </ng-template>            <ng-template #componentTemplate let-component="component" let-parent="parent" let-selected="selected"                let-cartItem="cartItem" let-group="group">                <div class="d-flex py-2">                    <div class="d-flex flex-grow-1">                        <div class="d-flex cr-popover-container">                            <apt-cr-popover [ruleList]="component?._metadata?.constraintRules" [triggers]="\'\'" [outsideClick]="false" [optionRules]="true"                                [product]="component?.ComponentProduct" [parentProduct]="view?.product" [containerClass]="\'CRPopover optionPopover\'" [options]="selectedOptionList$ | async">                                <div class="custom-control custom-radio" *ngIf="group?.MaxOptions === 1; else checkbox">                                    <input type="radio" [id]="parent + \'-\' + component.Id" [name]="parent + \'-\' + component.Id" [checked]="selected"                                        class="custom-control-input" [attr.data-checked]="selected" [disabled]="group?._metadata?.summary?.disabled || component?._metadata?.disabled">                                    <label class="custom-control-label" [for]="parent + \'-\' + component.Id"                                        (click)="toggleOption(component, group, parent, view)">&nbsp;</label>                                </div>                                <ng-template #checkbox>                                    <div class="custom-control custom-checkbox">                                        <input type="checkbox" class="custom-control-input" [id]="parent + \'-\' + component.Id" [checked]="selected"                                            [disabled]="group?._metadata?.summary?.disabled || component?._metadata?.disabled">                                        <label class="custom-control-label" [for]="parent + \'-\' + component.Id"                                            (click)="toggleOption(component, group, parent, view, $event)">&nbsp;</label>                                    </div>                                </ng-template>                            </apt-cr-popover>                                                        <div class="image-container d-flex justify-content-center">                                <img [src]="component?.ComponentProduct?.IconId | image" height="50">                            </div>                        </div>                        <div class="mx-3">                            <p class="m-0 font-weight-bold">{{component?.ComponentProduct?.Name}}</p>                            <small class="d-block desc">{{component?.ComponentProduct?.Description}}</small>                        </div>                    </div>                    <div class="width-fixed border-left d-flex">                        <div class="form-group col">                            <label>{{\'COMMON.PRICE\' | translate}}</label>                            <h5 class="pt-1">                                <apt-price [record]="component?.ComponentProduct" [quantity]="1"></apt-price>                            </h5>                        </div>                        <div class="form-group col">                            <label for="qty">{{\'COMMON.QTY\' | translate}}</label>                            <input type="number" class="form-control form-control-sm text-center"                                *ngIf="cartItem; else disabledInput" [disabled]="!selected" id="qty" placeholder="1"                                name="quantity" (change)="emitChange(view)" [(ngModel)]="cartItem.Quantity">                            <ng-template #disabledInput>                                <input type="number" class="form-control form-control-sm text-center" [disabled]="true"                                    id="qty" placeholder="0" name="quantity">                            </ng-template>                        </div>                    </div>                </div>                <div class="pl-3" [hidden]="!selected">                    <ng-container *ngIf="component?.ComponentProduct?._metadata?.item?.AttributeValue">                        <apt-product-attribute [product]="component.ComponentProduct" [container]="parent + \'-\' + component.Id"                            lineType="Option" [(productAttributeValue)]="component.ComponentProduct._metadata.item.AttributeValue"                            (productAttributeValueChange)="onAttributeChange($event, view)"></apt-product-attribute>                    </ng-container>                                        <ng-template [ngTemplateOutlet]="productOptionGroupTemplate"                        [ngTemplateOutletContext]="{optionGroupList: component?.ComponentProduct?.OptionGroups, parent: parent + \'-\' + component.Id, parentProduct: component?.ComponentProduct}">                    </ng-template>                </div>            </ng-template>        </div>    </ng-container>    <ng-template #empty>        <div class="d-flex justify-content-center flex-column align-items-center py-5 my-5">            <i class="fa fa-cog fa-5x text-primary xl text-faded"></i>            <div class="mt-4">{{\'CONFIGURATION.NO_CONFIGURATION\' | translate}}</div>        </div>    </ng-template></ng-container><ng-template #loading>    <div class="d-flex justify-content-center pt-5">        <apt-dots></apt-dots>    </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ProductConfigurationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductConfigurationComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
