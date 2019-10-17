@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Apttus Ecommerce Summer &#x27;19</title>
+        <title>Apttus Ecommerce Winter &#x27;19</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Apttus Ecommerce Summer &#x27;19</a>
+            <a href="../" class="navbar-brand">Apttus Ecommerce Winter &#x27;19</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -65,10 +65,16 @@
                             <a href="#MailFactory" title="projects/apttus/ecommerce/src/lib/modules/crm/classes/email.model.ts"><b>MailFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../email.model.ts)</a>
                         </li>
                         <li>
+                            <a href="#ngswAppInitializer" title="projects/ecommerce/src/app/services/service-worker.ts"><b>ngswAppInitializer</b>&nbsp;&nbsp;&nbsp;(projects/.../service-worker.ts)</a>
+                        </li>
+                        <li>
                             <a href="#TemplateMailFactory" title="projects/apttus/ecommerce/src/lib/modules/crm/classes/email.model.ts"><b>TemplateMailFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../email.model.ts)</a>
                         </li>
                         <li>
                             <a href="#testBit" title="projects/apttus/elements/src/lib/dependent-picklist/dependent-picklist.component.ts"><b>testBit</b>&nbsp;&nbsp;&nbsp;(projects/.../dependent-picklist.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#windowFactory" title="projects/ecommerce/src/app/window.config.ts"><b>windowFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../window.config.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -289,7 +295,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>TemplateMailFactory(templateName, whatId, contactId, toAddresses)</code>
+<code>TemplateMailFactory(templateName, whatId, contactId, toAddresses, ccAddresses?, attachmentIds?)</code>
                 </td>
             </tr>
 
@@ -345,10 +351,170 @@
 
 
                                 </tr>
+                                <tr>
+                                    <td>ccAddresses</td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>attachmentIds</td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>projects/ecommerce/src/app/services/service-worker.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngswAppInitializer"></a>
+                    <span class="name">
+                        <b>
+                            ngswAppInitializer
+                        </b>
+                        <a href="#ngswAppInitializer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngswAppInitializer(injector, script)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>injector</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>script</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank" >Function</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>projects/ecommerce/src/app/window.config.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="windowFactory"></a>
+                    <span class="name">
+                        <b>
+                            windowFactory
+                        </b>
+                        <a href="#windowFactory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>windowFactory(browserWindowRef, platformId)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>browserWindowRef</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>platformId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Window | Object</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>

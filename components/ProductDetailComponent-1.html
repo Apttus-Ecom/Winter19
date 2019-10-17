@@ -1,0 +1,1052 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Winter &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Winter &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProductDetailComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/partner-commerce/src/app/modules/products/detail/product-detail.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-product-detail</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./product-detail.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./product-detail.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cartItemList">cartItemList</a>
+                            </li>
+                            <li>
+                                <a href="#configurationChanged">configurationChanged</a>
+                            </li>
+                            <li>
+                                <a href="#productConfigurationSummary">productConfigurationSummary</a>
+                            </li>
+                            <li>
+                                <a href="#quantity">quantity</a>
+                            </li>
+                            <li>
+                                <a href="#saving">saving</a>
+                            </li>
+                            <li>
+                                <a href="#term">term</a>
+                            </li>
+                            <li>
+                                <a href="#viewState$">viewState$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#handleEndDateChange">handleEndDateChange</a>
+                            </li>
+                            <li>
+                                <a href="#handleStartChange">handleStartChange</a>
+                            </li>
+                            <li>
+                                <a href="#onAddToCart">onAddToCart</a>
+                            </li>
+                            <li>
+                                <a href="#onConfigurationChange">onConfigurationChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cartService: <a href="../injectables/CartService.html">CartService</a>, resolver: <a href="../guards/ProductDetailsResolver.html">ProductDetailsResolver</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>resolver</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../guards/ProductDetailsResolver.html" target="_self" >ProductDetailsResolver</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleEndDateChange"></a>
+                    <span class="name">
+                        <b>
+                            handleEndDateChange
+                        </b>
+                        <a href="#handleEndDateChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleEndDateChange(cartItem: <a href="../classes/CartItem.html">CartItem</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Changes the quantity of the cart item passed to this method.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartItem</td>
+                                    <td>
+                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Cart item reference to the cart line item object.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleStartChange"></a>
+                    <span class="name">
+                        <b>
+                            handleStartChange
+                        </b>
+                        <a href="#handleStartChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleStartChange(cartItem: <a href="../classes/CartItem.html">CartItem</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Changes the quantity of the cart item passed to this method.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartItem</td>
+                                    <td>
+                                                <code><a href="../classes/CartItem.html" target="_self" >CartItem</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Cart item reference to the cart line item object.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAddToCart"></a>
+                    <span class="name">
+                        <b>
+                            onAddToCart
+                        </b>
+                        <a href="#onAddToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAddToCart(cartItems: Array<CartItem>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartItems</td>
+                                    <td>
+                                            <code>Array&lt;CartItem&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onConfigurationChange"></a>
+                    <span class="name">
+                        <b>
+                            onConfigurationChange
+                        </b>
+                        <a href="#onConfigurationChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onConfigurationChange(result: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>onConfigurationChange method is invoked whenever there is change in product configuration and this method ets flag
+isConfigurationChanged to true.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>result</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cartItemList"></a>
+                        <span class="name">
+                            <b>
+                            cartItemList</b>
+                            <a href="#cartItemList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;CartItem&gt;</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="configurationChanged"></a>
+                        <span class="name">
+                            <b>
+                            configurationChanged</b>
+                            <a href="#configurationChanged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to detect if their is change in product configuration.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="productConfigurationSummary"></a>
+                        <span class="name">
+                            <b>
+                            productConfigurationSummary</b>
+                            <a href="#productConfigurationSummary"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Product.html" target="_self" >ProductConfigurationSummaryComponent</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;productConfigurationSummary&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="quantity"></a>
+                        <span class="name">
+                            <b>
+                            quantity</b>
+                            <a href="#quantity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saving"></a>
+                        <span class="name">
+                            <b>
+                            saving</b>
+                            <a href="#saving"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag used in update configuration method</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="term"></a>
+                        <span class="name">
+                            <b>
+                            term</b>
+                            <a href="#term"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Default term is set to 1.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewState$"></a>
+                        <span class="name">
+                            <b>
+                            viewState$</b>
+                            <a href="#viewState$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Product.html" target="_self" >BehaviorSubject&lt;ProductDetailsState&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-detail [title]&#x3D;&quot;viewState?.product?.Name&quot; [subtitle]&#x3D;&quot;productCode&quot; [context]&#x3D;&quot;viewState?.product&quot;
+    *ngIf&#x3D;&quot;viewState$ | async as viewState; else loading&quot;&gt;
+
+    &lt;div class&#x3D;&quot;primary-actions&quot;&gt;
+        &lt;form class&#x3D;&quot;d-flex&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group my-0 mr-5&quot;&gt;
+                &lt;small class&#x3D;&quot;mb-2 d-block&quot;&gt; {{&#x27;PRODUCT_DETAILS.STANDARD_PRICE&#x27; | translate}} &lt;/small&gt;
+                &lt;h5&gt;
+                    &lt;apt-price [record]&#x3D;&quot;viewState?.product&quot; type&#x3D;&quot;list&quot; [bundle]&#x3D;&quot;true&quot;&gt;&lt;/apt-price&gt;
+                &lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group my-0 mr-3&quot;&gt;
+                &lt;small class&#x3D;&quot;mb-2 d-block&quot;&gt; {{&#x27;COMMON.NET_PRICE&#x27; | translate}} &lt;/small&gt;
+                &lt;h5&gt;
+                    &lt;apt-price [record]&#x3D;&quot;cartItemList&quot; *ngIf&#x3D;&quot;cartItemList?.length &gt; 0; else productPrice&quot;
+                        [quantity]&#x3D;&quot;quantity&quot; [bundle]&#x3D;&quot;true&quot; [type]&#x3D;&quot;&#x27;net&#x27;&quot;&gt;&lt;/apt-price&gt;
+                    &lt;ng-template #productPrice&gt;
+                        &lt;apt-price [record]&#x3D;&quot;viewState?.product&quot; [quantity]&#x3D;&quot;quantity&quot; [bundle]&#x3D;&quot;true&quot; type&#x3D;&quot;net&quot;&gt;
+                        &lt;/apt-price&gt;
+                    &lt;/ng-template&gt;
+                &lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;secondary-actions&quot;&gt;
+        &lt;!-- Simple Product Controls --&gt;
+        &lt;form class&#x3D;&quot;d-flex justify-content-end&quot;
+            *ngIf&#x3D;&quot;!viewState?.product?.HasAttributes &amp;&amp; !viewState?.product?.HasOptions; else complex&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group mx-3 my-0 d-flex align-items-center&quot;&gt;
+                &lt;span class&#x3D;&quot;mr-3&quot;&gt; {{&#x27;COMMON.QUANTITY&#x27; | translate}} &lt;/span&gt;
+                &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;w-75 form-control&quot; [(ngModel)]&#x3D;&quot;quantity&quot; name&#x3D;&quot;quantity&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex align-items-center&quot;&gt;
+                &lt;apt-add-to-cart [showQuantityControls]&#x3D;&quot;false&quot; (onAddToCart)&#x3D;&quot;onAddToCart($event)&quot;
+                    [configurationEnabled]&#x3D;&quot;false&quot; [quantity]&#x3D;&quot;quantity&quot;
+                    [cartItems]&#x3D;&quot;(cartItems?.length &gt; 0) ? cartItems : null&quot; [product]&#x3D;&quot;viewState?.product&quot;
+                    [btnClass]&#x3D;&quot;&#x27;btn-primary btn-raised px-3&#x27;&quot;&gt;&lt;/apt-add-to-cart&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+
+
+        &lt;!-- Complex Product Controls --&gt;
+        &lt;ng-template #complex&gt;
+            &lt;div class&#x3D;&quot;d-flex&quot;&gt;
+                &lt;ng-container *ngIf&#x3D;&quot;viewState?.relatedTo; else newProduct&quot;&gt;
+                    &lt;apt-add-to-cart [showQuantityControls]&#x3D;&quot;false&quot; [configurationEnabled]&#x3D;&quot;false&quot; [quantity]&#x3D;&quot;quantity&quot;
+                        [cartItems]&#x3D;&quot;cartItemList&quot; [product]&#x3D;&quot;viewState?.product&quot; [btnClass]&#x3D;&quot;&#x27;btn-primary btn-raised px-3&#x27;&quot;
+                        (onAddToCart)&#x3D;&quot;onAddToCart($event)&quot; [disabled]&#x3D;&quot;!configurationChanged&quot;
+                        [label]&#x3D;&quot;&#x27;Update Configuration&#x27;&quot;&gt;
+                    &lt;/apt-add-to-cart&gt;
+                &lt;/ng-container&gt;
+                &lt;ng-template #newProduct&gt;
+                    &lt;div class&#x3D;&quot;d-flex justify-content-end&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group mx-3 my-0 d-flex align-items-center&quot;&gt;
+                            &lt;span class&#x3D;&quot;mr-3&quot;&gt; {{&#x27;COMMON.QUANTITY&#x27; | translate}} &lt;/span&gt;
+                            &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;w-75 form-control&quot; [(ngModel)]&#x3D;&quot;quantity&quot; name&#x3D;&quot;quantity&quot; /&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;d-flex align-items-center&quot;&gt;
+                            &lt;apt-add-to-cart [showQuantityControls]&#x3D;&quot;false&quot; [configurationEnabled]&#x3D;&quot;false&quot;
+                                [quantity]&#x3D;&quot;quantity&quot; (onAddToCart)&#x3D;&quot;onAddToCart($event)&quot;
+                                [disabled]&#x3D;&quot;!configurationChanged&quot; [cartItems]&#x3D;&quot;cartItemList&quot;
+                                [product]&#x3D;&quot;viewState?.product&quot; [btnClass]&#x3D;&quot;&#x27;btn-primary btn-raised px-3&#x27;&quot;&gt;
+                            &lt;/apt-add-to-cart&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/ng-template&gt;
+
+                &lt;button class&#x3D;&quot;btn btn-outline-primary ml-2&quot;
+                    *ngIf&#x3D;&quot;viewState?.product?.HasAttributes || viewState?.product?.HasOptions&quot;
+                    (click)&#x3D;&quot;productConfigurationSummary.show();&quot;&gt;Price Summary&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/ng-template&gt;
+
+    &lt;/div&gt;
+
+    &lt;app-detail-section [title]&#x3D;&quot;&#x27;PRODUCT_DETAILS.DETAILS&#x27; | translate&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;h4 class&#x3D;&quot;text-muted col-12&quot;&gt; {{&#x27;PRODUCT_DETAILS.PRODUCT_DETAIL&#x27; | translate}} &lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-4&quot;&gt;
+                &lt;apt-product-images [product]&#x3D;&quot;viewState?.product&quot;&gt;&lt;/apt-product-images&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-8&quot;&gt;
+                &lt;div class&#x3D;&quot;card&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;p [innerHTML]&#x3D;&quot;viewState?.product?.Description&quot; class&#x3D;&quot;p-2&quot;&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/app-detail-section&gt;
+
+    &lt;app-detail-section [title]&#x3D;&quot;&#x27;PRODUCT_DETAILS.CONFIGURATIONS&#x27; | translate&quot;
+        *ngIf&#x3D;&quot;viewState?.product?.HasAttributes || viewState?.product?.HasOptions&quot;&gt;
+        &lt;div class&#x3D;&quot;row mt-4&quot;&gt;
+            &lt;h4 class&#x3D;&quot;text-muted col-12&quot;&gt; {{&#x27;PRODUCT_DETAILS.CONFIGURATIONS&#x27; | translate}} &lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;apt-product-configuration [product]&#x3D;&quot;viewState?.product&quot; [relatedTo]&#x3D;&quot;viewState?.relatedTo&quot;
+                    (configurationChange)&#x3D;&quot;onConfigurationChange($event)&quot; (click)&#x3D;&quot;configurationChanged &#x3D; true&quot;&gt;
+                &lt;/apt-product-configuration&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/app-detail-section&gt;
+
+    &lt;app-detail-section [title]&#x3D;&quot;&#x27;PRODUCT_DETAILS.SPECIFICATIONS&#x27; | translate&quot;
+        *ngIf&#x3D;&quot;viewState?.product?.ProductFeatureValues?.length &gt; 0&quot;&gt;
+        &lt;div class&#x3D;&quot;row mt-4&quot;&gt;
+            &lt;h4 class&#x3D;&quot;text-muted col-12&quot;&gt; {{&#x27;PRODUCT_DETAILS.SPECIFICATIONS&#x27; | translate}} &lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;div class&#x3D;&quot;card&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;app-tab-features [product]&#x3D;&quot;viewState?.product&quot; class&#x3D;&quot;animated fadeIn d-block&quot;&gt;
+                        &lt;/app-tab-features&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/app-detail-section&gt;
+
+    &lt;app-detail-section [title]&#x3D;&quot;&#x27;PRODUCT_DETAILS.ATTACHMENTS&#x27; | translate&quot;
+        *ngIf&#x3D;&quot;viewState?.product?.ProductInformation?.length &gt; 0&quot;&gt;
+        &lt;div class&#x3D;&quot;row mt-4&quot;&gt;
+            &lt;h4 class&#x3D;&quot;text-muted col-12&quot;&gt; {{&#x27;PRODUCT_DETAILS.ATTACHMENTS&#x27; | translate}} &lt;/h4&gt;
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;div class&#x3D;&quot;card&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;app-tab-attachments [product]&#x3D;&quot;viewState?.product&quot;&gt;&lt;/app-tab-attachments&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/app-detail-section&gt;
+
+
+    &lt;ng-container *ngIf&#x3D;&quot;viewState?.recommendedProducts?.length &gt; 0&quot;&gt;
+        &lt;app-detail-section [title]&#x3D;&quot;&#x27;PRODUCT_DETAILS.RECOMMENDED_PRODUCTS&#x27; | translate&quot;&gt;
+            &lt;div class&#x3D;&quot;row mt-4&quot;&gt;
+                &lt;h4 class&#x3D;&quot;text-muted col-12&quot;&gt; {{&#x27;PRODUCT_DETAILS.RECOMMENDED_PRODUCTS&#x27; | translate}} &lt;/h4&gt;
+                &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                    &lt;!-- &lt;apt-product-carousel [productList]&#x3D;&quot;viewState?.recommendedProducts&quot; slides&#x3D;&quot;5&quot;&gt;&lt;/apt-product-carousel&gt; --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/app-detail-section&gt;
+    &lt;/ng-container&gt;
+
+    &lt;apt-product-configuration-summary [product]&#x3D;&quot;viewState?.product&quot; [relatedTo]&#x3D;&quot;viewState?.relatedTo&quot;
+        [changes]&#x3D;&quot;cartItemList&quot; [preload]&#x3D;&quot;true&quot; #productConfigurationSummary position&#x3D;&quot;right&quot;&gt;
+    &lt;/apt-product-configuration-summary&gt;
+&lt;/app-detail&gt;
+
+&lt;ng-template #loading&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-center pt-5&quot;&gt;
+        &lt;apt-spinner&gt;&lt;/apt-spinner&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./product-detail.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;variables&quot;;
+@keyframes slide {
+  from {
+      top: $navbar-brand-height;
+  }
+  to {
+      top: 0;
+  }
+}
+
+.navbar{
+    transition: all 0.2s ease 0s;
+    &amp;.fixed-top{
+        top: 0;
+        box-shadow: $box-shadow;
+        z-index: 1031;
+        position: fixed;
+        animation-name: slide;
+        animation-duration: 0.2s;
+    }
+    &amp;.expand{
+        top: calc(#{$navbar-brand-height} + 72px);
+    }
+    h3{
+        max-width: 95%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.headerContainer{
+    height: 230px;
+    .form-group{
+        margin-bottom: 0;
+        input:not(.form-control-plaintext){
+            width: 70px;
+        }
+    }
+    label{
+        white-space: nowrap;
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-detail [title]="viewState?.product?.Name" [subtitle]="productCode" [context]="viewState?.product"    *ngIf="viewState$ | async as viewState; else loading">    <div class="primary-actions">        <form class="d-flex">            <div class="form-group my-0 mr-5">                <small class="mb-2 d-block"> {{\'PRODUCT_DETAILS.STANDARD_PRICE\' | translate}} </small>                <h5>                    <apt-price [record]="viewState?.product" type="list" [bundle]="true"></apt-price>                </h5>            </div>            <div class="form-group my-0 mr-3">                <small class="mb-2 d-block"> {{\'COMMON.NET_PRICE\' | translate}} </small>                <h5>                    <apt-price [record]="cartItemList" *ngIf="cartItemList?.length > 0; else productPrice"                        [quantity]="quantity" [bundle]="true" [type]="\'net\'"></apt-price>                    <ng-template #productPrice>                        <apt-price [record]="viewState?.product" [quantity]="quantity" [bundle]="true" type="net">                        </apt-price>                    </ng-template>                </h5>            </div>        </form>    </div>    <div class="secondary-actions">        <!-- Simple Product Controls -->        <form class="d-flex justify-content-end"            *ngIf="!viewState?.product?.HasAttributes && !viewState?.product?.HasOptions; else complex">            <div class="form-group mx-3 my-0 d-flex align-items-center">                <span class="mr-3"> {{\'COMMON.QUANTITY\' | translate}} </span>                <input type="number" class="w-75 form-control" [(ngModel)]="quantity" name="quantity" />            </div>            <div class="d-flex align-items-center">                <apt-add-to-cart [showQuantityControls]="false" (onAddToCart)="onAddToCart($event)"                    [configurationEnabled]="false" [quantity]="quantity"                    [cartItems]="(cartItems?.length > 0) ? cartItems : null" [product]="viewState?.product"                    [btnClass]="\'btn-primary btn-raised px-3\'"></apt-add-to-cart>            </div>        </form>        <!-- Complex Product Controls -->        <ng-template #complex>            <div class="d-flex">                <ng-container *ngIf="viewState?.relatedTo; else newProduct">                    <apt-add-to-cart [showQuantityControls]="false" [configurationEnabled]="false" [quantity]="quantity"                        [cartItems]="cartItemList" [product]="viewState?.product" [btnClass]="\'btn-primary btn-raised px-3\'"                        (onAddToCart)="onAddToCart($event)" [disabled]="!configurationChanged"                        [label]="\'Update Configuration\'">                    </apt-add-to-cart>                </ng-container>                <ng-template #newProduct>                    <div class="d-flex justify-content-end">                        <div class="form-group mx-3 my-0 d-flex align-items-center">                            <span class="mr-3"> {{\'COMMON.QUANTITY\' | translate}} </span>                            <input type="number" class="w-75 form-control" [(ngModel)]="quantity" name="quantity" />                        </div>                        <div class="d-flex align-items-center">                            <apt-add-to-cart [showQuantityControls]="false" [configurationEnabled]="false"                                [quantity]="quantity" (onAddToCart)="onAddToCart($event)"                                [disabled]="!configurationChanged" [cartItems]="cartItemList"                                [product]="viewState?.product" [btnClass]="\'btn-primary btn-raised px-3\'">                            </apt-add-to-cart>                        </div>                    </div>                </ng-template>                <button class="btn btn-outline-primary ml-2"                    *ngIf="viewState?.product?.HasAttributes || viewState?.product?.HasOptions"                    (click)="productConfigurationSummary.show();">Price Summary</button>            </div>        </ng-template>    </div>    <app-detail-section [title]="\'PRODUCT_DETAILS.DETAILS\' | translate">        <div class="row">            <h4 class="text-muted col-12"> {{\'PRODUCT_DETAILS.PRODUCT_DETAIL\' | translate}} </h4>            <div class="col-12 col-md-4">                <apt-product-images [product]="viewState?.product"></apt-product-images>            </div>            <div class="col-12 col-md-8">                <div class="card">                    <div class="card-body">                        <p [innerHTML]="viewState?.product?.Description" class="p-2"></p>                    </div>                </div>            </div>        </div>    </app-detail-section>    <app-detail-section [title]="\'PRODUCT_DETAILS.CONFIGURATIONS\' | translate"        *ngIf="viewState?.product?.HasAttributes || viewState?.product?.HasOptions">        <div class="row mt-4">            <h4 class="text-muted col-12"> {{\'PRODUCT_DETAILS.CONFIGURATIONS\' | translate}} </h4>            <div class="col-12">                <apt-product-configuration [product]="viewState?.product" [relatedTo]="viewState?.relatedTo"                    (configurationChange)="onConfigurationChange($event)" (click)="configurationChanged = true">                </apt-product-configuration>            </div>        </div>    </app-detail-section>    <app-detail-section [title]="\'PRODUCT_DETAILS.SPECIFICATIONS\' | translate"        *ngIf="viewState?.product?.ProductFeatureValues?.length > 0">        <div class="row mt-4">            <h4 class="text-muted col-12"> {{\'PRODUCT_DETAILS.SPECIFICATIONS\' | translate}} </h4>            <div class="col-12">                <div class="card">                    <div class="card-body">                        <app-tab-features [product]="viewState?.product" class="animated fadeIn d-block">                        </app-tab-features>                    </div>                </div>            </div>        </div>    </app-detail-section>    <app-detail-section [title]="\'PRODUCT_DETAILS.ATTACHMENTS\' | translate"        *ngIf="viewState?.product?.ProductInformation?.length > 0">        <div class="row mt-4">            <h4 class="text-muted col-12"> {{\'PRODUCT_DETAILS.ATTACHMENTS\' | translate}} </h4>            <div class="col-12">                <div class="card">                    <div class="card-body">                        <app-tab-attachments [product]="viewState?.product"></app-tab-attachments>                    </div>                </div>            </div>        </div>    </app-detail-section>    <ng-container *ngIf="viewState?.recommendedProducts?.length > 0">        <app-detail-section [title]="\'PRODUCT_DETAILS.RECOMMENDED_PRODUCTS\' | translate">            <div class="row mt-4">                <h4 class="text-muted col-12"> {{\'PRODUCT_DETAILS.RECOMMENDED_PRODUCTS\' | translate}} </h4>                <div class="col-12">                    <!-- <apt-product-carousel [productList]="viewState?.recommendedProducts" slides="5"></apt-product-carousel> -->                </div>            </div>        </app-detail-section>    </ng-container>    <apt-product-configuration-summary [product]="viewState?.product" [relatedTo]="viewState?.relatedTo"        [changes]="cartItemList" [preload]="true" #productConfigurationSummary position="right">    </apt-product-configuration-summary></app-detail><ng-template #loading>    <div class="d-flex justify-content-center pt-5">        <apt-spinner></apt-spinner>    </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[appAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'ProductDetailComponent-1'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductDetailComponent-1.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

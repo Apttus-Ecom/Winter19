@@ -1,0 +1,1063 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Winter &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Winter &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CartSummaryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/ecommerce/src/app/modules/manage-cart/component/cart-summary/cart-summary.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-cart-summary</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./cart-summary.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./cart-summary.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_cart">_cart</a>
+                            </li>
+                            <li>
+                                <a href="#discardChangesModal">discardChangesModal</a>
+                            </li>
+                            <li>
+                                <a href="#discardChangesTemplate">discardChangesTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#hasErrors">hasErrors</a>
+                            </li>
+                            <li>
+                                <a href="#isLoggedIn$">isLoggedIn$</a>
+                            </li>
+                            <li>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                <a href="#showTaxPopUp">showTaxPopUp</a>
+                            </li>
+                            <li>
+                                <a href="#state">state</a>
+                            </li>
+                            <li>
+                                <a href="#storefront$">storefront$</a>
+                            </li>
+                            <li>
+                                <a href="#taxItems">taxItems</a>
+                            </li>
+                            <li>
+                                <a href="#taxPopHoverModal">taxPopHoverModal</a>
+                            </li>
+                            <li>
+                                <a href="#totalEstimatedTax">totalEstimatedTax</a>
+                            </li>
+                            <li>
+                                <a href="#totalPromotions">totalPromotions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calculateTotalTax">calculateTotalTax</a>
+                            </li>
+                            <li>
+                                <a href="#onDiscardChages">onDiscardChages</a>
+                            </li>
+                            <li>
+                                <a href="#openDiscardChageModals">openDiscardChageModals</a>
+                            </li>
+                            <li>
+                                <a href="#openEstimateTaxPopup">openEstimateTaxPopup</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cart">cart</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(quoteService: <a href="../classes/Quote.html">QuoteService</a>, modalService: BsModalService, crService: <a href="../injectables/ConstraintRuleService.html">ConstraintRuleService</a>, storefrontService: <a href="../injectables/StorefrontService.html">StorefrontService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, userService: <a href="../injectables/UserService.html">UserService</a>, cartService: <a href="../injectables/CartService.html">CartService</a>, taxService: <a href="../injectables/TaxService.html">TaxService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>quoteService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Quote.html" target="_self" >QuoteService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>crService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstraintRuleService.html" target="_self" >ConstraintRuleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>storefrontService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StorefrontService.html" target="_self" >StorefrontService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>taxService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TaxService.html" target="_self" >TaxService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cart"></a>
+                        <b>cart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateTotalTax"></a>
+                    <span class="name">
+                        <b>
+                            calculateTotalTax
+                        </b>
+                        <a href="#calculateTotalTax"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateTotalTax()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method calculates total tax for the cart.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDiscardChages"></a>
+                    <span class="name">
+                        <b>
+                            onDiscardChages
+                        </b>
+                        <a href="#onDiscardChages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDiscardChages()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method is invoked when abonding the cart while editing the quote line item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDiscardChageModals"></a>
+                    <span class="name">
+                        <b>
+                            openDiscardChageModals
+                        </b>
+                        <a href="#openDiscardChageModals"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDiscardChageModals()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method opens the discard changes confirmation modal dialog.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openEstimateTaxPopup"></a>
+                    <span class="name">
+                        <b>
+                            openEstimateTaxPopup
+                        </b>
+                        <a href="#openEstimateTaxPopup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openEstimateTaxPopup()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens estimated tax pop hover and shows calulated tax for the cart</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_cart"></a>
+                        <span class="name">
+                            <b>
+                            _cart</b>
+                            <a href="#_cart"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="discardChangesModal"></a>
+                        <span class="name">
+                            <b>
+                            discardChangesModal</b>
+                            <a href="#discardChangesModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>BsModalRef</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="discardChangesTemplate"></a>
+                        <span class="name">
+                            <b>
+                            discardChangesTemplate</b>
+                            <a href="#discardChangesTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;discardChangesTemplate&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasErrors"></a>
+                        <span class="name">
+                            <b>
+                            hasErrors</b>
+                            <a href="#hasErrors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoggedIn$"></a>
+                        <span class="name">
+                            <b>
+                            isLoggedIn$</b>
+                            <a href="#isLoggedIn$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showTaxPopUp"></a>
+                        <span class="name">
+                            <b>
+                            showTaxPopUp</b>
+                            <a href="#showTaxPopUp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>tax related local properties </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="state"></a>
+                        <span class="name">
+                            <b>
+                            state</b>
+                            <a href="#state"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/SummaryState.html" target="_self" >SummaryState</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="storefront$"></a>
+                        <span class="name">
+                            <b>
+                            storefront$</b>
+                            <a href="#storefront$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Storefront.html" target="_self" >Observable&lt;Storefront&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taxItems"></a>
+                        <span class="name">
+                            <b>
+                            taxItems</b>
+                            <a href="#taxItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/TaxBreakup.html" target="_self" >Array&lt;TaxBreakup&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taxPopHoverModal"></a>
+                        <span class="name">
+                            <b>
+                            taxPopHoverModal</b>
+                            <a href="#taxPopHoverModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>BsModalRef</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalEstimatedTax"></a>
+                        <span class="name">
+                            <b>
+                            totalEstimatedTax</b>
+                            <a href="#totalEstimatedTax"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalPromotions"></a>
+                        <span class="name">
+                            <b>
+                            totalPromotions</b>
+                            <a href="#totalPromotions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gives the total amount of promotion applied to the cart</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card animated fadeIn&quot; *ngIf&#x3D;&quot;cart&quot;&gt;
+  &lt;div class&#x3D;&quot;card-header&quot;&gt;
+    &lt;h5 class&#x3D;&quot;card-title mb-0&quot; *ngIf&#x3D;&quot;!cart.Quote?.Id&quot;&gt;{{&#x27;MANAGE_CART.CART_SUMMARY.CART_SUMMARY_TITLE&#x27; | translate }}&lt;/h5&gt;
+    &lt;h5 class&#x3D;&quot;card-title mb-0&quot; *ngIf&#x3D;&quot;cart.Quote?.Id&quot;&gt;{{&#x27;DETAILS.PRICE_SUMMARY&#x27; | translate }}&lt;/h5&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+      &lt;span&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.TOTAL_PRICE&#x27; | translate }} &lt;/span&gt;
+      &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;
+        &lt;apt-price [record]&#x3D;&quot;cart&quot;&gt;&lt;/apt-price&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;(storefront$ | async)?.EnablePromotions &amp;&amp; (storefront$ | async) !&#x3D;&#x3D; null ? true : false&quot; class&#x3D;&quot;d-flex mt-2 justify-content-between&quot;&gt;
+      &lt;span&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.PROMOTIONS_APPLIED&#x27; | translate }} &lt;/span&gt;
+      &lt;span&gt;{{totalPromotions | localCurrency | async}}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;(storefront$ | async)?.EnableTaxCalculations &amp;&amp; (storefront$ | async) !&#x3D;&#x3D; null ? true : false&quot;
+      class&#x3D;&quot;d-flex mt-2 justify-content-between small&quot;&gt;
+      &lt;span&gt;
+        &lt;a placement&#x3D;&quot;auto&quot; [popover]&#x3D;&quot;taxPophover&quot; [outsideClick]&#x3D;&quot;true&quot;&gt;
+          &lt;u (click)&#x3D;&quot;openEstimateTaxPopup()&quot;&gt;
+            {{&#x27;MANAGE_CART.CART_SUMMARY.TAX&#x27; | translate }}
+          &lt;/u&gt;
+        &lt;/a&gt;
+      &lt;/span&gt;
+      &lt;span&gt;{{totalEstimatedTax | localCurrency | async}}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;hr class&#x3D;&quot;mt-2 mb-3&quot; /&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+      &lt;span&gt; {{&#x27;MANAGE_CART.CART_SUMMARY.SUB_TOTAL&#x27; | translate }} &lt;/span&gt;
+      &lt;span class&#x3D;&quot;font-weight-bold&quot;&gt;
+        &lt;apt-price [record]&#x3D;&quot;cart&quot;&gt;&lt;/apt-price&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;hr class&#x3D;&quot;mt-2 mb-3&quot; /&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-end&quot; *ngIf&#x3D;&quot;!cart.Quote?.Id&quot;&gt;
+        &lt;button *ngIf&#x3D;&quot;(isLoggedIn$ | async) &amp;&amp; (storefront$ | async)?.EnableRequestQuote&quot; class&#x3D;&quot;btn btn-link&quot;
+          [routerLink]&#x3D;&quot;[&#x27;/proposals/create&#x27;]&quot; [ladda]&#x3D;&quot;cart?._state &#x3D;&#x3D;&#x3D; &#x27;pending&#x27;&quot; data-style&#x3D;&quot;zoom-in&quot;
+          [disabled]&#x3D;&quot;!cart?.LineItems || cart?.LineItems?.length &#x3D;&#x3D;&#x3D; 0 || hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+          {{&#x27;COMMON.REQUEST_QUOTE&#x27; | translate }}
+        &lt;/button&gt;
+        &lt;button class&#x3D;&quot;btn btn-primary&quot; [routerLink]&#x3D;&quot;[&#x27;/checkout&#x27;]&quot; [ladda]&#x3D;&quot;cart?._state &#x3D;&#x3D;&#x3D; &#x27;pending&#x27;&quot; data-style&#x3D;&quot;zoom-in&quot;
+          [disabled]&#x3D;&quot;!cart?.LineItems || cart?.LineItems?.length &#x3D;&#x3D;&#x3D; 0 || hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+          {{&#x27;MANAGE_CART.CART_SUMMARY.CHECKOUT&#x27; | translate }}
+        &lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;div class&#x3D;&quot;d-flex justify-content-end&quot; *ngIf&#x3D;&quot;cart.Quote?.Id&quot;&gt;
+      &lt;button class&#x3D;&quot;btn btn-link mr-2&quot; (click)&#x3D;&quot;openDiscardChageModals()&quot;  [ladda]&#x3D;&quot;cart?._state &#x3D;&#x3D;&#x3D; &#x27;pending&#x27;&quot; data-style&#x3D;&quot;zoom-in&quot;
+      [disabled]&#x3D;&quot;!cart?.LineItems || cart?.LineItems?.length &#x3D;&#x3D;&#x3D; 0 || hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+        {{&#x27;MANAGE_CART.CART_SUMMARY.DISCARD_CHANGES&#x27; | translate }}
+      &lt;/button&gt;
+      &lt;button class&#x3D;&quot;btn btn-primary px-2&quot; [routerLink]&#x3D;&quot;[&#x27;/proposals/create&#x27;]&quot;  [ladda]&#x3D;&quot;cart?._state &#x3D;&#x3D;&#x3D; &#x27;pending&#x27;&quot; data-style&#x3D;&quot;zoom-in&quot;
+      [disabled]&#x3D;&quot;!cart?.LineItems || cart?.LineItems?.length &#x3D;&#x3D;&#x3D; 0 || hasErrors &#x3D;&#x3D;&#x3D; true&quot;&gt;
+        {{&#x27;MANAGE_CART.CART_SUMMARY.FINALIZE_AND_SUBMIT&#x27; | translate }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--
+  Not part of Nov 15 deliverable
+--&gt;
+&lt;!-- &lt;div class&#x3D;&quot;card mt-3&quot; *ngIf&#x3D;&quot;cart&quot;&gt;
+  &lt;div class&#x3D;&quot;card-header&quot;&gt;
+    Request a Quote
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;small class&#x3D;&quot;mb-3 d-block&quot;&gt;
+      Request a quote for your configuration and someone will be in touch to discuss next steps.
+    &lt;/small&gt;
+    &lt;button class&#x3D;&quot;btn btn-block btn-outline-primary&quot; [ladda]&#x3D;&quot;state.requestQuoteLoading&quot; data-style&#x3D;&quot;zoom-in&quot; (click)&#x3D;&quot;createQuote()&quot;
+      data-spinner-color&#x3D;&quot;black&quot; [disabled]&#x3D;&quot;!cart?.LineItems || cart?.LineItems?.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;Request a Quote&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt; --&gt;
+
+&lt;ng-template #discardChangesTemplate&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title pull-left&quot;&gt; {{&#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_TITLE&#x27; | translate}} &lt;/h4&gt;
+    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close pull-right&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;discardChangesModal.hide()&quot;&gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-body flex-column justify-content-center&quot;&gt;
+    &lt;p&gt;{{&#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_Message&#x27; | translate}}&lt;/p&gt;
+    &lt;p&gt;{{&#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_CONFIRMATION&#x27; | translate}}&lt;/p&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-end flex-wrap flex-md-nowrap&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-link&quot; (click)&#x3D;&quot;discardChangesModal.hide()&quot;&gt; {{ &#x27;COMMON.CANCEL&#x27; | translate }} &lt;/button&gt;
+        &lt;button class&#x3D;&quot;btn btn-primary m-2&quot;  (click)&#x3D;&quot;onDiscardChages()&quot; [ladda]&#x3D;&quot;loading&quot; data-style&#x3D;&quot;zoom-in&quot;&gt; {{ &#x27;MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES&#x27; | translate }} &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #taxPophover&gt;
+  &lt;apt-tax-pophover
+    *ngIf&#x3D;&quot;(storefront$ | async)?.EnableTaxCalculations &amp;&amp; (storefront$ | async) !&#x3D;&#x3D; null ? true : false &amp;&amp; showTaxPopUp&quot;
+    [taxItems]&#x3D;&quot;taxItems&quot; [totalEstimatedTax]&#x3D;&quot;totalEstimatedTax&quot; class&#x3D;&quot;small&quot; [showTaxPopUp]&#x3D;&quot;true&quot;&gt;&lt;/apt-tax-pophover&gt;
+&lt;/ng-template&gt;&lt;hr class&#x3D;&quot;mt-3 mb-2&quot; /&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./cart-summary.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">u{
+    cursor: pointer;
+ }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="card animated fadeIn" *ngIf="cart">  <div class="card-header">    <h5 class="card-title mb-0" *ngIf="!cart.Quote?.Id">{{\'MANAGE_CART.CART_SUMMARY.CART_SUMMARY_TITLE\' | translate }}</h5>    <h5 class="card-title mb-0" *ngIf="cart.Quote?.Id">{{\'DETAILS.PRICE_SUMMARY\' | translate }}</h5>  </div>  <div class="card-body">    <div class="d-flex justify-content-between">      <span> {{\'MANAGE_CART.CART_SUMMARY.TOTAL_PRICE\' | translate }} </span>      <span class="font-weight-bold">        <apt-price [record]="cart"></apt-price>      </span>    </div>    <div *ngIf="(storefront$ | async)?.EnablePromotions && (storefront$ | async) !== null ? true : false" class="d-flex mt-2 justify-content-between">      <span> {{\'MANAGE_CART.CART_SUMMARY.PROMOTIONS_APPLIED\' | translate }} </span>      <span>{{totalPromotions | localCurrency | async}}</span>    </div>    <div *ngIf="(storefront$ | async)?.EnableTaxCalculations && (storefront$ | async) !== null ? true : false"      class="d-flex mt-2 justify-content-between small">      <span>        <a placement="auto" [popover]="taxPophover" [outsideClick]="true">          <u (click)="openEstimateTaxPopup()">            {{\'MANAGE_CART.CART_SUMMARY.TAX\' | translate }}          </u>        </a>      </span>      <span>{{totalEstimatedTax | localCurrency | async}}</span>    </div>    <hr class="mt-2 mb-3" />    <div class="d-flex justify-content-between">      <span> {{\'MANAGE_CART.CART_SUMMARY.SUB_TOTAL\' | translate }} </span>      <span class="font-weight-bold">        <apt-price [record]="cart"></apt-price>      </span>    </div>    <hr class="mt-2 mb-3" />    <div class="d-flex justify-content-end" *ngIf="!cart.Quote?.Id">        <button *ngIf="(isLoggedIn$ | async) && (storefront$ | async)?.EnableRequestQuote" class="btn btn-link"          [routerLink]="[\'/proposals/create\']" [ladda]="cart?._state === \'pending\'" data-style="zoom-in"          [disabled]="!cart?.LineItems || cart?.LineItems?.length === 0 || hasErrors === true">          {{\'COMMON.REQUEST_QUOTE\' | translate }}        </button>        <button class="btn btn-primary" [routerLink]="[\'/checkout\']" [ladda]="cart?._state === \'pending\'" data-style="zoom-in"          [disabled]="!cart?.LineItems || cart?.LineItems?.length === 0 || hasErrors === true">          {{\'MANAGE_CART.CART_SUMMARY.CHECKOUT\' | translate }}        </button>    </div>        <div class="d-flex justify-content-end" *ngIf="cart.Quote?.Id">      <button class="btn btn-link mr-2" (click)="openDiscardChageModals()"  [ladda]="cart?._state === \'pending\'" data-style="zoom-in"      [disabled]="!cart?.LineItems || cart?.LineItems?.length === 0 || hasErrors === true">        {{\'MANAGE_CART.CART_SUMMARY.DISCARD_CHANGES\' | translate }}      </button>      <button class="btn btn-primary px-2" [routerLink]="[\'/proposals/create\']"  [ladda]="cart?._state === \'pending\'" data-style="zoom-in"      [disabled]="!cart?.LineItems || cart?.LineItems?.length === 0 || hasErrors === true">        {{\'MANAGE_CART.CART_SUMMARY.FINALIZE_AND_SUBMIT\' | translate }}      </button>    </div>  </div></div><!--  Not part of Nov 15 deliverable--><!-- <div class="card mt-3" *ngIf="cart">  <div class="card-header">    Request a Quote  </div>  <div class="card-body">    <small class="mb-3 d-block">      Request a quote for your configuration and someone will be in touch to discuss next steps.    </small>    <button class="btn btn-block btn-outline-primary" [ladda]="state.requestQuoteLoading" data-style="zoom-in" (click)="createQuote()"      data-spinner-color="black" [disabled]="!cart?.LineItems || cart?.LineItems?.length === 0">Request a Quote</button>  </div></div> --><ng-template #discardChangesTemplate>  <div class="modal-header">    <h4 class="modal-title pull-left"> {{\'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_TITLE\' | translate}} </h4>    <button type="button" class="close pull-right" aria-label="Close" (click)="discardChangesModal.hide()">      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="modal-body flex-column justify-content-center">    <p>{{\'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_Message\' | translate}}</p>    <p>{{\'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES_CONFIRMATION\' | translate}}</p>    <div class="d-flex justify-content-end flex-wrap flex-md-nowrap">        <button class="btn btn-link" (click)="discardChangesModal.hide()"> {{ \'COMMON.CANCEL\' | translate }} </button>        <button class="btn btn-primary m-2"  (click)="onDiscardChages()" [ladda]="loading" data-style="zoom-in"> {{ \'MANAGE_CART.DISCARD_CHANGES_MODAL.DISCARD_CHANGES\' | translate }} </button>    </div></div></ng-template><ng-template #taxPophover>  <apt-tax-pophover    *ngIf="(storefront$ | async)?.EnableTaxCalculations && (storefront$ | async) !== null ? true : false && showTaxPopUp"    [taxItems]="taxItems" [totalEstimatedTax]="totalEstimatedTax" class="small" [showTaxPopUp]="true"></apt-tax-pophover></ng-template><hr class="mt-3 mb-2" /></div>'
+    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[appAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'CartSummaryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CartSummaryComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1322 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Apttus Ecommerce Winter &#x27;19</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Apttus Ecommerce Winter &#x27;19</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>QuoteDetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/ecommerce/src/app/modules/quote/layout/quote-details/quote-details.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-quote-details</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./quote-details.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./quote-details.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#accept_loader">accept_loader</a>
+                            </li>
+                            <li>
+                                <a href="#attachments_loader">attachments_loader</a>
+                            </li>
+                            <li>
+                                <a href="#comments_loader">comments_loader</a>
+                            </li>
+                            <li>
+                                <a href="#edit_loader">edit_loader</a>
+                            </li>
+                            <li>
+                                <a href="#file">file</a>
+                            </li>
+                            <li>
+                                <a href="#hasSizeError">hasSizeError</a>
+                            </li>
+                            <li>
+                                <a href="#intimationModal">intimationModal</a>
+                            </li>
+                            <li>
+                                <a href="#intimationTemplate">intimationTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#newlyGeneratedOrder">newlyGeneratedOrder</a>
+                            </li>
+                            <li>
+                                <a href="#note">note</a>
+                            </li>
+                            <li>
+                                <a href="#order$">order$</a>
+                            </li>
+                            <li>
+                                <a href="#quote$">quote$</a>
+                            </li>
+                            <li>
+                                <a href="#quoteLineItems$">quoteLineItems$</a>
+                            </li>
+                            <li>
+                                <a href="#uploadFileList">uploadFileList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#acceptQuote">acceptQuote</a>
+                            </li>
+                            <li>
+                                <a href="#addComment">addComment</a>
+                            </li>
+                            <li>
+                                <a href="#clear">clear</a>
+                            </li>
+                            <li>
+                                <a href="#closeModal">closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#editQuoteItems">editQuoteItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, quoteService: <a href="../classes/Quote.html">QuoteService</a>, noteService: <a href="../injectables/NoteService.html">NoteService</a>, exceptionService: <a href="../injectables/ExceptionService.html">ExceptionService</a>, modalService: BsModalService, orderService: <a href="../injectables/OrderService.html">OrderService</a>, attachmentService: <a href="../interfaces/Attachment.html">AttachmentService</a>, quoteItemService: <a href="../injectables/QuoteLineItemService.html">QuoteLineItemService</a>, productInformationService: <a href="../injectables/ProductInformationService.html">ProductInformationService</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, ngZone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>, userService: <a href="../injectables/UserService.html">UserService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>quoteService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Quote.html" target="_self" >QuoteService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>noteService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NoteService.html" target="_self" >NoteService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>exceptionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExceptionService.html" target="_self" >ExceptionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>BsModalService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrderService.html" target="_self" >OrderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attachmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Attachment.html" target="_self" >AttachmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>quoteItemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/QuoteLineItemService.html" target="_self" >QuoteLineItemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productInformationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductInformationService.html" target="_self" >ProductInformationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ngZone</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="acceptQuote"></a>
+                    <span class="name">
+                        <b>
+                            acceptQuote
+                        </b>
+                        <a href="#acceptQuote"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>acceptQuote(quoteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quoteId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addComment"></a>
+                    <span class="name">
+                        <b>
+                            addComment
+                        </b>
+                        <a href="#addComment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addComment(quoteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quoteId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clear"></a>
+                    <span class="name">
+                        <b>
+                            clear
+                        </b>
+                        <a href="#clear"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clear()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <b>
+                            closeModal
+                        </b>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editQuoteItems"></a>
+                    <span class="name">
+                        <b>
+                            editQuoteItems
+                        </b>
+                        <a href="#editQuoteItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editQuoteItems(quoteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quoteId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="accept_loader"></a>
+                        <span class="name">
+                            <b>
+                            accept_loader</b>
+                            <a href="#accept_loader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="attachments_loader"></a>
+                        <span class="name">
+                            <b>
+                            attachments_loader</b>
+                            <a href="#attachments_loader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="comments_loader"></a>
+                        <span class="name">
+                            <b>
+                            comments_loader</b>
+                            <a href="#comments_loader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="edit_loader"></a>
+                        <span class="name">
+                            <b>
+                            edit_loader</b>
+                            <a href="#edit_loader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="file"></a>
+                        <span class="name">
+                            <b>
+                            file</b>
+                            <a href="#file"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>File</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasSizeError"></a>
+                        <span class="name">
+                            <b>
+                            hasSizeError</b>
+                            <a href="#hasSizeError"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="intimationModal"></a>
+                        <span class="name">
+                            <b>
+                            intimationModal</b>
+                            <a href="#intimationModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>BsModalRef</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="intimationTemplate"></a>
+                        <span class="name">
+                            <b>
+                            intimationTemplate</b>
+                            <a href="#intimationTemplate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;intimationTemplate&#x27;, {static: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newlyGeneratedOrder"></a>
+                        <span class="name">
+                            <b>
+                            newlyGeneratedOrder</b>
+                            <a href="#newlyGeneratedOrder"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Order.html" target="_self" >Order</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="note"></a>
+                        <span class="name">
+                            <b>
+                            note</b>
+                            <a href="#note"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Note.html" target="_self" >Note</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Note()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="order$"></a>
+                        <span class="name">
+                            <b>
+                            order$</b>
+                            <a href="#order$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Order.html" target="_self" >Observable&lt;Order&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="quote$"></a>
+                        <span class="name">
+                            <b>
+                            quote$</b>
+                            <a href="#quote$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Quote&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="quoteLineItems$"></a>
+                        <span class="name">
+                            <b>
+                            quoteLineItems$</b>
+                            <a href="#quoteLineItems$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ItemGroup.html" target="_self" >Observable&lt;Array&lt;ItemGroup&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadFileList"></a>
+                        <span class="name">
+                            <b>
+                            uploadFileList</b>
+                            <a href="#uploadFileList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;apt-detail *ngIf&#x3D;&quot;quote$ | async as quote&quot; [context]&#x3D;&quot;quote&quot;&gt;
+  &lt;div class&#x3D;&quot;detail-header&quot;&gt;
+    &lt;div class&#x3D;&quot;d-flex d-flex align-items-center mb-2&quot;&gt;
+      &lt;h3 class&#x3D;&quot;m-0&quot;&gt;{{quote?.Proposal_Name}}&lt;/h3&gt;
+      &lt;span class&#x3D;&quot;badge badge-light ml-3 px-3 py-1 border text-uppercase&quot; *ngIf&#x3D;&quot;quote?.Approval_Stage&quot;&gt;{{quote?.Approval_Stage}}&lt;/span&gt;
+      &lt;div *ngIf&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Accepted&#x27; &amp;&amp; order$ | async as order&quot; class&#x3D;&quot;ml-auto&quot;&gt;
+        &lt;span class&#x3D;&quot;pr-4 d-flex&quot;&gt;
+          &lt;apt-output-field [record]&#x3D;&quot;order&quot; field&#x3D;&quot;Name&quot; labelClass&#x3D;&quot;d-none&quot; layout&#x3D;&quot;inline&quot; [editable]&#x3D;&quot;false&quot; [showQuickView]&#x3D;&quot;true&quot;&gt;&lt;/apt-output-field&gt; | &lt;span
+            class&#x3D;&quot;ml-2&quot;&gt;{{&#x27;MY_ACCOUNT.ORDER_DETAIL.ORDER_STATUS&#x27; | translate}}: {{order?.Status}}&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+  
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary ml-auto&quot; [ladda]&#x3D;&quot;accept_loader&quot; *ngIf&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Presented&#x27;&quot;
+        (click)&#x3D;&quot;acceptQuote(quote?.Id)&quot;&gt;{{&#x27;COMMON.ACCEPT_QUOTE&#x27; | translate}}&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;span&gt;{{quote?.Name}}&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;apt-detail-section [title]&#x3D;&quot;&#x27;DETAILS.QUOTE_SUMMARY&#x27; | translate&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-12 col-md-8&quot;&gt;
+        &lt;h5&gt;{{&#x27;DETAILS.QUOTE_SUMMARY&#x27; | translate}}&lt;/h5&gt;
+        &lt;div class&#x3D;&quot;row mt-4&quot;&gt;
+          &lt;dl class&#x3D;&quot;col-12 col-md-6&quot;&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;CreatedDate&quot; layout&#x3D;&quot;inline&quot; [editable]&#x3D;&quot;false&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote.CreatedBy&quot; field&#x3D;&quot;Name&quot; label&#x3D;&quot;Created By&quot; layout&#x3D;&quot;inline&quot; 
+            [editable]&#x3D;&quot;false&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;RFP_Response_Due_Date&quot; layout&#x3D;&quot;inline&quot; 
+            [editable]&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Draft&#x27; || quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Presented&#x27;&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;PrimaryContactId&quot; layout&#x3D;&quot;inline&quot; 
+            [editable]&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Draft&#x27; || quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Presented&#x27;&quot; [showQuickView]&#x3D;&quot;true&quot; &gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;BillToAccountId&quot; label&#x3D;&quot;BillToAccount.Name&quot; layout&#x3D;&quot;inline&quot; 
+            [editable]&#x3D;&quot;false&quot; [showQuickView]&#x3D;&quot;true&quot;&gt;&lt;/apt-output-field&gt;
+          &lt;/dl&gt;
+          &lt;dl class&#x3D;&quot;col-12 col-md-6&quot;&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;ShipToAccountId&quot; layout&#x3D;&quot;inline&quot; [editable]&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Draft&#x27; || quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Presented&#x27;&quot; label&#x3D;&quot;Ship To Account&quot; [showQuickView]&#x3D;&quot;true&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;ShipToAccount.ShippingAddress&quot; label&#x3D;&quot;Ship To Address&quot; layout&#x3D;&quot;inline&quot;
+            [editable]&#x3D;&quot;false&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;BillToAccountId&quot; layout&#x3D;&quot;inline&quot; [editable]&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Draft&#x27; || quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Presented&#x27;&quot; label&#x3D;&quot;Bill To Account&quot; [showQuickView]&#x3D;&quot;true&quot;&gt;&lt;/apt-output-field&gt;
+            &lt;apt-output-field [record]&#x3D;&quot;quote&quot; field&#x3D;&quot;BillToAccount.BillingAddress&quot; label&#x3D;&quot;Bill To Address&quot; layout&#x3D;&quot;inline&quot;
+            [editable]&#x3D;&quot;false&quot;&gt;&lt;/apt-output-field&gt;
+          &lt;/dl&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-12 col-md-4&quot;&gt;
+        &lt;apt-price-summary [record]&#x3D;&quot;quote&quot; [page]&#x3D;&quot;&#x27;quote-details&#x27;&quot;&gt;&lt;/apt-price-summary&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/apt-detail-section&gt;
+
+  &lt;apt-detail-section [title]&#x3D;&quot;&#x27;DETAILS.LINE_ITEMS&#x27; | translate&quot; class&#x3D;&quot;mt-4&quot;&gt;
+    &lt;h5 class&#x3D;&quot;py-2&quot;&gt;
+      {{&#x27;DETAILS.LINE_ITEMS&#x27; | translate}}
+      &lt;button class&#x3D;&quot;btn btn-sm btn-outline-primary px-4 ml-4&quot; *ngIf&#x3D;&quot;quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Draft&#x27; || quote?.Approval_Stage &#x3D;&#x3D;&#x3D; &#x27;Presented&#x27;&quot;  [ladda]&#x3D;&quot;edit_loader&quot;  data-style&#x3D;&quot;zoom-in&quot;  data-spinner-color&#x3D;&quot;black&quot; (click)&#x3D;&quot;editQuoteItems(quote.Id)&quot;&gt;{{&#x27;COMMON.EDIT&#x27; | translate}}&lt;/button&gt;
+    &lt;/h5&gt;
+    &lt;table class&#x3D;&quot;table table-responsive border-bottom&quot;&gt;
+      &lt;tbody&gt;
+        &lt;ng-container *ngFor&#x3D;&quot;let item of quoteLineItems$ | async; let i &#x3D; index&quot;&gt;
+          &lt;apt-line-item-table-row
+            [index]&#x3D;&quot;i&quot;
+            [parent]&#x3D;&quot;item.MainLine&quot;
+            [options]&#x3D;&quot;item.Options&quot;
+            [children]&#x3D;&quot;item.SecondaryLines&quot;
+            [editableFields]&#x3D;&quot;false&quot;&gt;
+          &lt;/apt-line-item-table-row&gt;
+        &lt;/ng-container&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/apt-detail-section&gt;
+
+  &lt;apt-detail-section [title]&#x3D;&quot;&#x27;DETAILS.COMMENTS&#x27; | translate&quot; class&#x3D;&quot;mt-4&quot;&gt;
+    &lt;h5 class&#x3D;&quot;py-2 text-uppercase&quot;&gt;
+        {{&#x27;DETAILS.COMMENTS&#x27; | translate}} &lt;span *ngIf&#x3D;&quot;quote?.Notes?.length &gt; 0&quot;&gt;({{quote?.Notes?.length}})&lt;/span&gt;
+    &lt;/h5&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;ng-scrollbar class&#x3D;&quot;col-12 col-md-6 border-right note-container&quot; track&#x3D;&quot;horizontal&quot;&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;quote?.Notes?.length &gt; 0; else emptyNotes&quot;&gt;
+          &lt;div class&#x3D;&quot;my-3 pb-3&quot; *ngFor&#x3D;&quot;let note of quote?.Notes&quot;&gt;
+            &lt;!-- &lt;strong class&#x3D;&quot;d-block&quot;&gt;{{note?.Title}}&lt;/strong&gt; --&gt;
+            &lt;div class&#x3D;&quot;text-muted d-block mb-2&quot;&gt;&lt;strong&gt;{{note?.CreatedBy?.Name}}&lt;/strong&gt; {{&#x27;COMMON.ON&#x27; | translate }}
+              {{note?.CreatedDate | date:&#x27;medium&#x27;}}&lt;/div&gt;
+            &lt;div&gt;
+              {{note?.Body}}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #emptyNotes&gt;
+          &lt;div class&#x3D;&quot;d-flex align-items-center justify-content-center flex-column h-100 text-muted&quot;&gt;
+            &lt;i class&#x3D;&quot;fa fa-4x fa-comments-o mb-2&quot;&gt;&lt;/i&gt;
+            {{&#x27;COMMON.NO_COMMENTS_TO_DISPLAY&#x27; | translate}}
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-scrollbar&gt;
+      &lt;div class&#x3D;&quot;col-12 col-md-6&quot;&gt;
+        &lt;form (ngSubmit)&#x3D;&quot;addComment(quote.Id)&quot;&gt;
+          &lt;!-- &lt;apt-input-field [entity]&#x3D;&quot;note&quot; field&#x3D;&quot;Title&quot; [(ngModel)]&#x3D;&quot;note.Title&quot; name&#x3D;&quot;title&quot; [required]&#x3D;&quot;true&quot; [placeholder]&#x3D;&quot;&#x27;Note Title&#x27;&quot;&gt;&lt;/apt-input-field&gt; --&gt;
+          &lt;apt-input-field [entity]&#x3D;&quot;note&quot; field&#x3D;&quot;Body&quot; rows&#x3D;&quot;5&quot; label&#x3D;&quot;{{&#x27;COMMON.ADD_NEW_COMMENT&#x27; | translate }}&quot; [(ngModel)]&#x3D;&quot;note.Body&quot; name&#x3D;&quot;body&quot; [required]&#x3D;&quot;true&quot;&gt;&lt;/apt-input-field&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-end&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-link&quot; (click)&#x3D;&quot;clear()&quot; type&#x3D;&quot;button&quot;&gt;{{&#x27;COMMON.CLEAR&#x27; | translate }}&lt;/button&gt;
+            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;submit&quot; [ladda]&#x3D;&quot;comments_loader&quot; [disabled]&#x3D;&quot;!note.Body&quot;&gt;{{&#x27;COMMON.ADD_COMMENT&#x27; | translate }}&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/apt-detail-section&gt;
+
+  &lt;apt-detail-section [title]&#x3D;&quot;&#x27;DETAILS.ATTACHMENTS&#x27; | translate&quot; class&#x3D;&quot;mt-4&quot;&gt;
+    &lt;h5 class&#x3D;&quot;py-2 text-uppercase&quot;&gt;
+        {{&#x27;DETAILS.ATTACHMENTS&#x27; | translate}} &lt;span *ngIf&#x3D;&quot;quote?.Attachments?.length &gt; 0&quot;&gt;({{quote?.Attachments?.length}})&lt;/span&gt;
+    &lt;/h5&gt;
+
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;ng-scrollbar class&#x3D;&quot;col-12 col-md-6 border-right attachment-container&quot;&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;quote?.Attachments?.length &gt; 0; else emptyAttachments&quot;&gt;
+          &lt;div class&#x3D;&quot;mb-2 hide-hscroll&quot; *ngFor&#x3D;&quot;let attachment of quote?.Attachments&quot;&gt;
+            &lt;div class&#x3D;&quot;row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-6&quot;&gt;&lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;&lt;a class&#x3D;&quot;text-underline&quot; href&#x3D;&quot;{{downloadAttachment(attachment.Id, quote.Id)}}&quot; target&#x3D;&quot;_blank&quot;&gt;{{attachment?.Name}}&lt;/a&gt;&lt;span&gt;{{(attachment?.BodyLength/1024).toFixed(2)}} KB&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-md-6&quot;&gt;{{&#x27;MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.BY&#x27; | translate}}&lt;span class&#x3D;&quot;pl-2&quot;&gt;{{attachment?.CreatedBy.Name}},&lt;/span&gt;&lt;span class&#x3D;&quot;pl-3&quot;&gt;{{attachment?.CreatedDate | date:&#x27;short&#x27;}}&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-template #emptyAttachments&gt;
+          &lt;div class&#x3D;&quot;d-flex align-items-center justify-content-center flex-column h-100 text-muted&quot;&gt;
+            &lt;i class&#x3D;&quot;fa fa-4x fa-file-o mb-2&quot;&gt;&lt;/i&gt;
+            {{&#x27;MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.NO_ATTACHMENTS&#x27; | translate}}
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-scrollbar&gt;
+      &lt;div class&#x3D;&quot;col-12 col-md-6&quot;&gt;
+        &lt;form (ngSubmit)&#x3D;&quot;uploadAttachment(quote.Id)&quot;&gt;
+          &lt;label class&#x3D;&quot;font-weight-bold&quot;&gt;{{&#x27;MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.TITLE&#x27; | translate}}&lt;/label&gt;
+          &lt;div class&#x3D;&quot;file-section bg-light d-flex align-items-center justify-content-center border-secondary file-upload&quot; (dragover)&#x3D;&quot;onDragFile($event)&quot; (drop)&#x3D;&quot;onDropFile($event)&quot; data-max-size&#x3D;&quot;26214400&quot;&gt;
+            &lt;label class&#x3D;&quot;p-5 position-relative&quot; for&#x3D;&quot;browse&quot;&gt;&lt;span class&#x3D;&quot;position-absolute upload-icon-position&quot;&gt;&lt;i class&#x3D;&quot;fa fa-4x fa-cloud-upload text-black-50&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class&#x3D;&quot;pl-4&quot;&gt;{{&#x27;MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.INPUT_LABEL&#x27; | translate}}&lt;/span&gt;&lt;span class&#x3D;&quot;pl-1 text-underline cursor-pointer&quot;&gt;{{&#x27;MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.BROWSE&#x27; | translate}}&lt;/span&gt;&lt;/label&gt;
+            &lt;input id&#x3D;&quot;browse&quot; class&#x3D;&quot;position-absolute p-5&quot; type&#x3D;&quot;file&quot; (change)&#x3D;&quot;fileChange($event)&quot; data-max-size&#x3D;&quot;26214400&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;mt-2&quot; *ngIf&#x3D;&quot;hasSizeError&quot;&gt;
+            &lt;p class&#x3D;&quot;text-danger&quot;&gt;{{&#x27;MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.FILE_SIZE_EXCEEDED_ERROR&#x27; | translate}}
+            &lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;div class&#x3D;&quot;mt-2&quot; *ngIf&#x3D;&quot;uploadFileList &amp;&amp; !hasSizeError&quot;&gt;
+              &lt;div class&#x3D;&quot;d-flex justify-content-between&quot; *ngFor&#x3D;&quot;let file of uploadFileList&quot;&gt;
+                &lt;div class&#x3D;&quot;w-70&quot;&gt;&lt;span&gt;{{file?.name}}&lt;/span&gt;&lt;/div&gt;
+                &lt;div class&#x3D;&quot;w-30&quot;&gt;&lt;span&gt;{{(file?.size/1024).toFixed(2)}} KB&lt;/span&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;d-flex justify-content-end mt-3&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-link&quot; (click)&#x3D;&quot;clearFiles()&quot; type&#x3D;&quot;button&quot;&gt;{{&#x27;COMMON.CLEAR&#x27; | translate }}&lt;/button&gt;
+            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;submit&quot; [disabled]&#x3D;&quot;!file&quot; [ladda]&#x3D;&quot;attachments_loader&quot;&gt;{{&#x27;COMMON.UPLOAD&#x27; | translate }}&lt;/button&gt;
+          &lt;/div&gt;
+      &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/apt-detail-section&gt;
+
+  &lt;ng-template #intimationTemplate&gt;
+    &lt;div class&#x3D;&quot;modal-header align-items-center p-0 mx-4 mt-3 border-bottom border-secondary&quot;&gt;
+      &lt;h6 class&#x3D;&quot;modal-title pull-left font-weight-bold&quot;&gt;
+        {{&#x27;COMMON.ACCEPT_QUOTE&#x27; | translate}}
+      &lt;/h6&gt;
+      &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close pull-right&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;closeModal()&quot;&gt;
+        &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;modal-body d-flex flex-column justify-content-center py-4&quot;&gt;
+      &lt;p class&#x3D;&quot;text-center&quot;&gt;&lt;strong&gt;{{ &#x27;QUOTE_CONFIRMATION_MODAL.THANK_YOU&#x27; | translate }}!&lt;/strong&gt;&lt;/p&gt;
+      &lt;span class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;DETAILS.SUCCESSFUL_QUOTE_ACCEPTANCE_MESSAGE&#x27;&quot; [translateParams]&#x3D;&quot;{quoteName: quote?.Name}&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/apt-detail&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./quote-details.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.price-summary {
+    div.col-6 {
+        height: 2rem;
+    }
+}
+
+.file-section{
+    height: 150px;
+    border-style: dashed;
+    border-width: 1px;
+}
+
+.note-container, .attachment-container{
+    height: 35vh;
+}
+
+.file-upload {
+    input[type&#x3D;&#x27;file&#x27;] {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.upload-icon-position{
+    left:0;
+    top:30px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><apt-detail *ngIf="quote$ | async as quote" [context]="quote">  <div class="detail-header">    <div class="d-flex d-flex align-items-center mb-2">      <h3 class="m-0">{{quote?.Proposal_Name}}</h3>      <span class="badge badge-light ml-3 px-3 py-1 border text-uppercase" *ngIf="quote?.Approval_Stage">{{quote?.Approval_Stage}}</span>      <div *ngIf="quote?.Approval_Stage === \'Accepted\' && order$ | async as order" class="ml-auto">        <span class="pr-4 d-flex">          <apt-output-field [record]="order" field="Name" labelClass="d-none" layout="inline" [editable]="false" [showQuickView]="true"></apt-output-field> | <span            class="ml-2">{{\'MY_ACCOUNT.ORDER_DETAIL.ORDER_STATUS\' | translate}}: {{order?.Status}}</span>        </span>      </div>        <button type="button" class="btn btn-primary ml-auto" [ladda]="accept_loader" *ngIf="quote?.Approval_Stage === \'Presented\'"        (click)="acceptQuote(quote?.Id)">{{\'COMMON.ACCEPT_QUOTE\' | translate}}</button>    </div>    <span>{{quote?.Name}}</span>  </div>  <apt-detail-section [title]="\'DETAILS.QUOTE_SUMMARY\' | translate">    <div class="row">      <div class="col-12 col-md-8">        <h5>{{\'DETAILS.QUOTE_SUMMARY\' | translate}}</h5>        <div class="row mt-4">          <dl class="col-12 col-md-6">            <apt-output-field [record]="quote" field="CreatedDate" layout="inline" [editable]="false"></apt-output-field>            <apt-output-field [record]="quote.CreatedBy" field="Name" label="Created By" layout="inline"             [editable]="false"></apt-output-field>            <apt-output-field [record]="quote" field="RFP_Response_Due_Date" layout="inline"             [editable]="quote?.Approval_Stage === \'Draft\' || quote?.Approval_Stage === \'Presented\'"></apt-output-field>            <apt-output-field [record]="quote" field="PrimaryContactId" layout="inline"             [editable]="quote?.Approval_Stage === \'Draft\' || quote?.Approval_Stage === \'Presented\'" [showQuickView]="true" ></apt-output-field>            <apt-output-field [record]="quote" field="BillToAccountId" label="BillToAccount.Name" layout="inline"             [editable]="false" [showQuickView]="true"></apt-output-field>          </dl>          <dl class="col-12 col-md-6">            <apt-output-field [record]="quote" field="ShipToAccountId" layout="inline" [editable]="quote?.Approval_Stage === \'Draft\' || quote?.Approval_Stage === \'Presented\'" label="Ship To Account" [showQuickView]="true"></apt-output-field>            <apt-output-field [record]="quote" field="ShipToAccount.ShippingAddress" label="Ship To Address" layout="inline"            [editable]="false"></apt-output-field>            <apt-output-field [record]="quote" field="BillToAccountId" layout="inline" [editable]="quote?.Approval_Stage === \'Draft\' || quote?.Approval_Stage === \'Presented\'" label="Bill To Account" [showQuickView]="true"></apt-output-field>            <apt-output-field [record]="quote" field="BillToAccount.BillingAddress" label="Bill To Address" layout="inline"            [editable]="false"></apt-output-field>          </dl>        </div>      </div>      <div class="col-12 col-md-4">        <apt-price-summary [record]="quote" [page]="\'quote-details\'"></apt-price-summary>      </div>    </div>  </apt-detail-section>  <apt-detail-section [title]="\'DETAILS.LINE_ITEMS\' | translate" class="mt-4">    <h5 class="py-2">      {{\'DETAILS.LINE_ITEMS\' | translate}}      <button class="btn btn-sm btn-outline-primary px-4 ml-4" *ngIf="quote?.Approval_Stage === \'Draft\' || quote?.Approval_Stage === \'Presented\'"  [ladda]="edit_loader"  data-style="zoom-in"  data-spinner-color="black" (click)="editQuoteItems(quote.Id)">{{\'COMMON.EDIT\' | translate}}</button>    </h5>    <table class="table table-responsive border-bottom">      <tbody>        <ng-container *ngFor="let item of quoteLineItems$ | async; let i = index">          <apt-line-item-table-row            [index]="i"            [parent]="item.MainLine"            [options]="item.Options"            [children]="item.SecondaryLines"            [editableFields]="false">          </apt-line-item-table-row>        </ng-container>      </tbody>    </table>  </apt-detail-section>  <apt-detail-section [title]="\'DETAILS.COMMENTS\' | translate" class="mt-4">    <h5 class="py-2 text-uppercase">        {{\'DETAILS.COMMENTS\' | translate}} <span *ngIf="quote?.Notes?.length > 0">({{quote?.Notes?.length}})</span>    </h5>    <div class="row">      <ng-scrollbar class="col-12 col-md-6 border-right note-container" track="horizontal">        <ng-container *ngIf="quote?.Notes?.length > 0; else emptyNotes">          <div class="my-3 pb-3" *ngFor="let note of quote?.Notes">            <!-- <strong class="d-block">{{note?.Title}}</strong> -->            <div class="text-muted d-block mb-2"><strong>{{note?.CreatedBy?.Name}}</strong> {{\'COMMON.ON\' | translate }}              {{note?.CreatedDate | date:\'medium\'}}</div>            <div>              {{note?.Body}}            </div>          </div>        </ng-container>        <ng-template #emptyNotes>          <div class="d-flex align-items-center justify-content-center flex-column h-100 text-muted">            <i class="fa fa-4x fa-comments-o mb-2"></i>            {{\'COMMON.NO_COMMENTS_TO_DISPLAY\' | translate}}          </div>        </ng-template>      </ng-scrollbar>      <div class="col-12 col-md-6">        <form (ngSubmit)="addComment(quote.Id)">          <!-- <apt-input-field [entity]="note" field="Title" [(ngModel)]="note.Title" name="title" [required]="true" [placeholder]="\'Note Title\'"></apt-input-field> -->          <apt-input-field [entity]="note" field="Body" rows="5" label="{{\'COMMON.ADD_NEW_COMMENT\' | translate }}" [(ngModel)]="note.Body" name="body" [required]="true"></apt-input-field>          <div class="d-flex justify-content-end">            <button class="btn btn-link" (click)="clear()" type="button">{{\'COMMON.CLEAR\' | translate }}</button>            <button class="btn btn-primary" type="submit" [ladda]="comments_loader" [disabled]="!note.Body">{{\'COMMON.ADD_COMMENT\' | translate }}</button>          </div>        </form>      </div>    </div>  </apt-detail-section>  <apt-detail-section [title]="\'DETAILS.ATTACHMENTS\' | translate" class="mt-4">    <h5 class="py-2 text-uppercase">        {{\'DETAILS.ATTACHMENTS\' | translate}} <span *ngIf="quote?.Attachments?.length > 0">({{quote?.Attachments?.length}})</span>    </h5>    <div class="row">      <ng-scrollbar class="col-12 col-md-6 border-right attachment-container">        <ng-container *ngIf="quote?.Attachments?.length > 0; else emptyAttachments">          <div class="mb-2 hide-hscroll" *ngFor="let attachment of quote?.Attachments">            <div class="row">              <div class="col-md-6"><div class="d-flex justify-content-between"><a class="text-underline" href="{{downloadAttachment(attachment.Id, quote.Id)}}" target="_blank">{{attachment?.Name}}</a><span>{{(attachment?.BodyLength/1024).toFixed(2)}} KB</span></div></div>              <div class="col-md-6">{{\'MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.BY\' | translate}}<span class="pl-2">{{attachment?.CreatedBy.Name}},</span><span class="pl-3">{{attachment?.CreatedDate | date:\'short\'}}</span></div>            </div>          </div>        </ng-container>        <ng-template #emptyAttachments>          <div class="d-flex align-items-center justify-content-center flex-column h-100 text-muted">            <i class="fa fa-4x fa-file-o mb-2"></i>            {{\'MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.NO_ATTACHMENTS\' | translate}}          </div>        </ng-template>      </ng-scrollbar>      <div class="col-12 col-md-6">        <form (ngSubmit)="uploadAttachment(quote.Id)">          <label class="font-weight-bold">{{\'MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.TITLE\' | translate}}</label>          <div class="file-section bg-light d-flex align-items-center justify-content-center border-secondary file-upload" (dragover)="onDragFile($event)" (drop)="onDropFile($event)" data-max-size="26214400">            <label class="p-5 position-relative" for="browse"><span class="position-absolute upload-icon-position"><i class="fa fa-4x fa-cloud-upload text-black-50"></i></span><span class="pl-4">{{\'MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.INPUT_LABEL\' | translate}}</span><span class="pl-1 text-underline cursor-pointer">{{\'MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.BROWSE\' | translate}}</span></label>            <input id="browse" class="position-absolute p-5" type="file" (change)="fileChange($event)" data-max-size="26214400" />          </div>          <div class="mt-2" *ngIf="hasSizeError">            <p class="text-danger">{{\'MY_ACCOUNT.QUOTE_DETAIL.ATTACHMENTS.FILE_SIZE_EXCEEDED_ERROR\' | translate}}            </p>          </div>          <div class="form-group">            <div class="mt-2" *ngIf="uploadFileList && !hasSizeError">              <div class="d-flex justify-content-between" *ngFor="let file of uploadFileList">                <div class="w-70"><span>{{file?.name}}</span></div>                <div class="w-30"><span>{{(file?.size/1024).toFixed(2)}} KB</span></div>              </div>            </div>          </div>          <div class="d-flex justify-content-end mt-3">            <button class="btn btn-link" (click)="clearFiles()" type="button">{{\'COMMON.CLEAR\' | translate }}</button>            <button class="btn btn-primary" type="submit" [disabled]="!file" [ladda]="attachments_loader">{{\'COMMON.UPLOAD\' | translate }}</button>          </div>      </form>      </div>    </div>  </apt-detail-section>  <ng-template #intimationTemplate>    <div class="modal-header align-items-center p-0 mx-4 mt-3 border-bottom border-secondary">      <h6 class="modal-title pull-left font-weight-bold">        {{\'COMMON.ACCEPT_QUOTE\' | translate}}      </h6>      <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">        <span aria-hidden="true">&times;</span>      </button>    </div>    <div class="modal-body d-flex flex-column justify-content-center py-4">      <p class="text-center"><strong>{{ \'QUOTE_CONFIRMATION_MODAL.THANK_YOU\' | translate }}!</strong></p>      <span class="text-center" [translate]="\'DETAILS.SUCCESSFUL_QUOTE_ACCEPTANCE_MESSAGE\'" [translateParams]="{quoteName: quote?.Name}"></span>    </div>  </ng-template></apt-detail></div>'
+    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
+    var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[appAutoFocus]'}];
+    var ACTUAL_COMPONENT = {'name': 'QuoteDetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'QuoteDetailsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
