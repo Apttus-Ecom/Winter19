@@ -155,6 +155,20 @@
     <table class="table table-sm table-bordered index-table">
         <tbody>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getPopoverFields">getPopoverFields</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -655,14 +669,83 @@
 </section>
 
 
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPopoverFields"></a>
+                    <span class="name">
+                        <b>
+                            getPopoverFields
+                        </b>
+                        <a href="#getPopoverFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPopoverFields(instance: AObject)</code>
+                </td>
+            </tr>
 
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>instance</td>
+                                    <td>
+                                            <code>AObject</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Array&lt;FieldLabel&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 </div>
 
 
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;span class&#x3D;&quot;d-flex&quot; [class.align-items-baseline]&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;inline&#x27;&quot; [class.flex-column]&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;stacked&#x27;&quot; [class.inline]&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;inline&#x27;&quot; [class.label-only]&#x3D;&quot;labelOnly&quot; *ngIf&#x3D;&quot;view$ | async as view&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;span [class.align-items-baseline]&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;inline&#x27;&quot; [class.inline]&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;inline&#x27;&quot; [class.d-flex]&#x3D;&quot;layout &#x3D;&#x3D;&#x3D; &#x27;inline&#x27;&quot; [class.label-only]&#x3D;&quot;labelOnly&quot; *ngIf&#x3D;&quot;view$ | async as view&quot;&gt;
   
   
     &lt;dt [ngClass]&#x3D;&quot;labelClass&quot; *ngIf&#x3D;&quot;!valueOnly&quot;&gt;
@@ -687,8 +770,11 @@
         &lt;/ng-container&gt;
 
         &lt;ng-container *ngIf&#x3D;&quot;view?.recordMetadata?.type &#x3D;&#x3D;&#x3D; &#x27;reference&#x27; &amp;&amp; !showQuickView&quot;&gt;
-          &lt;a href&#x3D;&quot;javascript:void(0)&quot; *ngIf&#x3D;&quot;view?.referenceFieldInstance?.Id&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27; + view?.labelPlural, view?.referenceFieldInstance?.Id]&quot; [innerHTML]&#x3D;&quot;view?.value&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;/a&gt;
+          &lt;a href&#x3D;&quot;javascript:void(0)&quot; *ngIf&#x3D;&quot;view?.referenceFieldInstance?.Id &amp;&amp; view?.titleIsLink; else noLinkReference&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27; + view?.labelPlural, view?.referenceFieldInstance?.Id]&quot; [innerHTML]&#x3D;&quot;view?.value&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;/a&gt;
         &lt;/ng-container&gt;
+        &lt;ng-template #noLinkReference&gt;
+          &lt;span [innerHTML]&#x3D;&quot;view?.value&quot;&gt;&lt;/span&gt;
+        &lt;/ng-template&gt;
 
         &lt;ng-container *ngIf&#x3D;&quot;showQuickView&quot;&gt;
           &lt;span
@@ -706,7 +792,7 @@
       &lt;/ng-container&gt;
 
       &lt;ng-container *ngSwitchDefault&gt;
-        &lt;span [innerHTML]&#x3D;&quot;view?.value&quot;&gt;&lt;/span&gt;
+        &lt;span [innerHTML]&#x3D;&quot;!!view?.value ? view?.value : (&#x27;COMMON.NO_DATA&#x27; | translate)&quot;&gt;&lt;/span&gt;
       &lt;/ng-container&gt;
 
       &lt;i
@@ -729,7 +815,7 @@
       &lt;div class&#x3D;&quot;popHeader p-3 mb-1&quot; [ngClass]&#x3D;&quot;expanded ? &#x27;bg-dark text-white&#x27; : &#x27;bg-white text-dark&#x27;&quot;&gt;
         &lt;div class&#x3D;&quot;titleSection pb-2 border-bottom d-flex justify-content-between align-items-baseline&quot;&gt;
           &lt;ng-container&gt;
-            &lt;a class&#x3D;&quot;h5 btn-link&quot; href&#x3D;&quot;javascript:void(0)&quot; *ngIf&#x3D;&quot;view?.referenceFieldInstance?.Id&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27; + view?.labelPlural, view?.referenceFieldInstance?.Id]&quot; [innerHTML]&#x3D;&quot;view?.value&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;/a&gt;
+            &lt;a class&#x3D;&quot;h5 btn-link&quot; href&#x3D;&quot;javascript:void(0)&quot; *ngIf&#x3D;&quot;view?.referenceFieldInstance?.Id &amp;&amp; view?.titleIsLink; else noLinkPopoverTitle&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27; + view?.labelPlural, view?.referenceFieldInstance?.Id]&quot; [innerHTML]&#x3D;&quot;view?.value&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;/a&gt;
           &lt;/ng-container&gt;
           &lt;ng-template #noLinkPopoverTitle&gt;
             &lt;h5 [innerHTML]&#x3D;&quot;view?.value&quot;&gt;&lt;/h5&gt;
@@ -741,7 +827,8 @@
             &lt;div *ngFor&#x3D;&quot;let field of view?.popoverFields | slice:0:6&quot; class&#x3D;&quot;col-6 pl-0 d-flex flex-column&quot;&gt;
               &lt;apt-output-field
                 [record]&#x3D;&quot;view?.referenceFieldInstance&quot;
-                [field]&#x3D;&quot;field&quot;
+                [field]&#x3D;&quot;field.field&quot;
+                [label]&#x3D;&quot;field.label&quot;
                 layout&#x3D;&quot;stacked&quot;
                 [editable]&#x3D;&quot;false&quot;
                 [showQuickView]&#x3D;&quot;false&quot;
@@ -767,7 +854,8 @@
             &lt;div *ngFor&#x3D;&quot;let field of view?.popoverFields | slice:6&quot; class&#x3D;&quot;col-6 pl-0 d-flex flex-column&quot;&gt;
               &lt;apt-output-field
                 [record]&#x3D;&quot;view?.referenceFieldInstance&quot;
-                [field]&#x3D;&quot;field&quot;
+                [field]&#x3D;&quot;field.field&quot;
+                [label]&#x3D;&quot;field.label&quot;
                 layout&#x3D;&quot;stacked&quot;
                 [editable]&#x3D;&quot;false&quot;
                 [showQuickView]&#x3D;&quot;false&quot;
@@ -780,11 +868,10 @@
 
   &lt;ng-template #popTemplate&gt;
     &lt;form class&#x3D;&quot;p-3&quot; (ngSubmit)&#x3D;&quot;update(view)&quot;&gt;
-      &lt;apt-input-field *ngIf&#x3D;&quot;!lookupOptions&quot; [(ngModel)]&#x3D;&quot;view.recordInstance[view.field]&quot; [field]&#x3D;&quot;view.field&quot; [entity]&#x3D;&quot;view.recordInstance&quot; [name]&#x3D;&quot;view.field&quot; &gt;&lt;/apt-input-field&gt;
-      &lt;apt-input-field *ngIf&#x3D;&quot;lookupOptions&quot; [(ngModel)]&#x3D;&quot;view.recordInstance[view.field]&quot; [field]&#x3D;&quot;view.field&quot; [entity]&#x3D;&quot;view.recordInstance&quot; [name]&#x3D;&quot;view.field&quot; [lookupOptions]&#x3D;&quot;lookupOptions&quot;&gt;&lt;/apt-input-field&gt;
+      &lt;apt-input-field [(ngModel)]&#x3D;&quot;view.recordInstance[view.field]&quot; [field]&#x3D;&quot;view.field&quot; [entity]&#x3D;&quot;view.recordInstance&quot; [name]&#x3D;&quot;view.field&quot; [lookupOptions]&#x3D;&quot;lookupOptions&quot;&gt;&lt;/apt-input-field&gt;
       &lt;div class&#x3D;&quot;d-flex justify-content-end&quot;&gt;
-        &lt;button class&#x3D;&quot;btn-link btn&quot; (click)&#x3D;&quot;handleHidePop()&quot;&gt;Cancel&lt;/button&gt;
-        &lt;button class&#x3D;&quot;btn btn-primary btn-raised&quot; type&#x3D;&quot;submit&quot; [ladda]&#x3D;&quot;loading&quot;&gt;Update&lt;/button&gt;
+        &lt;button class&#x3D;&quot;btn-link btn&quot; (click)&#x3D;&quot;handleHidePop()&quot;&gt;{{&#x27;COMMON.CANCEL&#x27; | translate}}&lt;/button&gt;
+        &lt;button class&#x3D;&quot;btn btn-primary btn-raised&quot; type&#x3D;&quot;submit&quot; [ladda]&#x3D;&quot;loading&quot;&gt;{{&#x27;COMMON.UPDATE&#x27; | translate}}&lt;/button&gt;
       &lt;/div&gt;
     &lt;/form&gt;
   &lt;/ng-template&gt;
@@ -925,8 +1012,8 @@
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><span class="d-flex" [class.align-items-baseline]="layout === \'inline\'" [class.flex-column]="layout === \'stacked\'" [class.inline]="layout === \'inline\'" [class.label-only]="labelOnly" *ngIf="view$ | async as view">        <dt [ngClass]="labelClass" *ngIf="!valueOnly">      {{view?.label}}    </dt>    <dd *ngIf="!labelOnly" class="m-0 position-relative"  [class.px-1]="layout === \'inline\'" [class.py-1]="layout === \'stacked\'" [class.empty]="!view.value" [ngClass]="valueClass" [ngSwitch]="true">      <ng-container *ngSwitchCase="view.recordMetadata?.type === \'date\' || view.recordMetadata?.type === \'datetime\'">{{view.value | date:getDateFormat(view.metadata)}}</ng-container>        <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'currency\'">{{view?.value | localCurrency | async}}</ng-container>        <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'address\'">        <apt-address [value]="view?.value" [readonly]="true"></apt-address>      </ng-container>        <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'double\'">        {{view?.value | number:\'1.0-\' + view.metadata.scale}}      </ng-container>      <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'reference\' || view?.recordMetadata?.type === \'string\'">        <ng-container *ngIf="view?.recordMetadata?.type === \'string\' && !showQuickView;">          <span [innerHTML]="view?.value"></span>        </ng-container>        <ng-container *ngIf="view?.recordMetadata?.type === \'reference\' && !showQuickView">          <a href="javascript:void(0)" *ngIf="view?.referenceFieldInstance?.Id" [routerLink]="[\'/\' + view?.labelPlural, view?.referenceFieldInstance?.Id]" [innerHTML]="view?.value" target="_blank"></a>        </ng-container>        <ng-container *ngIf="showQuickView">          <span            [ngClass]="showQuickView ? \'btn-link popoverLink\' : \'\'"            #lookupPop="bs-popover"            [popover]="lookupPopTemplate"            (click)="handleLookupPopClick()"            triggers=""            container="body"            containerClass="lookupPopover"            [outsideClick]="true"            [placement]="onShown()"            [innerHTML]="view?.value"></span>        </ng-container>      </ng-container>      <ng-container *ngSwitchDefault>        <span [innerHTML]="view?.value"></span>      </ng-container>      <i        *ngIf="editable"        #pop="bs-popover"        class="fa fa-pencil edit-icon ml-3"        [popover]="editable ? popTemplate : null"        container="body"        containerClass="editPopover"        [outsideClick]="false"        (onShown)="hidePopover()"      ></i>    </dd>    <ng-template #lookupPopTemplate>      <div class="popHeader p-3 mb-1" [ngClass]="expanded ? \'bg-dark text-white\' : \'bg-white text-dark\'">        <div class="titleSection pb-2 border-bottom d-flex justify-content-between align-items-baseline">          <ng-container>            <a class="h5 btn-link" href="javascript:void(0)" *ngIf="view?.referenceFieldInstance?.Id" [routerLink]="[\'/\' + view?.labelPlural, view?.referenceFieldInstance?.Id]" [innerHTML]="view?.value" target="_blank"></a>          </ng-container>          <ng-template #noLinkPopoverTitle>            <h5 [innerHTML]="view?.value"></h5>          </ng-template>          <button aria-label="Close" [ngClass]="{\'text-white\': expanded}" class="close" type="button" (click)="hidePopover()">×</button>        </div>        <div class="fieldSection container-fluid py-2">          <div class="row">            <div *ngFor="let field of view?.popoverFields | slice:0:6" class="col-6 pl-0 d-flex flex-column">              <apt-output-field                [record]="view?.referenceFieldInstance"                [field]="field"                layout="stacked"                [editable]="false"                [showQuickView]="false"              ></apt-output-field>            </div>          </div>        </div>        <div *ngIf="!expanded" class="bottomBar bg-dark"></div>        <div          *ngIf="view?.popoverFields?.length > 6"          class="toggleButton justify-content-center align-items-center border d-flex"          [ngClass]="hovering ? \'bg-primary\' : \'bg-white\'"          (mouseover)="hovering = true"          (mouseout)="hovering = false"          (click)="expanded = !expanded"        >          <i class="fa" [ngClass]="{\'fa-chevron-up\': expanded, \'fa-chevron-down\': !expanded, \'text-white\': hovering, \'text-primary\': !hovering}" aria-hidden="true"></i>        </div>      </div>      <div *ngIf="expanded" class="expandSection p-3">        <div class="container-fluid">          <div class="row">            <div *ngFor="let field of view?.popoverFields | slice:6" class="col-6 pl-0 d-flex flex-column">              <apt-output-field                [record]="view?.referenceFieldInstance"                [field]="field"                layout="stacked"                [editable]="false"                [showQuickView]="false"              ></apt-output-field>            </div>          </div>        </div>      </div>    </ng-template>  <ng-template #popTemplate>    <form class="p-3" (ngSubmit)="update(view)">      <apt-input-field *ngIf="!lookupOptions" [(ngModel)]="view.recordInstance[view.field]" [field]="view.field" [entity]="view.recordInstance" [name]="view.field" ></apt-input-field>      <apt-input-field *ngIf="lookupOptions" [(ngModel)]="view.recordInstance[view.field]" [field]="view.field" [entity]="view.recordInstance" [name]="view.field" [lookupOptions]="lookupOptions"></apt-input-field>      <div class="d-flex justify-content-end">        <button class="btn-link btn" (click)="handleHidePop()">Cancel</button>        <button class="btn btn-primary btn-raised" type="submit" [ladda]="loading">Update</button>      </div>    </form>  </ng-template>  <ng-content></ng-content></span></div>'
-    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
+        var COMPONENT_TEMPLATE = '<div><span [class.align-items-baseline]="layout === \'inline\'" [class.inline]="layout === \'inline\'" [class.d-flex]="layout === \'inline\'" [class.label-only]="labelOnly" *ngIf="view$ | async as view">        <dt [ngClass]="labelClass" *ngIf="!valueOnly">      {{view?.label}}    </dt>    <dd *ngIf="!labelOnly" class="m-0 position-relative"  [class.px-1]="layout === \'inline\'" [class.py-1]="layout === \'stacked\'" [class.empty]="!view.value" [ngClass]="valueClass" [ngSwitch]="true">      <ng-container *ngSwitchCase="view.recordMetadata?.type === \'date\' || view.recordMetadata?.type === \'datetime\'">{{view.value | date:getDateFormat(view.metadata)}}</ng-container>        <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'currency\'">{{view?.value | localCurrency | async}}</ng-container>        <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'address\'">        <apt-address [value]="view?.value" [readonly]="true"></apt-address>      </ng-container>        <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'double\'">        {{view?.value | number:\'1.0-\' + view.metadata.scale}}      </ng-container>      <ng-container *ngSwitchCase="view?.recordMetadata?.type === \'reference\' || view?.recordMetadata?.type === \'string\'">        <ng-container *ngIf="view?.recordMetadata?.type === \'string\' && !showQuickView;">          <span [innerHTML]="view?.value"></span>        </ng-container>        <ng-container *ngIf="view?.recordMetadata?.type === \'reference\' && !showQuickView">          <a href="javascript:void(0)" *ngIf="view?.referenceFieldInstance?.Id && view?.titleIsLink; else noLinkReference" [routerLink]="[\'/\' + view?.labelPlural, view?.referenceFieldInstance?.Id]" [innerHTML]="view?.value" target="_blank"></a>        </ng-container>        <ng-template #noLinkReference>          <span [innerHTML]="view?.value"></span>        </ng-template>        <ng-container *ngIf="showQuickView">          <span            [ngClass]="showQuickView ? \'btn-link popoverLink\' : \'\'"            #lookupPop="bs-popover"            [popover]="lookupPopTemplate"            (click)="handleLookupPopClick()"            triggers=""            container="body"            containerClass="lookupPopover"            [outsideClick]="true"            [placement]="onShown()"            [innerHTML]="view?.value"></span>        </ng-container>      </ng-container>      <ng-container *ngSwitchDefault>        <span [innerHTML]="!!view?.value ? view?.value : (\'COMMON.NO_DATA\' | translate)"></span>      </ng-container>      <i        *ngIf="editable"        #pop="bs-popover"        class="fa fa-pencil edit-icon ml-3"        [popover]="editable ? popTemplate : null"        container="body"        containerClass="editPopover"        [outsideClick]="false"        (onShown)="hidePopover()"      ></i>    </dd>    <ng-template #lookupPopTemplate>      <div class="popHeader p-3 mb-1" [ngClass]="expanded ? \'bg-dark text-white\' : \'bg-white text-dark\'">        <div class="titleSection pb-2 border-bottom d-flex justify-content-between align-items-baseline">          <ng-container>            <a class="h5 btn-link" href="javascript:void(0)" *ngIf="view?.referenceFieldInstance?.Id && view?.titleIsLink; else noLinkPopoverTitle" [routerLink]="[\'/\' + view?.labelPlural, view?.referenceFieldInstance?.Id]" [innerHTML]="view?.value" target="_blank"></a>          </ng-container>          <ng-template #noLinkPopoverTitle>            <h5 [innerHTML]="view?.value"></h5>          </ng-template>          <button aria-label="Close" [ngClass]="{\'text-white\': expanded}" class="close" type="button" (click)="hidePopover()">×</button>        </div>        <div class="fieldSection container-fluid py-2">          <div class="row">            <div *ngFor="let field of view?.popoverFields | slice:0:6" class="col-6 pl-0 d-flex flex-column">              <apt-output-field                [record]="view?.referenceFieldInstance"                [field]="field.field"                [label]="field.label"                layout="stacked"                [editable]="false"                [showQuickView]="false"              ></apt-output-field>            </div>          </div>        </div>        <div *ngIf="!expanded" class="bottomBar bg-dark"></div>        <div          *ngIf="view?.popoverFields?.length > 6"          class="toggleButton justify-content-center align-items-center border d-flex"          [ngClass]="hovering ? \'bg-primary\' : \'bg-white\'"          (mouseover)="hovering = true"          (mouseout)="hovering = false"          (click)="expanded = !expanded"        >          <i class="fa" [ngClass]="{\'fa-chevron-up\': expanded, \'fa-chevron-down\': !expanded, \'text-white\': hovering, \'text-primary\': !hovering}" aria-hidden="true"></i>        </div>      </div>      <div *ngIf="expanded" class="expandSection p-3">        <div class="container-fluid">          <div class="row">            <div *ngFor="let field of view?.popoverFields | slice:6" class="col-6 pl-0 d-flex flex-column">              <apt-output-field                [record]="view?.referenceFieldInstance"                [field]="field.field"                [label]="field.label"                layout="stacked"                [editable]="false"                [showQuickView]="false"              ></apt-output-field>            </div>          </div>        </div>      </div>    </ng-template>  <ng-template #popTemplate>    <form class="p-3" (ngSubmit)="update(view)">      <apt-input-field [(ngModel)]="view.recordInstance[view.field]" [field]="view.field" [entity]="view.recordInstance" [name]="view.field" [lookupOptions]="lookupOptions"></apt-input-field>      <div class="d-flex justify-content-end">        <button class="btn-link btn" (click)="handleHidePop()">{{\'COMMON.CANCEL\' | translate}}</button>        <button class="btn btn-primary btn-raised" type="submit" [ladda]="loading">{{\'COMMON.UPDATE\' | translate}}</button>      </div>    </form>  </ng-template>  <ng-content></ng-content></span></div>'
+    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[appAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'OutputFieldComponent'};
 </script>

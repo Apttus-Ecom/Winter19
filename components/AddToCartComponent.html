@@ -169,6 +169,20 @@ export class AppModule {}</code></pre></div>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
                 <tr>
@@ -190,9 +204,6 @@ export class AppModule {}</code></pre></div>
                             </li>
                             <li>
                                 <a href="#configurationRoute">configurationRoute</a>
-                            </li>
-                            <li>
-                                <a href="#disabled">disabled</a>
                             </li>
                             <li>
                                 <a href="#label">label</a>
@@ -571,33 +582,6 @@ export class AppModule {}</code></pre></div>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="disabled"></a>
-                        <b>disabled</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>false</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Flag to set this component as disabled.</p>
-</div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="label"></a>
                         <b>label</b>
                     </td>
@@ -780,6 +764,45 @@ export class AppModule {}</code></pre></div>
 
 
 
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <span class="name">
+                            <b>
+                            disabled</b>
+                            <a href="#disabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag to set this component as disabled.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
@@ -787,68 +810,45 @@ export class AppModule {}</code></pre></div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;product&quot;&gt;
-    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;template; context: { isLoggedIn: isLoggedIn$ | async }&quot;&gt;&lt;/ng-container&gt;
-    &lt;ng-template let-isLoggedIn&#x3D;&quot;isLoggedIn&quot; #template&gt;
-    &lt;apt-cr-popover [product]&#x3D;&quot;product&quot;  [message]&#x3D;&quot;message&quot;&gt;
+  &lt;ng-container *ngTemplateOutlet&#x3D;&quot;template; context: { isLoggedIn: isLoggedIn$ | async }&quot;&gt;&lt;/ng-container&gt;
+  &lt;ng-template let-isLoggedIn&#x3D;&quot;isLoggedIn&quot; #template&gt;
+    &lt;apt-cr-popover [product]&#x3D;&quot;product&quot; [message]&#x3D;&quot;message&quot;&gt;
       &lt;form&gt;
         &lt;div [ngClass]&#x3D;&quot;inputClass&quot; *ngIf&#x3D;&quot;showQuantityControls; else buttonOnly&quot;&gt;
           &lt;div class&#x3D;&quot;align-items-center d-flex justify-content-center input-group-sm&quot;&gt;
-            &lt;label [for]&#x3D;&quot;&#x27;quantity&#x27; + product.Id&quot; class&#x3D;&quot;mr-3&quot;&gt;Quantity&lt;/label&gt;
-            &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control mb-2 w-25&quot; [(ngModel)]&#x3D;&quot;quantity&quot; min&#x3D;&quot;1&quot; name&#x3D;&quot;quantity&quot; [id]&#x3D;&quot;&#x27;quantity&#x27; + product.Id&quot; /&gt;
+            &lt;label [for]&#x3D;&quot;&#x27;quantity&#x27; + product.Id&quot; class&#x3D;&quot;mr-3&quot;&gt;{{&#x27;COMMON.QUANTITY&#x27; | translate}}&lt;/label&gt;
+            &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;1&quot; class&#x3D;&quot;form-control mb-2 w-25&quot; [(ngModel)]&#x3D;&quot;quantity&quot; min&#x3D;&quot;1&quot; name&#x3D;&quot;quantity&quot;
+              [id]&#x3D;&quot;&#x27;quantity&#x27; + product.Id&quot; /&gt;
           &lt;/div&gt;
-          &lt;div class&#x3D;&quot;input-group-append mt-2 container-fluid&quot;&gt;
-            &lt;div *ngIf&#x3D;&quot;disabled&quot; tooltip&#x3D;&quot;{{&#x27;BUTTON.ACTION_CANNOT_BE_COMPLETED_TOOLTIP&#x27; | translate}}&quot; container&#x3D;&quot;body&quot;&gt;
-              &lt;button
-                class&#x3D;&quot;btn btn-block&quot;
-                [ngClass]&#x3D;&quot;buttonClass&quot;
-                (click)&#x3D;&quot;addToCart()&quot;
-                [ladda]&#x3D;&quot;loading&quot;
-                data-style&#x3D;&quot;zoom-in&quot;
-                [disabled]&#x3D;&quot;true&quot;
-              &gt; {{&#x27;COMMON.ADD_TO_CART&#x27; | translate}} &lt;/button&gt;
+          &lt;div class&#x3D;&quot;input-group-append mt-2 w-100&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;disabled&quot; tooltip&#x3D;&quot;{{&#x27;BUTTON.ACTION_CANNOT_BE_COMPLETED_TOOLTIP&#x27; | translate}}&quot; class&#x3D;&quot;w-100&quot;
+              container&#x3D;&quot;body&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-block btn-disabled&quot; [ngClass]&#x3D;&quot;buttonClass&quot; (click)&#x3D;&quot;addToCart()&quot; [ladda]&#x3D;&quot;loading&quot;
+                data-style&#x3D;&quot;zoom-in&quot; [disabled]&#x3D;&quot;true&quot;&gt; {{&#x27;COMMON.ADD_TO_CART&#x27; | translate}} &lt;/button&gt;
             &lt;/div&gt;
-            &lt;button
-              *ngIf&#x3D;&quot;!disabled&quot;
-              class&#x3D;&quot;btn btn-block&quot;
-              [ngClass]&#x3D;&quot;buttonClass&quot;
-              (click)&#x3D;&quot;(hideAddToCart &amp;&amp; isLoggedIn) ? handleActionClick(&#x27;Buy More&#x27;) : addToCart()&quot;
-              [ladda]&#x3D;&quot;loading&quot;
-              data-style&#x3D;&quot;zoom-in&quot;
-              [disabled]&#x3D;&quot;disabled&quot;
-              &gt; {{(hideAddToCart &amp;&amp; isLoggedIn) ? (&#x27;BUTTON.Buy More&#x27; | translate) : (&#x27;COMMON.ADD_TO_CART&#x27; | translate) }} &lt;/button&gt;
-              &lt;ng-container *ngIf&#x3D;&quot;isLoggedIn&quot;&gt;
-                &lt;button 
-                  *ngIf&#x3D;&quot;(showAssetDropdown$ | async) &amp;&amp; enabledActions?.length &gt; 0&quot;
-                  class&#x3D;&quot;dropdown-toggle-split border-left border-primary&quot;
-                  [ngClass]&#x3D;&quot;buttonClass&quot;
-                  data-toggle&#x3D;&quot;dropdown&quot;
-                  data-reference&#x3D;&quot;parent&quot;
-                  aria-haspopup&#x3D;&quot;true&quot;
-                  aria-expanded&#x3D;&quot;false&quot;
-                &gt;
-                  &lt;small class&#x3D;&quot;downArrow&quot;&gt;&lt;i class&#x3D;&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/small&gt;
-                &lt;/button&gt;
-              &lt;/ng-container&gt;
+            &lt;button *ngIf&#x3D;&quot;!disabled&quot; class&#x3D;&quot;btn btn-block&quot; [ngClass]&#x3D;&quot;buttonClass&quot;
+              (click)&#x3D;&quot;(hideAddToCart &amp;&amp; isLoggedIn) ? handleActionClick(&#x27;Buy More&#x27;) : addToCart()&quot; [ladda]&#x3D;&quot;loading&quot;
+              data-style&#x3D;&quot;zoom-in&quot; [disabled]&#x3D;&quot;disabled&quot;&gt;
+              {{(hideAddToCart &amp;&amp; isLoggedIn) ? (&#x27;BUTTON.Buy More&#x27; | translate) : (&#x27;COMMON.ADD_TO_CART&#x27; | translate) }}
+            &lt;/button&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;isLoggedIn&quot;&gt;
+              &lt;button *ngIf&#x3D;&quot;(showAssetDropdown$ | async) &amp;&amp; enabledActions?.length &gt; 0&quot;
+                class&#x3D;&quot;dropdown-toggle-split border-left border-primary&quot; [ngClass]&#x3D;&quot;buttonClass&quot; data-toggle&#x3D;&quot;dropdown&quot;
+                data-reference&#x3D;&quot;parent&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+                &lt;small class&#x3D;&quot;downArrow&quot;&gt;&lt;i class&#x3D;&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/small&gt;
+              &lt;/button&gt;
+            &lt;/ng-container&gt;
             &lt;div class&#x3D;&quot;dropdown-menu&quot; aria-labelledby&#x3D;&quot;dropdownMenuButton&quot;&gt;
-              &lt;button
-                *ngFor&#x3D;&quot;let action of enabledActions&quot;
-                class&#x3D;&quot;dropdown-item&quot;
-                [class.text-danger]&#x3D;&quot;action &#x3D;&#x3D;&#x3D; &#x27;Terminate&#x27;&quot;
-                (click)&#x3D;&quot;handleActionClick(action)&quot;
-              &gt;
+              &lt;button *ngFor&#x3D;&quot;let action of enabledActions&quot; class&#x3D;&quot;dropdown-item&quot;
+                [class.text-danger]&#x3D;&quot;action &#x3D;&#x3D;&#x3D; &#x27;Terminate&#x27;&quot; (click)&#x3D;&quot;handleActionClick(action)&quot;&gt;
                 {{ (&#x27;BUTTON.&#x27; + action) | translate }}
               &lt;/button&gt;
             &lt;/div&gt;
-            &lt;/div&gt;
           &lt;/div&gt;
+        &lt;/div&gt;
         &lt;ng-template #buttonOnly&gt;
-          &lt;button
-            [ngClass]&#x3D;&quot;buttonClass&quot;
-            (click)&#x3D;&quot;addToCart()&quot;
-            [ladda]&#x3D;&quot;loading&quot;
-            data-style&#x3D;&quot;zoom-in&quot;
-            [disabled]&#x3D;&quot;disabled&quot;
-          &gt; {{label | translate}} &lt;/button&gt;
+          &lt;button [ngClass]&#x3D;&quot;buttonClass&quot; (click)&#x3D;&quot;addToCart()&quot; [ladda]&#x3D;&quot;loading&quot; data-style&#x3D;&quot;zoom-in&quot;
+            [disabled]&#x3D;&quot;disabled&quot;&gt; {{label | translate}} &lt;/button&gt;
         &lt;/ng-template&gt;
       &lt;/form&gt;
     &lt;/apt-cr-popover&gt;
@@ -856,10 +856,9 @@ export class AppModule {}</code></pre></div>
 &lt;/ng-container&gt;
 
 
-&lt;apt-product-configuration-summary [product]&#x3D;&quot;product&quot; *ngIf&#x3D;&quot;configurationEnabled &amp;&amp; (product?.HasOptions || product?.HasAttributes)&quot; #productConfiguration&gt;
-&lt;/apt-product-configuration-summary&gt;
-
-</code></pre>
+&lt;apt-product-configuration-summary [product]&#x3D;&quot;product&quot;
+  *ngIf&#x3D;&quot;configurationEnabled &amp;&amp; (product?.HasOptions || product?.HasAttributes)&quot; #productConfiguration&gt;
+&lt;/apt-product-configuration-summary&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -894,8 +893,8 @@ export class AppModule {}</code></pre></div>
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="product">    <ng-container *ngTemplateOutlet="template; context: { isLoggedIn: isLoggedIn$ | async }"></ng-container>    <ng-template let-isLoggedIn="isLoggedIn" #template>    <apt-cr-popover [product]="product"  [message]="message">      <form>        <div [ngClass]="inputClass" *ngIf="showQuantityControls; else buttonOnly">          <div class="align-items-center d-flex justify-content-center input-group-sm">            <label [for]="\'quantity\' + product.Id" class="mr-3">Quantity</label>            <input type="number" class="form-control mb-2 w-25" [(ngModel)]="quantity" min="1" name="quantity" [id]="\'quantity\' + product.Id" />          </div>          <div class="input-group-append mt-2 container-fluid">            <div *ngIf="disabled" tooltip="{{\'BUTTON.ACTION_CANNOT_BE_COMPLETED_TOOLTIP\' | translate}}" container="body">              <button                class="btn btn-block"                [ngClass]="buttonClass"                (click)="addToCart()"                [ladda]="loading"                data-style="zoom-in"                [disabled]="true"              > {{\'COMMON.ADD_TO_CART\' | translate}} </button>            </div>            <button              *ngIf="!disabled"              class="btn btn-block"              [ngClass]="buttonClass"              (click)="(hideAddToCart && isLoggedIn) ? handleActionClick(\'Buy More\') : addToCart()"              [ladda]="loading"              data-style="zoom-in"              [disabled]="disabled"              > {{(hideAddToCart && isLoggedIn) ? (\'BUTTON.Buy More\' | translate) : (\'COMMON.ADD_TO_CART\' | translate) }} </button>              <ng-container *ngIf="isLoggedIn">                <button                   *ngIf="(showAssetDropdown$ | async) && enabledActions?.length > 0"                  class="dropdown-toggle-split border-left border-primary"                  [ngClass]="buttonClass"                  data-toggle="dropdown"                  data-reference="parent"                  aria-haspopup="true"                  aria-expanded="false"                >                  <small class="downArrow"><i class="fa fa-caret-down"></i></small>                </button>              </ng-container>            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">              <button                *ngFor="let action of enabledActions"                class="dropdown-item"                [class.text-danger]="action === \'Terminate\'"                (click)="handleActionClick(action)"              >                {{ (\'BUTTON.\' + action) | translate }}              </button>            </div>            </div>          </div>        <ng-template #buttonOnly>          <button            [ngClass]="buttonClass"            (click)="addToCart()"            [ladda]="loading"            data-style="zoom-in"            [disabled]="disabled"          > {{label | translate}} </button>        </ng-template>      </form>    </apt-cr-popover>  </ng-template></ng-container><apt-product-configuration-summary [product]="product" *ngIf="configurationEnabled && (product?.HasOptions || product?.HasAttributes)" #productConfiguration></apt-product-configuration-summary></div>'
-    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="product">  <ng-container *ngTemplateOutlet="template; context: { isLoggedIn: isLoggedIn$ | async }"></ng-container>  <ng-template let-isLoggedIn="isLoggedIn" #template>    <apt-cr-popover [product]="product" [message]="message">      <form>        <div [ngClass]="inputClass" *ngIf="showQuantityControls; else buttonOnly">          <div class="align-items-center d-flex justify-content-center input-group-sm">            <label [for]="\'quantity\' + product.Id" class="mr-3">{{\'COMMON.QUANTITY\' | translate}}</label>            <input type="number" min="1" class="form-control mb-2 w-25" [(ngModel)]="quantity" min="1" name="quantity"              [id]="\'quantity\' + product.Id" />          </div>          <div class="input-group-append mt-2 w-100">            <div *ngIf="disabled" tooltip="{{\'BUTTON.ACTION_CANNOT_BE_COMPLETED_TOOLTIP\' | translate}}" class="w-100"              container="body">              <button class="btn btn-block btn-disabled" [ngClass]="buttonClass" (click)="addToCart()" [ladda]="loading"                data-style="zoom-in" [disabled]="true"> {{\'COMMON.ADD_TO_CART\' | translate}} </button>            </div>            <button *ngIf="!disabled" class="btn btn-block" [ngClass]="buttonClass"              (click)="(hideAddToCart && isLoggedIn) ? handleActionClick(\'Buy More\') : addToCart()" [ladda]="loading"              data-style="zoom-in" [disabled]="disabled">              {{(hideAddToCart && isLoggedIn) ? (\'BUTTON.Buy More\' | translate) : (\'COMMON.ADD_TO_CART\' | translate) }}            </button>            <ng-container *ngIf="isLoggedIn">              <button *ngIf="(showAssetDropdown$ | async) && enabledActions?.length > 0"                class="dropdown-toggle-split border-left border-primary" [ngClass]="buttonClass" data-toggle="dropdown"                data-reference="parent" aria-haspopup="true" aria-expanded="false">                <small class="downArrow"><i class="fa fa-caret-down"></i></small>              </button>            </ng-container>            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">              <button *ngFor="let action of enabledActions" class="dropdown-item"                [class.text-danger]="action === \'Terminate\'" (click)="handleActionClick(action)">                {{ (\'BUTTON.\' + action) | translate }}              </button>            </div>          </div>        </div>        <ng-template #buttonOnly>          <button [ngClass]="buttonClass" (click)="addToCart()" [ladda]="loading" data-style="zoom-in"            [disabled]="disabled"> {{label | translate}} </button>        </ng-template>      </form>    </apt-cr-popover>  </ng-template></ng-container><apt-product-configuration-summary [product]="product"  *ngIf="configurationEnabled && (product?.HasOptions || product?.HasAttributes)" #productConfiguration></apt-product-configuration-summary></div>'
+    var COMPONENTS = [{'name': 'ActionBarComponent', 'selector': 'app-action-bar'},{'name': 'AddressBookComponent', 'selector': 'app-address-book'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'AssetListComponent', 'selector': 'app-asset-list'},{'name': 'AssetListComponent', 'selector': 'ngsw-asset-list'},{'name': 'AttachmentComponent', 'selector': 'app-attachment'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CardFormComponent', 'selector': 'app-card-form'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CartDetailComponent', 'selector': 'app-cart-detail'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartListComponent', 'selector': 'app-cart-list'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartSummaryComponent', 'selector': 'app-cart-summary'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CartTableComponent', 'selector': 'app-cart-table'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChangePasswordComponent', 'selector': 'app-change-password'},{'name': 'ChangePasswordLayoutComponent', 'selector': 'app-change-password-layout'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'CheckoutComponent', 'selector': 'app-cart'},{'name': 'CompareLayoutComponent', 'selector': 'app-compare-layout'},{'name': 'CRConstraintAlertComponent', 'selector': 'apt-cr-constraint-alert'},{'name': 'CreateQuoteComponent', 'selector': 'app-create-quote'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'CRSideMenuComponent', 'selector': 'apt-cr-side-menu'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardViewComponent', 'selector': 'app-dashboard-view'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DetailSectionComponent', 'selector': 'app-detail-section'},{'name': 'DetailsLayoutComponent', 'selector': 'app-detail'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'InstalledProductsLayoutComponent', 'selector': 'app-installed-products-layout'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'LoginLayoutComponent', 'selector': 'app-login-layout'},{'name': 'LoginViewComponent', 'selector': 'app-login-view'},{'name': 'LogoutViewComponent', 'selector': 'app-login-view'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'ManageCartComponent', 'selector': 'app-manage-cart'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'MyAccountLayoutComponent', 'selector': 'app-my-account-layout'},{'name': 'NavAccountComponent', 'selector': 'nav-account'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailComponent', 'selector': 'app-order-detail'},{'name': 'OrderDetailsComponent', 'selector': 'app-order-details'},{'name': 'OrderHistoryLayoutComponent', 'selector': 'app-order-history-layout'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OrderListComponent', 'selector': 'app-order-list'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentDetailsComponent', 'selector': 'app-payment-details'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PaymentMesageComponent', 'selector': 'app-payment-message'},{'name': 'PaymentMessageComponent', 'selector': 'app-payment-message'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'PriceTypeFilterComponent', 'selector': 'app-price-type-filter'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'ProgressComponent', 'selector': 'app-progress'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'QuoteDetailComponent', 'selector': 'app-quote-details'},{'name': 'QuoteDetailsComponent', 'selector': 'app-quote-details'},{'name': 'QuoteListComponent', 'selector': 'app-quote-list'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RenewalFilterComponent', 'selector': 'app-renewal-filter'},{'name': 'RequestQuoteFormComponent', 'selector': 'app-request-quote-form'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'ResultsComponent', 'selector': 'pl-results'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'SummaryComponent', 'selector': 'cart-summary'},{'name': 'TabAttachmentsComponent', 'selector': 'pdp-tab-attachments'},{'name': 'TabAttachmentsComponent', 'selector': 'app-tab-attachments'},{'name': 'TabFeaturesComponent', 'selector': 'pdp-tab-features'},{'name': 'TabFeaturesComponent', 'selector': 'app-tab-features'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'},{'name': 'WishlistsComponent', 'selector': 'app-wishlists'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[appAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'AddToCartComponent'};
 </script>

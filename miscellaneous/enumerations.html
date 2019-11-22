@@ -59,22 +59,13 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#AccessLevel" title="projects/apttus/ecommerce/src/lib/interfaces/generate-dcoument.interface.ts"><b>AccessLevel</b>&nbsp;&nbsp;&nbsp;(projects/.../generate-dcoument.interface.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#AssetError" title="projects/apttus/ecommerce/src/lib/modules/abo/classes/asset-error.enum.ts"><b>AssetError</b>&nbsp;&nbsp;&nbsp;(projects/.../asset-error.enum.ts)</a>
+                            <a href="#Adjustment" title="projects/apttus/ecommerce/src/lib/modules/pricing/services/price.service.ts"><b>Adjustment</b>&nbsp;&nbsp;&nbsp;(projects/.../price.service.ts)</a>
                         </li>
                         <li>
                             <a href="#CartError" title="projects/apttus/ecommerce/src/lib/modules/cart/enums/cart-error.enum.ts"><b>CartError</b>&nbsp;&nbsp;&nbsp;(projects/.../cart-error.enum.ts)</a>
                         </li>
                         <li>
                             <a href="#ChargeType" title="projects/apttus/ecommerce/src/lib/modules/pricing/enums/charge-type.enum.ts"><b>ChargeType</b>&nbsp;&nbsp;&nbsp;(projects/.../charge-type.enum.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#CheckState" title="projects/apttus/elements/src/lib/data/table/table.interface.ts"><b>CheckState</b>&nbsp;&nbsp;&nbsp;(projects/.../table.interface.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#FRAGMENT" title="projects/apttus/ecommerce/src/lib/services/resolvers/bootstrap.resolver.ts"><b>FRAGMENT</b>&nbsp;&nbsp;&nbsp;(projects/.../bootstrap.resolver.ts)</a>
                         </li>
                         <li>
                             <a href="#LineStatus" title="projects/apttus/ecommerce/src/lib/modules/cart/enums/line-status.enum.ts"><b>LineStatus</b>&nbsp;&nbsp;&nbsp;(projects/.../line-status.enum.ts)</a>
@@ -86,47 +77,74 @@
     </table>
 </section>
 
-    <h3>projects/apttus/ecommerce/src/lib/interfaces/generate-dcoument.interface.ts</h3>
+    <h3>projects/apttus/ecommerce/src/lib/modules/pricing/services/price.service.ts</h3>
     <section>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="AccessLevel"></a>
-                        <span class="name"><b>AccessLevel</b><a href="#AccessLevel"><span class="icon ion-ios-link"></span></a></span>
+                        <a name="Adjustment"></a>
+                        <span class="name"><b>Adjustment</b><a href="#Adjustment"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                &nbsp;FULL_ACCESS
+                                &nbsp;PER_DISCOUNT
                             </td>
                         </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Value : </i><code>Full access</code>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
-    <h3>projects/apttus/ecommerce/src/lib/modules/abo/classes/asset-error.enum.ts</h3>
-    <section>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="AssetError"></a>
-                        <span class="name"><b>AssetError</b><a href="#AssetError"><span class="icon ion-ios-link"></span></a></span>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                &nbsp;UNABLE_TO_RENEW
+                                <i>Value : </i><code>% Discount</code>
                             </td>
                         </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Value : </i><code>UNABLE_TO_RENEW</code>
+                                &nbsp;DISCOUNT_AMOUNT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Discount Amount</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;PER_MARKUP
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>% Markup</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;MARKUP_AMT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Markup Amount</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;PRICE_FACTOR
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Price Factor</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;LIST_PRICE_OVERRIDE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>List Price Override</code>
                             </td>
                         </tr>
             </tbody>
@@ -278,72 +296,6 @@
             </tbody>
         </table>
 </section>
-    <h3>projects/apttus/elements/src/lib/data/table/table.interface.ts</h3>
-    <section>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="CheckState"></a>
-                        <span class="name"><b>CheckState</b><a href="#CheckState"><span class="icon ion-ios-link"></span></a></span>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                &nbsp;CHECKED
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Value : </i><code>checked</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                &nbsp;INDETERMINATE
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Value : </i><code>indeterminate</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                &nbsp;UNCHECKED
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Value : </i><code>unchecked</code>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
-    <h3>projects/apttus/ecommerce/src/lib/services/resolvers/bootstrap.resolver.ts</h3>
-    <section>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="FRAGMENT"></a>
-                        <span class="name"><b>FRAGMENT</b><a href="#FRAGMENT"><span class="icon ion-ios-link"></span></a></span>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                &nbsp;ACCESS_TOKEN
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Value : </i><code>access_token</code>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
     <h3>projects/apttus/ecommerce/src/lib/modules/cart/enums/line-status.enum.ts</h3>
     <section>
         <table class="table table-sm table-bordered">
@@ -422,6 +374,16 @@
                         <tr>
                             <td class="col-md-4">
                                 <i>Value : </i><code>Upgraded</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;Activate
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Activated</code>
                             </td>
                         </tr>
             </tbody>

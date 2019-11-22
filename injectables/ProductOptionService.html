@@ -110,16 +110,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#getListOfProducts">getListOfProducts</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#getProductOptions">getProductOptions</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
+                                <a href="#getProductOptionsForGroup">getProductOptionsForGroup</a>
+                            </li>
+                            <li>
                                 <a href="#getProductOptionTree">getProductOptionTree</a>
+                            </li>
+                            <li>
+                                <a href="#groupOptionGroups">groupOptionGroups</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -170,7 +173,6 @@
                     <a name="getListOfProducts"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Public</span>
                             getListOfProducts
                         </b>
                         <a href="#getListOfProducts"><span class="icon ion-ios-link"></span></a>
@@ -179,8 +181,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getListOfProducts(productId: Array<string>)</code>
+<code>getListOfProducts(productId: Array<string>)</code>
                 </td>
             </tr>
 
@@ -236,7 +237,6 @@
                     <a name="getProductOptions"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Public</span>
                             getProductOptions
                         </b>
                         <a href="#getProductOptions"><span class="icon ion-ios-link"></span></a>
@@ -245,8 +245,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getProductOptions(product: <a href="../classes/BundleProduct.html">BundleProduct</a>)</code>
+<code>getProductOptions(product: <a href="../classes/BundleProduct.html">BundleProduct</a>)</code>
                 </td>
             </tr>
 
@@ -306,10 +305,95 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getProductOptionsForGroup"></a>
+                    <span class="name">
+                        <b>
+                            getProductOptionsForGroup
+                        </b>
+                        <a href="#getProductOptionsForGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProductOptionsForGroup(product: <a href="../classes/BundleProduct.html">BundleProduct</a>, group: <a href="../classes/ProductOptionGroup.html">ProductOptionGroup</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method returns list of ProductOptionComponent filters out ProductOptionComponent which is not associated
+with the group parameter.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>product</td>
+                                    <td>
+                                                <code><a href="../classes/BundleProduct.html" target="_self" >BundleProduct</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>group</td>
+                                    <td>
+                                                <code><a href="../classes/ProductOptionGroup.html" target="_self" >ProductOptionGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Instance of a product option group</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Array&lt;ProductOptionComponent&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getProductOptionTree"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Public</span>
                             getProductOptionTree
                         </b>
                         <a href="#getProductOptionTree"><span class="icon ion-ios-link"></span></a>
@@ -318,8 +402,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getProductOptionTree(productId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, relatedTo?: CartItem | QuoteLineItem | AssetLineItem | OrderLineItem, applyFilter: "none" | "items" | "changes", changes?: Array<CartItem>)</code>
+<code>getProductOptionTree(productId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, relatedTo?: CartItem | QuoteLineItem | AssetLineItem | OrderLineItem, applyFilter: "none" | "items" | "changes", changes?: Array<CartItem>)</code>
                 </td>
             </tr>
 
@@ -420,6 +503,144 @@ that are empty and associate related cart items with each option</p>
                     </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Observable&lt;BundleProduct&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="groupOptionGroups"></a>
+                    <span class="name">
+                        <b>
+                            groupOptionGroups
+                        </b>
+                        <a href="#groupOptionGroups"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>groupOptionGroups(p: <a href="../classes/BundleProduct.html">BundleProduct</a>, attributeValue: <a href="../classes/ProductAttributeValue.html">ProductAttributeValue</a>, relatedItems: Array<CartItem | QuoteLineItem | AssetLineItem | OrderLineItem>, applyFilter: "none" | "items" | "changes", metadata: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, parentItem?: CartItem | QuoteLineItem | AssetLineItem | OrderLineItem)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p</td>
+                                    <td>
+                                                <code><a href="../classes/BundleProduct.html" target="_self" >BundleProduct</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>attributeValue</td>
+                                    <td>
+                                                <code><a href="../classes/ProductAttributeValue.html" target="_self" >ProductAttributeValue</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>relatedItems</td>
+                                    <td>
+                                            <code>Array&lt;CartItem | QuoteLineItem | AssetLineItem | OrderLineItem&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>applyFilter</td>
+                                    <td>
+                                            <code>&quot;none&quot; | &quot;items&quot; | &quot;changes&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;none&#x27;</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>metadata</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>parentItem</td>
+                                    <td>
+                                            <code>CartItem | QuoteLineItem | AssetLineItem | OrderLineItem</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/BundleProduct.html" target="_self" >BundleProduct</a></code>
 
                     </div>
                     <div class="io-description">

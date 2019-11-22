@@ -231,6 +231,20 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#validate">validate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -1022,7 +1036,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[new OrderLineItem()]</code>
+                            <i>Default value : </i><code>null</code>
                         </td>
                     </tr>
                     <tr>
@@ -1030,7 +1044,7 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @AField({soql: &#x27;Apttus_Config2__OrderLineItems__r&#x27;, aql: &#x27;OrderId&#x27;, expand: &#x27;shallow&#x27;})<br />@Type(undefined)<br />
+                                @AField({soql: &#x27;Apttus_Config2__OrderLineItems__r&#x27;, aql: &#x27;OrderId&#x27;, expand: &#x27;deep&#x27;})<br />@Type(undefined)<br />
                             </code>
                         </td>
                     </tr>
@@ -1210,7 +1224,7 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @AField({soql: &#x27;OwnerId&#x27;, aql: &#x27;CreatedById&#x27;, view: undefined})<br />
+                                @AField({soql: &#x27;OwnerId&#x27;, aql: &#x27;CreatedById&#x27;, view: undefined, compactLabel: &#x27;Owner&#x27;})<br />
                             </code>
                         </td>
                     </tr>
@@ -1282,7 +1296,7 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @AField({soql: &#x27;Apttus_Config2__PaymentStatus__c&#x27;})<br />
+                                @AField({soql: &#x27;Apttus_Config2__PaymentStatus__c&#x27;, view: undefined})<br />
                             </code>
                         </td>
                     </tr>
@@ -1930,7 +1944,7 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @AField({soql: &#x27;Apttus_Config2__Status__c&#x27;, aql: &#x27;Status&#x27;, view: undefined})<br />
+                                @AField({soql: &#x27;Apttus_Config2__Status__c&#x27;, aql: &#x27;Status&#x27;})<br />
                             </code>
                         </td>
                     </tr>
@@ -1976,7 +1990,45 @@
         </table>
 </section>
 
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validate"></a>
+                    <span class="name">
+                        <b>
+                            validate
+                        </b>
+                        <a href="#validate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validate()</code>
+                </td>
+            </tr>
 
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 
 
